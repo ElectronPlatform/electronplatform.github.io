@@ -1,21 +1,17 @@
 # Electron Portal
 
-Static website foundation for the future Electron Portal.
+Static website foundation for the public Electron Portal.
 
-Recommended local layout:
+Live site:
 
 ```text
-~/Documents/Electron Portal/
-├── portal/
-│   ├── index.html
-│   ├── config.js
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── assets/
-├── downloads/
-├── logs/
-└── README.md
+https://electronplatform.github.io
+```
+
+GitHub repository:
+
+```text
+https://github.com/ElectronPlatform/electronplatform.github.io
 ```
 
 ## Purpose
@@ -30,37 +26,80 @@ The Portal is split into separate pages:
 - `features.html` explains the Electron modules.
 - `documentation.html` is the documentation foundation.
 - `about.html` contains project background, philosophy and credits.
+- `contact.html` contains the official support and feedback route.
 
 Downloads are intentionally not hosted by the website. Put Preview ZIPs and future
 releases on Google Drive or another file host, then update the central URL in:
 
 ```text
-portal/config.js
+config.js
 ```
 
-The site uses relative paths such as `./css`, `./js`, `./images` and `./assets`
-so the `portal/` folder can be moved to another local folder or server later.
+The public GitHub Pages URL must remain:
+
+```text
+https://electronplatform.github.io
+```
+
+Because the repository is named `electronplatform.github.io`, the website files
+belong at the repository root when publishing through GitHub Pages.
+
+The website uses relative paths such as `./css`, `./js`, `./images` and
+`./assets`, making it portable to any static web server.
+
+## Google Drive Distribution
+
+Google Drive is the distribution and storage area. Keep it separate from GitHub
+Pages so the website remains a simple static presentation layer.
+
+Recommended folder meaning:
+
+- `Releases/`: public Preview ZIPs, future releases, checksums and release notes.
+- `Documents/`: manuals, PDF guides, public documentation exports and test notes.
+- `Media/`: logos, screenshots, demo images and public promotional media.
+- `Feedback/`: received tester feedback packages. Keep this private by default.
+
+When a new Preview ZIP is ready, upload it to `Releases/`, copy the share link,
+and update only `downloadUrl` in `config.js`.
 
 ## Local Preview
 
 Open this file in a browser:
 
 ```text
-portal/index.html
+index.html
 ```
 
 No Node.js server is required for the current static version.
 
+If you prefer a local web server during testing, run one inside the Portal folder
+and open `http://localhost:8080`. A missing `favicon.ico` warning is harmless if
+the browser asks for it before deployment.
+
+## Publishing Workflow
+
+Use GitHub Desktop with the local `ElectronPlatform/electronplatform.github.io`
+repository:
+
+1. Edit files directly in the `electronplatform.github.io` repository.
+2. Commit.
+3. Push.
+4. GitHub Pages deploys automatically.
+
+No router ports, WireGuard changes, local public web server, backend, login or
+database are needed.
+
 ## Edit Points
 
-- Download URL: `portal/config.js`
-- Preview version: `portal/config.js`
-- Footer credits: `portal/config.js`
-- Feature cards: `portal/config.js`
-- Visual style: `portal/css/styles.css`
-- Browser logic: `portal/js/portal.js`
-- Images: `portal/images/`
-- Static assets: `portal/assets/`
+- Download URL: `config.js`
+- Preview version: `config.js`
+- Footer credits: `config.js`
+- Feature cards: `config.js`
+- Visual style: `css/styles.css`
+- Browser logic: `js/portal.js`
+- Images: `images/`
+- Static assets: `assets/`
+- Support email: `config.js`
 
 ## Design Direction
 

@@ -24,7 +24,7 @@
     });
     const status=byId("downloadStatus");
     if(status && !url){
-      status.textContent="Download link not configured yet. Add the Google Drive URL in portal/config.js.";
+      status.textContent="Download link not configured yet. Add the Google Drive URL in config.js.";
     }
   }
 

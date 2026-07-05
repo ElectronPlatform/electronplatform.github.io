@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Preview - Electron RFID Intelligence Platform</title>
+  <title>Contact - Electron RFID Intelligence Platform</title>
   <link rel="icon" type="image/png" href="./images/electron-icon.png">
   <link rel="stylesheet" href="./css/styles.css">
   <script src="config.js"></script>
 </head>
-<body data-page="preview">
+<body data-page="contact">
   <header class="siteHeader">
     <a class="brand" href="./index.html" aria-label="Electron home">
       <span class="brandBadge"><img src="./images/electron-icon.png" alt=""></span>
@@ -30,45 +30,33 @@
 
   <main class="pageMain">
     <section class="pageHero">
-      <p class="eyebrow">Preview</p>
-      <h1>Preview Release Candidate <span id="previewVersion">0.8.0</span></h1>
-      <p>Download and test the current Electron Preview. The website only points to the release file; builds remain hosted separately on Google Drive.</p>
-      <a id="primaryDownload" class="primaryDownload" href="#" target="_blank" rel="noopener"><span class="downloadGlyph" aria-hidden="true">↓</span> Download Preview</a>
-      <p id="downloadStatus" class="downloadStatus"></p>
+      <p class="eyebrow">Contact</p>
+      <h1>Contact Electron</h1>
+      <p>Use this route for Preview feedback, tester questions, support requests and extension requests.</p>
     </section>
 
     <section class="contentGrid twoColumn">
       <article class="infoPanel">
-        <p class="eyebrow">Release</p>
-        <h2>Build information</h2>
-        <div class="previewFacts">
-          <div><span>Build</span><strong id="buildLabel">Preview Release Candidate</strong></div>
-          <div><span>Distribution</span><strong>Google Drive link</strong></div>
-          <div><span>Data sharing</span><strong>User controlled</strong></div>
-        </div>
+        <p class="eyebrow">Official support email</p>
+        <h2>Email</h2>
+        <p>Nothing is sent automatically by Electron. You choose what to share and when to send it.</p>
+        <a class="contactLink" data-support-email href="mailto:electron.platform@gmail.com">electron.platform@gmail.com</a>
       </article>
       <article class="infoPanel">
-        <p class="eyebrow">Tester Notes</p>
-        <h2>Before testing</h2>
-        <p>Electron Preview is intended for early testers. It may change quickly, and feedback packages are created locally so testers can review what they share.</p>
+        <p class="eyebrow">Feedback packages</p>
+        <h2>User controlled</h2>
+        <p>The Electron app can create a local feedback package with selected text, screenshots, logs and device console output. Review the package before sharing it.</p>
       </article>
     </section>
 
     <section class="infoPanel">
-      <p class="eyebrow">Preview Notes</p>
-      <h2>What to test first</h2>
+      <p class="eyebrow">Before sharing</p>
+      <h2>Privacy reminder</h2>
       <ul class="cleanList">
-        <li>Open the app and confirm the welcome flow feels clear.</li>
-        <li>Connect a supported RFID device and run safe read-only scans.</li>
-        <li>Create a feedback package when something behaves unexpectedly.</li>
-        <li>Do not share private keys, dumps or personal card data unless you choose to include them.</li>
+        <li>Do not share private keys, card dumps or personal card data unless you intentionally choose to include them.</li>
+        <li>Feedback ZIP files are created locally first, so you can inspect them before sending.</li>
+        <li>Google Drive is used only for release downloads. Support messages are handled through the official email address for now.</li>
       </ul>
-    </section>
-
-    <section class="infoPanel">
-      <p class="eyebrow">Changelog</p>
-      <h2>Current focus</h2>
-      <p>The first public Preview focuses on Device Console stability, Card Intelligence, Report generation, local feedback packages, Preview status and a safer testing workflow.</p>
     </section>
   </main>
 

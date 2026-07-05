@@ -3,8 +3,16 @@ window.ELECTRON_PORTAL_CONFIG = {
   subtitle: "RFID Intelligence Platform",
   previewVersion: "0.8.0",
   buildLabel: "Preview Release Candidate",
+  siteUrl: "https://electronplatform.github.io",
+  repositoryUrl: "https://github.com/ElectronPlatform/electronplatform.github.io",
   downloadUrl: "",
   supportEmail: "electron.platform@gmail.com",
+  googleDriveFolders: {
+    releases: "Releases",
+    documents: "Documents",
+    media: "Media",
+    feedback: "Feedback"
+  },
   tagline: "Helping you explore, understand and document RFID technologies.",
   footerCredit: "Created by Ronald Peters",
   assistanceCredit: "Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.",
