@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preview - Electron RFID Intelligence Platform</title>
+  <link rel="icon" type="image/png" href="./images/electron-icon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="config.js"></script>
+</head>
+<body data-page="preview">
+  <header class="siteHeader">
+    <a class="brand" href="./index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="./images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="./index.html" data-page-link="home">Home</a>
+      <a href="./preview.html" data-page-link="preview">Preview</a>
+      <a href="./features.html" data-page-link="features">Features</a>
+      <a href="./documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="./about.html" data-page-link="about">About</a>
+      <a href="./about.html#contact" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink" href="#" target="_blank" rel="noopener"><span class="downloadGlyph" aria-hidden="true">↓</span> Download</a>
+  </header>
+
+  <main class="pageMain">
+    <section class="pageHero">
+      <p class="eyebrow">Preview</p>
+      <h1>Preview Release Candidate <span id="previewVersion">0.8.0</span></h1>
+      <p>Download and test the current Electron Preview. The website only points to the release file; builds remain hosted separately on Google Drive.</p>
+      <a id="primaryDownload" class="primaryDownload" href="#" target="_blank" rel="noopener"><span class="downloadGlyph" aria-hidden="true">↓</span> Download Preview</a>
+      <p id="downloadStatus" class="downloadStatus"></p>
+    </section>
+
+    <section class="contentGrid twoColumn">
+      <article class="infoPanel">
+        <p class="eyebrow">Release</p>
+        <h2>Build information</h2>
+        <div class="previewFacts">
+          <div><span>Build</span><strong id="buildLabel">Preview Release Candidate</strong></div>
+          <div><span>Distribution</span><strong>Google Drive link</strong></div>
+          <div><span>Data sharing</span><strong>User controlled</strong></div>
+        </div>
+      </article>
+      <article class="infoPanel">
+        <p class="eyebrow">Tester Notes</p>
+        <h2>Before testing</h2>
+        <p>Electron Preview is intended for early testers. It may change quickly, and feedback packages are created locally so testers can review what they share.</p>
+      </article>
+    </section>
+
+    <section class="infoPanel">
+      <p class="eyebrow">Preview Notes</p>
+      <h2>What to test first</h2>
+      <ul class="cleanList">
+        <li>Open the app and confirm the welcome flow feels clear.</li>
+        <li>Connect a supported RFID device and run safe read-only scans.</li>
+        <li>Create a feedback package when something behaves unexpectedly.</li>
+        <li>Do not share private keys, dumps or personal card data unless you choose to include them.</li>
+      </ul>
+    </section>
+
+    <section class="infoPanel">
+      <p class="eyebrow">Changelog</p>
+      <h2>Current focus</h2>
+      <p>The first public Preview focuses on Device Console stability, Card Intelligence, Report generation, local feedback packages, Preview status and a safer testing workflow.</p>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="./images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="./js/portal.js"></script>
+</body>
+</html>

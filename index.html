@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electron - RFID Intelligence Platform</title>
+  <link rel="icon" type="image/png" href="./images/electron-icon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="config.js"></script>
+</head>
+<body data-page="home">
+  <header class="siteHeader">
+    <a class="brand" href="./index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="./images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="./index.html" data-page-link="home">Home</a>
+      <a href="./preview.html" data-page-link="preview">Preview</a>
+      <a href="./features.html" data-page-link="features">Features</a>
+      <a href="./documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="./about.html" data-page-link="about">About</a>
+      <a href="./about.html#contact" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink" href="#" target="_blank" rel="noopener"><span class="downloadGlyph" aria-hidden="true">↓</span> Download</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="starfield"></div>
+      <div class="electronCore" aria-hidden="true">
+        <svg class="coreOrbits" viewBox="0 0 430 270">
+          <defs>
+            <path id="portalOrbit" d="M 5 135 A 210 95 0 1 0 425 135 A 210 95 0 1 0 5 135"></path>
+            <radialGradient id="portalDotGlow" cx="45%" cy="35%" r="70%">
+              <stop offset="0%" stop-color="#e0f7ff"></stop>
+              <stop offset="32%" stop-color="#38bdf8"></stop>
+              <stop offset="68%" stop-color="#1d4ed8"></stop>
+              <stop offset="100%" stop-color="#071a3d"></stop>
+            </radialGradient>
+          </defs>
+          <g transform="rotate(0 215 135)">
+            <use href="#portalOrbit" class="orbitGlow"></use>
+            <use href="#portalOrbit" class="orbitLine"></use>
+            <circle r="5.4" class="orbitDot"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#portalOrbit"></mpath></animateMotion></circle>
+          </g>
+          <g transform="rotate(60 215 135)">
+            <use href="#portalOrbit" class="orbitGlow"></use>
+            <use href="#portalOrbit" class="orbitLine"></use>
+            <circle r="5.4" class="orbitDot"><animateMotion dur="7s" begin="-2s" repeatCount="indefinite"><mpath href="#portalOrbit"></mpath></animateMotion></circle>
+          </g>
+          <g transform="rotate(120 215 135)">
+            <use href="#portalOrbit" class="orbitGlow"></use>
+            <use href="#portalOrbit" class="orbitLine"></use>
+            <circle r="5.4" class="orbitDot"><animateMotion dur="8s" begin="-4s" repeatCount="indefinite"><mpath href="#portalOrbit"></mpath></animateMotion></circle>
+          </g>
+        </svg>
+        <div class="coreBadge"><img src="./images/electron-icon.png" alt=""></div>
+      </div>
+
+      <div class="heroCopy">
+        <p class="eyebrow">Electron Preview</p>
+        <h1 id="heroTitle">Electron</h1>
+        <p class="platform">RFID Intelligence Platform</p>
+        <p class="tagline" id="portalTagline">Helping you explore, understand and document RFID technologies.</p>
+        <a id="primaryDownload" class="primaryDownload" href="#" target="_blank" rel="noopener"><span class="downloadGlyph" aria-hidden="true">↓</span> Download Preview</a>
+        <p id="downloadStatus" class="downloadStatus"></p>
+      </div>
+    </section>
+
+    <section class="featureBand homeFeatureBand" aria-labelledby="featuresTitle">
+      <div class="sectionIntro">
+        <p class="eyebrow">Platform Foundation</p>
+        <h2 id="featuresTitle">Connected RFID workflows</h2>
+      </div>
+      <div id="featureGrid" class="featureGrid"></div>
+      <p class="discoverLine">Want more detail? Continue with <a href="./preview.html">Preview information</a>, <a href="./features.html">module details</a> or <a href="./documentation.html">documentation</a>.</p>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="./images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="./js/portal.js"></script>
+</body>
+</html>
