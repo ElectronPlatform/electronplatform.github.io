@@ -13,51 +13,177 @@ window.ELECTRON_PORTAL_CONFIG = {
     media: "Media",
     feedback: "Feedback"
   },
-  tagline: "Helping you explore, understand and document RFID technologies.",
+  tagline: "Explore, understand and preserve RFID evidence in a local-first Collection.",
   footerCredit: "Created by Ronald Peters",
   assistanceCredit: "Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.",
   modules: [
     {
+      id: "knowledge-engine",
       icon: "book",
       title: "Knowledge Engine",
       description: "Understand RFID families, card types, protocols and safe next steps in plain language.",
-      actionLabel: "Explore Knowledge",
-      actionTarget: "./features.html#knowledge-engine"
+      actionLabel: "View details",
+      actionTarget: "./features.html#knowledge-engine",
+      dialogTitle: "Understand what Electron sees",
+      dialogIntro: "Knowledge Engine turns verified RFID concepts into clear, source-aware explanations without removing the technical depth behind them.",
+      details: [
+        {
+          title: "What it does",
+          text: "Explains card families, protocols, terminology, evidence states and appropriate next steps in language that works for both new and experienced users."
+        },
+        {
+          title: "Why it helps",
+          text: "A scan result becomes understandable without requiring the user to begin with Proxmark3 command syntax, while uncertainty and source information remain visible."
+        },
+        {
+          title: "Collection relationship",
+          text: "Knowledge can explain and enrich a Collection record, but it never replaces the observations or evidence preserved with that record."
+        },
+        {
+          title: "Current Preview scope",
+          text: "The Preview foundation includes contextual RFID explanations and related guidance. Coverage expands only as additional knowledge is verified."
+        }
+      ]
     },
     {
+      id: "card-intelligence",
       icon: "search",
       title: "Card Intelligence",
       description: "Turn scan output into a readable card profile with confidence, context and meaning.",
-      actionLabel: "Explore Intelligence",
-      actionTarget: "./features.html#card-intelligence"
+      actionLabel: "View details",
+      actionTarget: "./features.html#card-intelligence",
+      dialogTitle: "Turn scans into explainable findings",
+      dialogIntro: "Card Intelligence organises device observations into a readable profile while keeping facts, interpretation and uncertainty distinct.",
+      details: [
+        {
+          title: "What it does",
+          text: "Interprets HF and LF scan output, identifies supported card families and presents readable characteristics with evidence and confidence context."
+        },
+        {
+          title: "Why it helps",
+          text: "Users can understand what Electron observed, what it concluded and what remains unknown instead of relying on an unexplained label."
+        },
+        {
+          title: "Collection relationship",
+          text: "A scan is temporary. Card Intelligence supplies observations and proposals that can enrich a durable Collection record without becoming a separate source of truth."
+        },
+        {
+          title: "Current Preview scope",
+          text: "Quick Scan, Explore Card, readable card profiles and the Card Viewer provide the current identification and inspection foundation."
+        }
+      ]
     },
     {
+      id: "report-engine",
       icon: "report",
       title: "Report Engine",
       description: "Create structured TXT, DOC and PDF reports from one central Report Model.",
-      actionLabel: "Explore Reports",
-      actionTarget: "./features.html#report-engine"
+      actionLabel: "View details",
+      actionTarget: "./features.html#report-engine",
+      dialogTitle: "One source, consistent reports",
+      dialogIntro: "Report Engine turns selected Electron information into structured documents without creating another competing data store.",
+      details: [
+        {
+          title: "What it does",
+          text: "Builds TXT, DOC and PDF output from a shared Report Model so each format can describe the same selected evidence consistently."
+        },
+        {
+          title: "Why it helps",
+          text: "Users can preserve, review or share a clear result without manually copying information from several workspaces."
+        },
+        {
+          title: "Collection relationship",
+          text: "Reports are derived views of accepted Collection information and explicit session context. They do not become the authoritative owner of card data."
+        },
+        {
+          title: "Current Preview scope",
+          text: "The current report workflow supports structured local report generation and export, with wider release packaging still being prepared."
+        }
+      ]
     },
     {
+      id: "device-guard",
       icon: "shield",
       title: "Device Guard",
       description: "Keep hardware workflows predictable with device checks, capability checks and command safety.",
-      actionLabel: "Explore Safety",
-      actionTarget: "./features.html#device-guard"
+      actionLabel: "View details",
+      actionTarget: "./features.html#device-guard",
+      dialogTitle: "Predictable hardware workflows",
+      dialogIntro: "Device Guard adds context and lifecycle checks around reader operations so hardware behaviour remains understandable and controlled.",
+      details: [
+        {
+          title: "What it does",
+          text: "Checks device availability, reported capabilities and port ownership, and supports bounded command execution, cancellation and cleanup."
+        },
+        {
+          title: "Why it helps",
+          text: "It reduces confusing busy states, conflicting device sessions and actions that start without a compatible reader or a clear explanation."
+        },
+        {
+          title: "Collection relationship",
+          text: "Device Guard protects hardware workflows and supplies operational evidence. It does not decide card identity or own Collection records."
+        },
+        {
+          title: "Current Preview scope",
+          text: "Core device checks and command lifecycle protections are present, while guided coverage continues to grow with verified device capabilities."
+        }
+      ]
     },
     {
+      id: "device-studio",
       icon: "device",
-      title: "Device Manager",
-      description: "Prepare Electron for multiple RFID readers through profiles, capabilities and command libraries.",
-      actionLabel: "Explore Devices",
-      actionTarget: "./features.html#device-manager"
+      title: "Device Studio",
+      description: "Understand connected hardware through verified capabilities, source-labelled diagnostics and guided explanations.",
+      actionLabel: "View details",
+      actionTarget: "./features.html#device-studio",
+      dialogTitle: "Learn the hardware through verified capabilities",
+      dialogIntro: "Device Studio presents the connected reader as an explainable technical system, from beginner guidance to source-labelled diagnostics.",
+      details: [
+        {
+          title: "What it does",
+          text: "Explains hardware components, firmware compatibility, diagnostics and available actions according to capabilities Electron can actually verify."
+        },
+        {
+          title: "Why it helps",
+          text: "New users can discover the reader visually, while experienced users can inspect technical evidence without Electron pretending unsupported features exist."
+        },
+        {
+          title: "Collection relationship",
+          text: "Device Studio supplies hardware context and diagnostic evidence. It never determines the durable identity of an RFID Collection record."
+        },
+        {
+          title: "Current Preview scope",
+          text: "Standard Proxmark3 firmware supports core workflows. Optional Electron Device Studio firmware can expose additional structured status and diagnostics."
+        }
+      ]
     },
     {
+      id: "rfid-collection",
       icon: "feedback",
-      title: "Feedback Engine",
-      description: "Create local support packages with screenshots, logs and console output only when selected.",
-      actionLabel: "Explore Feedback",
-      actionTarget: "./features.html#feedback-engine"
+      title: "RFID Collection",
+      description: "Keep identified cards, observations, evidence and history together in one durable local Collection.",
+      actionLabel: "View details",
+      actionTarget: "./features.html#rfid-collection",
+      dialogTitle: "The durable centre of Electron",
+      dialogIntro: "RFID Collection preserves the lasting record of the user's RFID work while scans, physical card presence and analysis sessions remain temporary.",
+      details: [
+        {
+          title: "What it does",
+          text: "Keeps locally managed RFID records together with their accepted observations, identifying evidence, notes, artefacts and history."
+        },
+        {
+          title: "Why it helps",
+          text: "Users can return to an asset over time, compare new evidence with earlier work and preserve context beyond one hardware session."
+        },
+        {
+          title: "Platform relationship",
+          text: "Scanning, Intelligence, Engineering, Knowledge, Reports and device tools all create, explain or enrich Collection work instead of owning competing card databases."
+        },
+        {
+          title: "Current Preview scope",
+          text: "Local Collection management is part of the Preview foundation. Identity and import/export contracts continue to mature before wider release."
+        }
+      ]
     }
   ]
 };

@@ -32,7 +32,7 @@
     <section class="pageHero">
       <p class="eyebrow">Preview</p>
       <h1>Preview Release Candidate <span id="previewVersion">0.8.0</span></h1>
-      <p>Download and test the current Electron Preview. The website only points to the release file; builds remain hosted separately on Google Drive.</p>
+      <p>Test Electron as a local-first RFID Collection and evidence platform. Standard Proxmark3 firmware supports the core experience, while optional Device Studio firmware adds verified hardware capabilities.</p>
       <a id="primaryDownload" class="primaryDownload" href="#" target="_blank" rel="noopener"><span class="downloadGlyph" aria-hidden="true">↓</span> Download Preview</a>
       <p id="downloadStatus" class="downloadStatus"></p>
     </section>
@@ -45,12 +45,13 @@
           <div><span>Build</span><strong id="buildLabel">Preview Release Candidate</strong></div>
           <div><span>Distribution</span><strong>Google Drive link</strong></div>
           <div><span>Data sharing</span><strong>User controlled</strong></div>
+          <div><span>Firmware</span><strong>Standard and Device Studio</strong></div>
         </div>
       </article>
       <article class="infoPanel">
         <p class="eyebrow">Tester Notes</p>
         <h2>Before testing</h2>
-        <p>Electron Preview is intended for early testers. It may change quickly, and feedback packages are created locally so testers can review what they share.</p>
+        <p>Electron Preview is intended for early testers. A firmware change is not required to try the core workflows, and unavailable capabilities remain clearly identified instead of being guessed.</p>
       </article>
     </section>
 
@@ -59,7 +60,8 @@
       <h2>What to test first</h2>
       <ul class="cleanList">
         <li>Open the app and confirm the welcome flow feels clear.</li>
-        <li>Connect a supported RFID device and run safe read-only scans.</li>
+        <li>Connect a supported RFID device and verify HF/LF scanning, Collection records and Card Viewer.</li>
+        <li>Confirm Device Studio accurately describes the capabilities reported by the connected firmware.</li>
         <li>Create a feedback package when something behaves unexpectedly.</li>
         <li>Do not share private keys, dumps or personal card data unless you choose to include them.</li>
       </ul>
@@ -68,7 +70,7 @@
     <section class="infoPanel">
       <p class="eyebrow">Changelog</p>
       <h2>Current focus</h2>
-      <p>The first public Preview focuses on Device Console stability, Card Intelligence, Report generation, local feedback packages, Preview status and a safer testing workflow.</p>
+      <p>The first public Preview focuses on device connection, capability discovery, explainable scanning, durable Collection records, Card Viewer, report generation and user-controlled local feedback.</p>
     </section>
   </main>
 

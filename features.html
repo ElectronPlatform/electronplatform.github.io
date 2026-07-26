@@ -32,7 +32,7 @@
     <section class="pageHero">
       <p class="eyebrow">Features</p>
       <h1>Electron modules</h1>
-      <p>Electron is built from connected parts: knowledge, intelligence, reports, device safety, device management and feedback.</p>
+      <p>Electron is built around one durable local RFID Collection. Scanning, intelligence, knowledge, reports and hardware tools create, explain or enrich its records.</p>
     </section>
 
     <section class="featureBand detailedFeatureBand" aria-labelledby="featuresTitle">
@@ -41,38 +41,35 @@
     </section>
 
     <section class="contentGrid twoColumn">
-      <article id="knowledge-engine" class="infoPanel">
-        <p class="eyebrow">Knowledge Engine</p>
-        <h2>Understand what Electron sees</h2>
-        <p>Card families, protocols and safe next steps are explained in plain language so the user does not need to start with command-line knowledge.</p>
+      <article class="infoPanel">
+        <p class="eyebrow">Standard Firmware</p>
+        <h2>Start without changing your Proxmark3</h2>
+        <p>Standard Proxmark3 v4.21611 firmware supports core Electron workflows, including HF/LF scanning, Device Console, Card Viewer and basic diagnostics. Capabilities that are not reported stay visibly unavailable.</p>
       </article>
-      <article id="card-intelligence" class="infoPanel">
-        <p class="eyebrow">Card Intelligence</p>
-        <h2>Turn scans into meaning</h2>
-        <p>Electron combines scan output, confidence, readable data and research context into a clearer card profile.</p>
-      </article>
-      <article id="report-engine" class="infoPanel">
-        <p class="eyebrow">Report Engine</p>
-        <h2>One model, multiple reports</h2>
-        <p>Reports are built from a central Report Model so TXT, DOC, PDF and future exports can share the same source of truth.</p>
-      </article>
-      <article id="device-guard" class="infoPanel">
-        <p class="eyebrow">Device Guard</p>
-        <h2>Predictable hardware workflows</h2>
-        <p>Device checks and command safety rules help prevent confusing hangs, unsafe commands and workflows that start without a suitable reader.</p>
-      </article>
-      <article id="device-manager" class="infoPanel">
-        <p class="eyebrow">Device Manager</p>
-        <h2>Prepared for multiple readers</h2>
-        <p>Electron is moving toward device profiles, capabilities and command libraries instead of hardcoding one reader everywhere.</p>
-      </article>
-      <article id="feedback-engine" class="infoPanel">
-        <p class="eyebrow">Feedback Engine</p>
-        <h2>User-controlled support packages</h2>
-        <p>Feedback packages can include notes, screenshots, logs and console output, but nothing is sent automatically.</p>
+      <article class="infoPanel">
+        <p class="eyebrow">Device Studio Firmware</p>
+        <h2>Additional verified hardware capabilities</h2>
+        <p>The optional Electron Device Studio firmware can add structured hardware status, LED status, Safe Mode, board mapping and snapshots. Electron discovers these capabilities instead of assuming them from a device name.</p>
       </article>
     </section>
   </main>
+
+  <dialog id="moduleDialog" class="moduleDialog" aria-labelledby="moduleDialogTitle">
+    <div class="moduleDialogFrame">
+      <header class="moduleDialogHeader">
+        <div id="moduleDialogIcon" class="featureIcon moduleDialogIcon" aria-hidden="true"></div>
+        <div class="moduleDialogHeading">
+          <p id="moduleDialogEyebrow" class="eyebrow"></p>
+          <h2 id="moduleDialogTitle"></h2>
+        </div>
+        <button class="moduleDialogClose" type="button" data-module-dialog-close aria-label="Close module details">×</button>
+      </header>
+      <div class="moduleDialogBody">
+        <p id="moduleDialogIntro" class="moduleDialogIntro"></p>
+        <div id="moduleDialogDetails" class="moduleDialogDetails"></div>
+      </div>
+    </div>
+  </dialog>
 
   <footer class="siteFooter">
     <div class="footerMark"><span class="brandBadge small"><img src="./images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>

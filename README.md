@@ -16,8 +16,10 @@ https://github.com/ElectronPlatform/electronplatform.github.io
 
 ## Purpose
 
-The Portal is presentation only. It introduces Electron, shows the Preview status,
-links to future documentation, and points users to the Preview download.
+The Portal is presentation only. It introduces Electron as a local-first RFID
+Collection and evidence platform, shows the Preview status, explains the
+capability-based firmware policy, links to future documentation, and points
+users to the Preview download.
 
 The Portal is split into separate pages:
 
@@ -43,6 +45,21 @@ https://electronplatform.github.io
 
 Because the repository is named `electronplatform.github.io`, the website files
 belong at the repository root when publishing through GitHub Pages.
+
+Public product copy should preserve these current decisions:
+
+- the RFID Collection is Electron's durable centre;
+- standard Proxmark3 v4.21611 firmware supports core Preview workflows;
+- optional Electron Device Studio firmware adds capabilities but is not a
+  prerequisite for trying Electron;
+- unavailable hardware capabilities remain explicit rather than guessed or
+  presented as errors requiring an automatic firmware change.
+
+On `features.html`, the six module cards open accessible detail dialogs. Their
+hash links remain stable so links from the homepage or an external page can
+open the matching explanation directly. Keep the separate firmware comparison
+visible on the page because it applies across modules rather than belonging to
+one module.
 
 The website uses relative paths such as `./css`, `./js`, `./images` and
 `./assets`, making it portable to any static web server.
@@ -95,6 +112,7 @@ database are needed.
 - Preview version: `config.js`
 - Footer credits: `config.js`
 - Feature cards: `config.js`
+- Feature-dialog behaviour: `js/portal.js`
 - Visual style: `css/styles.css`
 - Browser logic: `js/portal.js`
 - Images: `images/`
