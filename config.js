@@ -7,7 +7,36 @@ window.ELECTRON_PORTAL_CONFIG = {
   repositoryUrl: "https://github.com/ElectronPlatform/electronplatform.github.io",
   documentationRef: "main",
   downloadUrl: "",
-  downloadStatusText: "Public Preview 1 is being prepared. No public installer is available yet.",
+  downloadStatusText: "Public Preview 1 installers are being prepared. No public installer is available yet.",
+  downloads: {
+    macosAppleSilicon: {
+      url: "",
+      availableLabel: "Download Electron Preview 1 (.dmg)",
+      availableStatus: "Available",
+      availableNote: "Download the approved macOS installer from this page.",
+      unavailableLabel: "Installer being prepared",
+      status: "Installer being prepared",
+      note: "No public macOS installer is available yet."
+    },
+    windows: {
+      url: "",
+      availableLabel: "Download Electron Preview 1",
+      availableStatus: "Available",
+      availableNote: "Download the approved Windows installer from this page.",
+      unavailableLabel: "Not yet available",
+      status: "Not yet available",
+      note: "Public Preview 1 support is not currently claimed for Windows."
+    },
+    linux: {
+      url: "",
+      availableLabel: "Download Electron Preview 1",
+      availableStatus: "Available",
+      availableNote: "Download the approved Linux installer from this page.",
+      unavailableLabel: "Not yet available",
+      status: "Not yet available",
+      note: "Public Preview 1 support is not currently claimed for Linux."
+    }
+  },
   supportEmail: "electron.platform@gmail.com",
   tagline: "Explore, understand and preserve RFID evidence in a local-first Collection.",
   footerCredit: "Created by Ronald Peters",

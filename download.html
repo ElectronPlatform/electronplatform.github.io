@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official download status and installation guidance for Electron Public Preview 1.">
+  <title>Download &amp; Installation - Electron RFID Intelligence Platform</title>
+  <link rel="icon" type="image/png" href="./images/electron-icon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="config.js"></script>
+</head>
+<body data-page="download">
+  <header class="siteHeader">
+    <a class="brand" href="./index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="./images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="./index.html" data-page-link="home">Home</a>
+      <a href="./preview.html" data-page-link="preview">Preview</a>
+      <a href="./features.html" data-page-link="features">Features</a>
+      <a href="./documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="./about.html" data-page-link="about">About</a>
+      <a href="./contact.html" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink active" href="./download.html" aria-current="page">Download</a>
+  </header>
+
+  <main class="pageMain">
+    <section class="pageHero">
+      <p class="eyebrow">Public Preview 1</p>
+      <h1>Download &amp; Installation</h1>
+      <p>This is the official download-status and installation guide for Electron. Public installers are being prepared and no public download is available yet.</p>
+    </section>
+
+    <section class="infoPanel" aria-labelledby="downloadTitle">
+      <div class="sectionIntro">
+        <div>
+          <p class="eyebrow">Download</p>
+          <h2 id="downloadTitle">Choose your platform</h2>
+        </div>
+        <p class="sectionNote">A download button becomes active only after an approved installer has been published.</p>
+      </div>
+      <div class="downloadGrid">
+        <article class="downloadCard" data-download-platform="macosAppleSilicon">
+          <div>
+            <p class="platformLabel">macOS</p>
+            <h3>Apple Silicon</h3>
+          </div>
+          <span class="platformStatus" data-download-status>Installer being prepared</span>
+          <p data-download-note>No public macOS installer is available yet.</p>
+          <a class="downloadAction disabled" data-download-action aria-disabled="true">Installer being prepared</a>
+        </article>
+        <article class="downloadCard" data-download-platform="windows">
+          <div>
+            <p class="platformLabel">Windows</p>
+            <h3>Public Preview status</h3>
+          </div>
+          <span class="platformStatus" data-download-status>Not yet available</span>
+          <p data-download-note>Public Preview 1 support is not currently claimed for Windows.</p>
+          <a class="downloadAction disabled" data-download-action aria-disabled="true">Not yet available</a>
+        </article>
+        <article class="downloadCard" data-download-platform="linux">
+          <div>
+            <p class="platformLabel">Linux</p>
+            <h3>Public Preview status</h3>
+          </div>
+          <span class="platformStatus" data-download-status>Not yet available</span>
+          <p data-download-note>Public Preview 1 support is not currently claimed for Linux.</p>
+          <a class="downloadAction disabled" data-download-action aria-disabled="true">Not yet available</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contentGrid twoColumn installationSection">
+      <article class="infoPanel">
+        <p class="eyebrow">System requirements</p>
+        <h2>Before you install</h2>
+        <ul class="cleanList">
+          <li>Current validation target: a Mac with Apple Silicon.</li>
+          <li>A compatible Proxmark3 and a working USB-C or USB-A connection.</li>
+          <li>Permission to test every RFID card, tag or device you use.</li>
+          <li>Internet access for downloads and current documentation; core Collection data remains local.</li>
+        </ul>
+        <p class="supportNote">Exact macOS versions and packaged PM3 requirements will be stated with the approved installer.</p>
+      </article>
+      <article class="infoPanel">
+        <p class="eyebrow">Installing on macOS</p>
+        <h2>Normal installation</h2>
+        <ol class="stepList">
+          <li>Download the official Electron DMG from this page when it becomes available.</li>
+          <li>Open the downloaded DMG.</li>
+          <li>Drag Electron into the Applications folder.</li>
+          <li>Eject the Electron installer.</li>
+          <li>Open Electron from Applications.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="infoPanel securityPanel" aria-labelledby="securityTitle">
+      <p class="eyebrow">macOS security</p>
+      <h2 id="securityTitle">If macOS asks you to confirm the application</h2>
+      <p>Electron is a new application. Early Public Preview builds may show messages such as <strong>“Electron cannot be opened because it is from an unidentified developer”</strong> or <strong>“Apple could not verify this application.”</strong> This can happen while full Apple code signing and notarization are still being prepared; it does not by itself mean the application is unsafe.</p>
+      <div class="methodGrid">
+        <article class="methodCard">
+          <p class="methodNumber">Method 1</p>
+          <h3>Open from Applications</h3>
+          <ol class="stepList compact">
+            <li>Open the Applications folder.</li>
+            <li>Right-click or Control-click Electron.</li>
+            <li>Select <strong>Open</strong>.</li>
+            <li>Select <strong>Open</strong> again when macOS asks for confirmation.</li>
+          </ol>
+        </article>
+        <article class="methodCard">
+          <p class="methodNumber">Method 2</p>
+          <h3>Use Privacy &amp; Security</h3>
+          <ol class="stepList compact">
+            <li>Try to open Electron once, then open <strong>System Settings</strong>.</li>
+            <li>Select <strong>Privacy &amp; Security</strong>.</li>
+            <li>Scroll to the Security section.</li>
+            <li>Select <strong>Open Anyway</strong> for Electron and confirm.</li>
+            <li>Open Electron again if macOS asks you to do so.</li>
+          </ol>
+        </article>
+      </div>
+      <p class="securityReminder">Use these steps only for an installer obtained through the official Electron website. Confirm the release details before overriding a security message.</p>
+    </section>
+
+    <section class="contentGrid twoColumn installationSection">
+      <article class="infoPanel">
+        <p class="eyebrow">First launch</p>
+        <h2>What to expect</h2>
+        <ul class="cleanList">
+          <li>Electron creates local settings and support folders for the Preview.</li>
+          <li>A local Installation ID is generated for Preview access information.</li>
+          <li>No Internet account is required to use the local application.</li>
+          <li>Your RFID Collection remains on your computer.</li>
+          <li>Nothing is submitted as feedback unless you deliberately choose what to share and send it.</li>
+        </ul>
+      </article>
+      <article class="infoPanel">
+        <p class="eyebrow">Connect your Proxmark3</p>
+        <h2>Start with the connection status</h2>
+        <ol class="stepList">
+          <li>Connect the Proxmark3 directly by USB.</li>
+          <li>Open <strong>Device Console</strong> and select <strong>Check Device</strong>.</li>
+          <li>If USB is detected but no session is active, select <strong>Connect Device</strong>.</li>
+        </ol>
+        <div class="evidenceTerms">
+          <p><strong>USB detected</strong><span>The computer can see a compatible USB device.</span></p>
+          <p><strong>Connected session</strong><span>Electron has an active PM3 session and can communicate with the device.</span></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="contentGrid twoColumn installationSection">
+      <article class="infoPanel">
+        <p class="eyebrow">Need help?</p>
+        <h2>Official help routes</h2>
+        <div class="helpLinks">
+          <a href="./documentation.html">Documentation <span aria-hidden="true">→</span></a>
+          <a href="https://github.com/ElectronPlatform/electronplatform.github.io/blob/main/docs/public-preview-1/FAQ.md">FAQ <span aria-hidden="true">→</span></a>
+          <a href="https://github.com/ElectronPlatform/electronplatform.github.io/issues">GitHub Issues <span aria-hidden="true">→</span></a>
+          <a href="mailto:electron.platform@gmail.com">electron.platform@gmail.com <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="infoPanel">
+        <p class="eyebrow">Future updates</p>
+        <h2>Replacing a Preview build</h2>
+        <p>Unless the release notes say otherwise, a newer Preview application can replace the earlier Electron application in Applications.</p>
+        <ul class="cleanList">
+          <li>Quit Electron before replacing it.</li>
+          <li>Read the release notes for that build first.</li>
+          <li>Back up important Collection data before updating.</li>
+          <li>Follow any build-specific instructions instead of assuming a migration.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="./images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="footerLinks" role="navigation" aria-label="Footer navigation">
+      <a href="./download.html">Download &amp; Installation</a>
+      <a href="./documentation.html">Documentation</a>
+      <a href="./contact.html">Support</a>
+    </div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="./js/portal.js"></script>
+</body>
+</html>

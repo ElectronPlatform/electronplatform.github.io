@@ -32,14 +32,16 @@ The Portal is split into separate pages:
 
 - `index.html` introduces Electron and shows the Electron Core.
 - `preview.html` contains Preview release, download and tester information.
+- `download.html` is the official download-status, installation and first-launch
+  guide.
 - `features.html` explains the Electron modules.
 - `documentation.html` contains the current public guidance and website/GitHub
   role split.
 - `about.html` contains project background, philosophy and credits.
 - `contact.html` contains the official support and feedback route.
 
-Downloads are not embedded in the website source. After an approved public
-package and release location exist, update the central URL in:
+Downloads are not embedded in the website source. Platform availability,
+button labels and approved release URLs are configured centrally in:
 
 ```text
 config.js
@@ -86,7 +88,9 @@ GitHub release or another official release location.
 
 When a public Preview package is ready, publish the package, checksums, release
 notes, licence notices and corresponding source information together. Then
-update only `downloadUrl` and `downloadStatusText` in `config.js`.
+update the matching platform entry under `downloads` and the shared
+`downloadStatusText` in `config.js`. The legacy `downloadUrl` remains a macOS
+fallback until the first approved package is published.
 
 ## Local Preview
 
@@ -117,8 +121,8 @@ database are needed.
 
 ## Edit Points
 
-- Download URL: `config.js`
-- Download status: `config.js`
+- Platform download URLs and status: `config.js`
+- Shared download status: `config.js`
 - Public documentation Git reference: `config.js`
 - Preview version: `config.js`
 - Footer credits: `config.js`

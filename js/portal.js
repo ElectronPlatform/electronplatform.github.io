@@ -24,51 +24,72 @@
   }
 
   function configureDownloads(){
-    const url=String(config.downloadUrl || "").trim();
     const primary=byId("primaryDownload");
     const header=byId("headerDownload");
     const page=document.body?.dataset?.page || "home";
 
-    if(url){
-      [primary,header].filter(Boolean).forEach(link=>{
-        link.href=url;
-        link.target="_blank";
-        link.rel="noopener";
-        link.removeAttribute("aria-disabled");
-        link.classList.remove("disabled");
-      });
-      setDownloadLabel(header,"Download");
-      setDownloadLabel(primary,"Download Preview");
-    }else{
-      if(header){
-        header.href="./preview.html";
-        header.removeAttribute("target");
-        header.removeAttribute("rel");
-        header.removeAttribute("aria-disabled");
-        header.classList.remove("disabled");
-        setDownloadLabel(header,"Preview status",false);
-      }
-      if(primary){
-        primary.removeAttribute("target");
-        primary.removeAttribute("rel");
-        if(page==="preview"){
-          primary.href="#downloadStatus";
-          primary.setAttribute("aria-disabled","true");
-          primary.classList.add("disabled");
-          setDownloadLabel(primary,"Download not available",false);
-        }else{
-          primary.href="./preview.html";
-          primary.removeAttribute("aria-disabled");
-          primary.classList.remove("disabled");
-          setDownloadLabel(primary,"Preview status",false);
-        }
-      }
+    if(header){
+      header.href="./download.html";
+      header.removeAttribute("target");
+      header.removeAttribute("rel");
+      header.removeAttribute("aria-disabled");
+      header.classList.remove("disabled");
+      header.classList.toggle("active",page==="download");
+      if(page==="download") header.setAttribute("aria-current","page");
+      else header.removeAttribute("aria-current");
+      setDownloadLabel(header,"Download",false);
+    }
+
+    if(primary){
+      primary.href="./download.html";
+      primary.removeAttribute("target");
+      primary.removeAttribute("rel");
+      primary.removeAttribute("aria-disabled");
+      primary.classList.remove("disabled");
+      setDownloadLabel(primary,"Download & Installation",false);
     }
 
     const status=byId("downloadStatus");
-    if(status && !url){
-      status.textContent=String(config.downloadStatusText || "No public installer is available yet.");
-    }
+    if(status) status.textContent=String(config.downloadStatusText || "No public installer is available yet.");
+  }
+
+  function configurePlatformDownloads(){
+    const downloads=config.downloads || {};
+    document.querySelectorAll("[data-download-platform]").forEach(card=>{
+      const platform=downloads[card.dataset.downloadPlatform] || {};
+      const url=String(platform.url || (
+        card.dataset.downloadPlatform==="macosAppleSilicon" ? config.downloadUrl : ""
+      ) || "").trim();
+      const action=card.querySelector("[data-download-action]");
+      const status=card.querySelector("[data-download-status]");
+      const note=card.querySelector("[data-download-note]");
+
+      if(status) status.textContent=String(url
+        ? (platform.availableStatus || "Available")
+        : (platform.status || "Not yet available"));
+      if(note) note.textContent=String(url
+        ? (platform.availableNote || "An approved installer is available.")
+        : (platform.note || ""));
+      if(!action) return;
+
+      action.textContent=String(url
+        ? (platform.availableLabel || "Download")
+        : (platform.unavailableLabel || "Not yet available"));
+
+      if(url){
+        action.href=url;
+        action.target="_blank";
+        action.rel="noopener";
+        action.removeAttribute("aria-disabled");
+        action.classList.remove("disabled");
+      }else{
+        action.removeAttribute("href");
+        action.removeAttribute("target");
+        action.removeAttribute("rel");
+        action.setAttribute("aria-disabled","true");
+        action.classList.add("disabled");
+      }
+    });
   }
 
   function renderFeatures(){
@@ -257,6 +278,7 @@
     setText("footerCredit", config.footerCredit);
     setText("assistanceCredit", config.assistanceCredit);
     configureDownloads();
+    configurePlatformDownloads();
     configureSupportLinks();
     configureDocumentationLinks();
     renderFeatures();
