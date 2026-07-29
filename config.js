@@ -38,6 +38,13 @@ window.ELECTRON_PORTAL_CONFIG = {
     }
   },
   supportEmail: "electron.platform@gmail.com",
+  support: {
+    provider: "PayPal",
+    url: "",
+    buttonLabel: "Support Electron with PayPal",
+    unavailableLabel: "PayPal support is not currently enabled",
+    expectationText: "Financial support is voluntary appreciation. It does not affect Preview access and does not purchase guaranteed features, timelines or individual support."
+  },
   tagline: "Explore, understand and preserve RFID evidence in a local-first Collection.",
   footerCredit: "Created by Ronald Peters",
   assistanceCredit: "Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.",

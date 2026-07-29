@@ -249,6 +249,34 @@
     });
   }
 
+  function configureFinancialSupport(){
+    const support=config.support || {};
+    const url=String(support.url || "").trim();
+    document.querySelectorAll("[data-support-action]").forEach(link=>{
+      link.textContent=String(url
+        ? (support.buttonLabel || "Support Electron")
+        : (support.unavailableLabel || "Financial support is not currently enabled"));
+
+      if(url){
+        link.href=url;
+        link.target="_blank";
+        link.rel="noopener";
+        link.removeAttribute("aria-disabled");
+        link.classList.remove("disabled");
+      }else{
+        link.removeAttribute("href");
+        link.removeAttribute("target");
+        link.removeAttribute("rel");
+        link.setAttribute("aria-disabled","true");
+        link.classList.add("disabled");
+      }
+    });
+
+    document.querySelectorAll("[data-support-expectation]").forEach(element=>{
+      element.textContent=String(support.expectationText || "");
+    });
+  }
+
   function configureDocumentationLinks(){
     const repository=String(config.repositoryUrl || "").replace(/\/+$/,"");
     const reference=encodeURIComponent(String(config.documentationRef || "main"));
@@ -280,6 +308,7 @@
     configureDownloads();
     configurePlatformDownloads();
     configureSupportLinks();
+    configureFinancialSupport();
     configureDocumentationLinks();
     renderFeatures();
     configureModuleDialog();

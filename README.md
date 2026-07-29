@@ -38,6 +38,8 @@ The Portal is split into separate pages:
 - `documentation.html` contains the current public guidance and website/GitHub
   role split.
 - `about.html` contains project background, philosophy and credits.
+- `support.html` explains community participation and the optional external
+  financial-support route.
 - `contact.html` contains the official support and feedback route.
 
 Downloads are not embedded in the website source. Platform availability,
@@ -135,6 +137,7 @@ database are needed.
 - Public release-document snapshots: `docs/`
 - Static assets: `assets/`
 - Support email: `config.js`
+- External support provider, label, URL and expectation text: `config.js`
 
 ## Design Direction
 
