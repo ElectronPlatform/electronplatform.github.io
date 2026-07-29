@@ -8,23 +8,66 @@
     if(el) el.textContent=value || "";
   }
 
+  function setDownloadLabel(link, label, withGlyph=true){
+    if(!link) return;
+    const parts=[];
+    if(withGlyph){
+      const glyph=document.createElement("span");
+      glyph.className="downloadGlyph";
+      glyph.setAttribute("aria-hidden","true");
+      glyph.textContent="↓";
+      parts.push(glyph, document.createTextNode(` ${label}`));
+    }else{
+      parts.push(document.createTextNode(label));
+    }
+    link.replaceChildren(...parts);
+  }
+
   function configureDownloads(){
     const url=String(config.downloadUrl || "").trim();
-    const targets=[byId("primaryDownload"), byId("headerDownload")].filter(Boolean);
-    targets.forEach(link=>{
-      if(url){
+    const primary=byId("primaryDownload");
+    const header=byId("headerDownload");
+    const page=document.body?.dataset?.page || "home";
+
+    if(url){
+      [primary,header].filter(Boolean).forEach(link=>{
         link.href=url;
+        link.target="_blank";
+        link.rel="noopener";
         link.removeAttribute("aria-disabled");
         link.classList.remove("disabled");
-      }else{
-        link.href="./preview.html";
-        link.setAttribute("aria-disabled","true");
-        link.classList.add("disabled");
+      });
+      setDownloadLabel(header,"Download");
+      setDownloadLabel(primary,"Download Preview");
+    }else{
+      if(header){
+        header.href="./preview.html";
+        header.removeAttribute("target");
+        header.removeAttribute("rel");
+        header.removeAttribute("aria-disabled");
+        header.classList.remove("disabled");
+        setDownloadLabel(header,"Preview status",false);
       }
-    });
+      if(primary){
+        primary.removeAttribute("target");
+        primary.removeAttribute("rel");
+        if(page==="preview"){
+          primary.href="#downloadStatus";
+          primary.setAttribute("aria-disabled","true");
+          primary.classList.add("disabled");
+          setDownloadLabel(primary,"Download not available",false);
+        }else{
+          primary.href="./preview.html";
+          primary.removeAttribute("aria-disabled");
+          primary.classList.remove("disabled");
+          setDownloadLabel(primary,"Preview status",false);
+        }
+      }
+    }
+
     const status=byId("downloadStatus");
     if(status && !url){
-      status.textContent="Download link not configured yet. Add the Google Drive URL in config.js.";
+      status.textContent=String(config.downloadStatusText || "No public installer is available yet.");
     }
   }
 
@@ -185,6 +228,25 @@
     });
   }
 
+  function configureDocumentationLinks(){
+    const repository=String(config.repositoryUrl || "").replace(/\/+$/,"");
+    const reference=encodeURIComponent(String(config.documentationRef || "main"));
+    const localReview=window.location.protocol==="file:" ||
+      ["localhost","127.0.0.1"].includes(window.location.hostname);
+    document.querySelectorAll("[data-document-path]").forEach(link=>{
+      const documentPath=String(link.dataset.documentPath || "").replace(/^\/+/,"");
+      if(documentPath && localReview){
+        link.href=`./${documentPath}`;
+        link.target="_blank";
+        link.rel="noopener";
+      }else if(repository && documentPath){
+        link.href=`${repository}/blob/${reference}/${documentPath}`;
+        link.target="_blank";
+        link.rel="noopener";
+      }
+    });
+  }
+
   function init(){
     if(document.body?.dataset?.page==="home"){
       document.title=`${config.productName || "Electron"} - ${config.subtitle || "RFID Intelligence Platform"}`;
@@ -196,6 +258,7 @@
     setText("assistanceCredit", config.assistanceCredit);
     configureDownloads();
     configureSupportLinks();
+    configureDocumentationLinks();
     renderFeatures();
     configureModuleDialog();
     markActiveNav();

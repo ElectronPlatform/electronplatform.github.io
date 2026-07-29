@@ -32,25 +32,74 @@
     <section class="pageHero">
       <p class="eyebrow">Documentation</p>
       <h1>Understand Electron from first scan to lasting record</h1>
-      <p>Public guides and release notes will explain how Electron handles Collection records, evidence, devices and firmware capabilities.</p>
+      <p>This page summarises the current Public Preview guidance. Installation packages and repository-specific release material will be linked only after they are publicly available.</p>
     </section>
 
-    <section class="contentGrid threeColumn">
+    <section class="documentSection" aria-labelledby="publicDocumentsTitle">
+      <div class="sectionIntro">
+        <div>
+          <p class="eyebrow">Public documentation</p>
+          <h2 id="publicDocumentsTitle">Public Preview 1 documents</h2>
+        </div>
+        <p class="sectionNote">Versioned copies maintained with the public website source.</p>
+      </div>
+      <div class="documentGrid">
+        <article class="documentCard">
+          <p class="eyebrow">Start here</p>
+          <h3>Quick Start</h3>
+          <p>Requirements, device connection, the first safe scan and opening or creating an RFID Tag.</p>
+          <a class="documentLink" href="https://github.com/ElectronPlatform/electronplatform.github.io" data-document-path="docs/public-preview-1/QUICK_START.md">Open document <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="documentCard">
+          <p class="eyebrow">Before testing</p>
+          <h3>Public Preview Notice</h3>
+          <p>Responsibilities, safe use, backups and what participation in the Preview means.</p>
+          <a class="documentLink" href="https://github.com/ElectronPlatform/electronplatform.github.io" data-document-path="docs/public-preview-1/PUBLIC_PREVIEW_NOTICE.md">Open document <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="documentCard">
+          <p class="eyebrow">Current boundaries</p>
+          <h3>Known Limitations</h3>
+          <p>Hardware, firmware, installation and workflow limitations that apply to Public Preview 1.</p>
+          <a class="documentLink" href="https://github.com/ElectronPlatform/electronplatform.github.io" data-document-path="docs/public-preview-1/KNOWN_LIMITATIONS.md">Open document <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="documentCard">
+          <p class="eyebrow">Common questions</p>
+          <h3>FAQ</h3>
+          <p>Clear answers about Unknown states, device sessions, local storage, authorisation and feedback.</p>
+          <a class="documentLink" href="https://github.com/ElectronPlatform/electronplatform.github.io" data-document-path="docs/public-preview-1/FAQ.md">Open document <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="documentCard">
+          <p class="eyebrow">What is included</p>
+          <h3>Release Notes</h3>
+          <p>The workflows, safety improvements and known release gates in Public Preview 1.</p>
+          <a class="documentLink" href="https://github.com/ElectronPlatform/electronplatform.github.io" data-document-path="docs/public-preview-1/RELEASE_NOTES_PUBLIC_PREVIEW_1.md">Open document <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contentGrid twoColumn">
       <article class="infoPanel">
-        <p class="eyebrow">Guides</p>
-        <h2>Getting started</h2>
-        <p>Getting-started guides will cover installation, the first safe scan, saving a Collection record, reports and user-controlled feedback packages.</p>
+        <p class="eyebrow">Official Website</p>
+        <h2>Information for users</h2>
+        <p>The Electron website is the official location for product information, download status, documentation, screenshots and support guidance.</p>
       </article>
       <article class="infoPanel">
-        <p class="eyebrow">Compatibility</p>
-        <h2>Firmware and capabilities</h2>
-        <p>Compatibility guidance will distinguish standard Proxmark3 firmware from optional Electron Device Studio capabilities without presenting a firmware change as a prerequisite.</p>
+        <p class="eyebrow">GitHub</p>
+        <h2>Source and development</h2>
+        <p>GitHub is used for public source repositories, releases, issues and development information as each resource is published.</p>
+        <a class="contactLink" href="https://github.com/ElectronPlatform" target="_blank" rel="noopener">Open Electron Platform on GitHub</a>
       </article>
-      <article class="infoPanel">
-        <p class="eyebrow">Release Notes</p>
-        <h2>Preview history</h2>
-        <p>Release notes will document each Preview build, supported workflows, known limitations and changes that testers should understand.</p>
-      </article>
+    </section>
+
+    <section class="infoPanel">
+      <p class="eyebrow">Safety and evidence</p>
+      <h2>Evidence Before Inference</h2>
+      <ul class="cleanList">
+        <li>Electron distinguishes USB detection, an active PM3 session and measured diagnostics.</li>
+        <li>Unknown or unsupported hardware state remains visible instead of being guessed.</li>
+        <li>Card scans are temporary observations until the user deliberately accepts information into a Collection record.</li>
+        <li>Remove keys, dumps and personal or payment-card data before sharing feedback or reports.</li>
+      </ul>
     </section>
   </main>
 

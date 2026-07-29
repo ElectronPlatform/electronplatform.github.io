@@ -16,22 +16,30 @@ https://github.com/ElectronPlatform/electronplatform.github.io
 
 ## Purpose
 
-The Portal is presentation only. It introduces Electron as a local-first RFID
-Collection and evidence platform, shows the Preview status, explains the
-capability-based firmware policy, links to future documentation, and points
-users to the Preview download.
+The Portal is the official public information layer for Electron. It introduces
+Electron as a local-first RFID Collection and evidence platform, shows the
+current Preview status, explains the capability-based firmware policy, provides
+documentation and screenshots, and identifies the official support route.
+
+Public responsibilities are intentionally separated:
+
+- The website contains official product information, download status,
+  documentation, screenshots and support guidance.
+- GitHub contains public source repositories, releases, issues and development
+  information as each resource is published.
 
 The Portal is split into separate pages:
 
 - `index.html` introduces Electron and shows the Electron Core.
 - `preview.html` contains Preview release, download and tester information.
 - `features.html` explains the Electron modules.
-- `documentation.html` is the documentation foundation.
+- `documentation.html` contains the current public guidance and website/GitHub
+  role split.
 - `about.html` contains project background, philosophy and credits.
 - `contact.html` contains the official support and feedback route.
 
-Downloads are intentionally not hosted by the website. Put Preview ZIPs and future
-releases on Google Drive or another file host, then update the central URL in:
+Downloads are not embedded in the website source. After an approved public
+package and release location exist, update the central URL in:
 
 ```text
 config.js
@@ -49,9 +57,9 @@ belong at the repository root when publishing through GitHub Pages.
 Public product copy should preserve these current decisions:
 
 - the RFID Collection is Electron's durable centre;
-- standard Proxmark3 v4.21611 firmware supports core Preview workflows;
-- optional Electron Device Studio firmware adds capabilities but is not a
-  prerequisite for trying Electron;
+- compatible stock Proxmark3 firmware supports core Preview workflows;
+- additional Device Studio status appears only when the connected firmware
+  reports the required capabilities;
 - unavailable hardware capabilities remain explicit rather than guessed or
   presented as errors requiring an automatic firmware change.
 
@@ -64,20 +72,21 @@ one module.
 The website uses relative paths such as `./css`, `./js`, `./images` and
 `./assets`, making it portable to any static web server.
 
-## Google Drive Distribution
+Public documentation snapshots for a release belong under
+`docs/<release-name>/`. The Documentation page links to the GitHub-rendered
+copies through `repositoryUrl` and `documentationRef` in `config.js`. Do not
+publish internal plans, handoffs, constitutions or unfinished legal drafts in
+this folder.
 
-Google Drive is the distribution and storage area. Keep it separate from GitHub
-Pages so the website remains a simple static presentation layer.
+## Release Distribution
 
-Recommended folder meaning:
+Keep release packages separate from the GitHub Pages source so the website
+remains a simple static presentation layer. The final approved host may be a
+GitHub release or another official release location.
 
-- `Releases/`: public Preview ZIPs, future releases, checksums and release notes.
-- `Documents/`: manuals, PDF guides, public documentation exports and test notes.
-- `Media/`: logos, screenshots, demo images and public promotional media.
-- `Feedback/`: received tester feedback packages. Keep this private by default.
-
-When a new Preview ZIP is ready, upload it to `Releases/`, copy the share link,
-and update only `downloadUrl` in `config.js`.
+When a public Preview package is ready, publish the package, checksums, release
+notes, licence notices and corresponding source information together. Then
+update only `downloadUrl` and `downloadStatusText` in `config.js`.
 
 ## Local Preview
 
@@ -109,6 +118,8 @@ database are needed.
 ## Edit Points
 
 - Download URL: `config.js`
+- Download status: `config.js`
+- Public documentation Git reference: `config.js`
 - Preview version: `config.js`
 - Footer credits: `config.js`
 - Feature cards: `config.js`
@@ -116,6 +127,8 @@ database are needed.
 - Visual style: `css/styles.css`
 - Browser logic: `js/portal.js`
 - Images: `images/`
+- Public screenshots: `images/screenshots/`
+- Public release-document snapshots: `docs/`
 - Static assets: `assets/`
 - Support email: `config.js`
 
@@ -127,4 +140,4 @@ The visual identity should follow the Electron splash screen:
 - electric blue core
 - orbit lines with moving light points
 - calm, professional, platform-focused
-- one clear Download Preview action
+- one clear Preview or download-status action

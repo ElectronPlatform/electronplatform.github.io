@@ -32,7 +32,7 @@
     <section class="pageHero">
       <p class="eyebrow">Preview</p>
       <h1>Preview Release Candidate <span id="previewVersion">0.8.0</span></h1>
-      <p>Test Electron as a local-first RFID Collection and evidence platform. Standard Proxmark3 firmware supports the core experience, while optional Device Studio firmware adds verified hardware capabilities.</p>
+      <p>Electron Public Preview 1 is being prepared as a local-first RFID Collection and evidence platform. Core workflows support compatible stock Proxmark3 firmware, while extra hardware status appears only when the connected firmware reports it.</p>
       <a id="primaryDownload" class="primaryDownload" href="#" target="_blank" rel="noopener"><span class="downloadGlyph" aria-hidden="true">↓</span> Download Preview</a>
       <p id="downloadStatus" class="downloadStatus"></p>
     </section>
@@ -43,15 +43,15 @@
         <h2>Build information</h2>
         <div class="previewFacts">
           <div><span>Build</span><strong id="buildLabel">Preview Release Candidate</strong></div>
-          <div><span>Distribution</span><strong>Google Drive link</strong></div>
+          <div><span>Distribution</span><strong>Not published yet</strong></div>
           <div><span>Data sharing</span><strong>User controlled</strong></div>
-          <div><span>Firmware</span><strong>Standard and Device Studio</strong></div>
+          <div><span>Firmware support</span><strong>Capability based</strong></div>
         </div>
       </article>
       <article class="infoPanel">
         <p class="eyebrow">Tester Notes</p>
         <h2>Before testing</h2>
-        <p>Electron Preview is intended for early testers. A firmware change is not required to try the core workflows, and unavailable capabilities remain clearly identified instead of being guessed.</p>
+        <p>Electron Preview is intended for early testers. A firmware change is not required for the core workflows. Signing, notarization, final packaging and clean-machine verification must be completed before the public installer is released.</p>
       </article>
     </section>
 
@@ -60,11 +60,31 @@
       <h2>What to test first</h2>
       <ul class="cleanList">
         <li>Open the app and confirm the welcome flow feels clear.</li>
-        <li>Connect a supported RFID device and verify HF/LF scanning, Collection records and Card Viewer.</li>
+        <li>Connect a compatible Proxmark3 and verify HF/LF scanning, Collection records and Card Viewer.</li>
         <li>Confirm Device Studio accurately describes the capabilities reported by the connected firmware.</li>
         <li>Create a feedback package when something behaves unexpectedly.</li>
-        <li>Do not share private keys, dumps or personal card data unless you choose to include them.</li>
+        <li>Remove private keys, card dumps and personal or payment-card data before sharing feedback.</li>
       </ul>
+    </section>
+
+    <section class="infoPanel">
+      <p class="eyebrow">Screenshots</p>
+      <h2>Current Public Preview interface</h2>
+      <p class="sectionLead">These images show the current Release Candidate interface. Availability and results still depend on the connected hardware and firmware capabilities.</p>
+      <div class="screenshotGrid">
+        <figure class="screenshotCard">
+          <img src="./images/screenshots/workshop-overview.webp" alt="Electron Workshop with the available workspaces">
+          <figcaption><strong>Workshop</strong><span>Choose a workspace according to the task you want to perform.</span></figcaption>
+        </figure>
+        <figure class="screenshotCard">
+          <img src="./images/screenshots/device-connection-status.webp" alt="Device Console showing USB, active-session and diagnostics status">
+          <figcaption><strong>Device connection</strong><span>USB detection, active-session state and diagnostic readiness remain separate.</span></figcaption>
+        </figure>
+        <figure class="screenshotCard">
+          <img src="./images/screenshots/card-lab-first-scan.webp" alt="Card Lab before the first safe RFID scan">
+          <figcaption><strong>Card Lab</strong><span>Start with a quick identification scan or a deeper safe exploration.</span></figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="infoPanel">

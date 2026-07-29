@@ -5,14 +5,10 @@ window.ELECTRON_PORTAL_CONFIG = {
   buildLabel: "Preview Release Candidate",
   siteUrl: "https://electronplatform.github.io",
   repositoryUrl: "https://github.com/ElectronPlatform/electronplatform.github.io",
+  documentationRef: "main",
   downloadUrl: "",
+  downloadStatusText: "Public Preview 1 is being prepared. No public installer is available yet.",
   supportEmail: "electron.platform@gmail.com",
-  googleDriveFolders: {
-    releases: "Releases",
-    documents: "Documents",
-    media: "Media",
-    feedback: "Feedback"
-  },
   tagline: "Explore, understand and preserve RFID evidence in a local-first Collection.",
   footerCredit: "Created by Ronald Peters",
   assistanceCredit: "Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.",
@@ -125,7 +121,7 @@ window.ELECTRON_PORTAL_CONFIG = {
         },
         {
           title: "Current Preview scope",
-          text: "Core device checks and command lifecycle protections are present, while guided coverage continues to grow with verified device capabilities."
+          text: "The Preview reports USB availability, active-session state and diagnostic readiness, while existing command-safety controls remain in effect."
         }
       ]
     },
@@ -153,7 +149,7 @@ window.ELECTRON_PORTAL_CONFIG = {
         },
         {
           title: "Current Preview scope",
-          text: "Standard Proxmark3 firmware supports core workflows. Optional Electron Device Studio firmware can expose additional structured status and diagnostics."
+          text: "Core workflows remain available with compatible stock Proxmark3 firmware. Additional structured hardware status appears only when connected firmware reports it."
         }
       ]
     },
@@ -177,11 +173,11 @@ window.ELECTRON_PORTAL_CONFIG = {
         },
         {
           title: "Platform relationship",
-          text: "Scanning, Intelligence, Engineering, Knowledge, Reports and device tools all create, explain or enrich Collection work instead of owning competing card databases."
+          text: "Card Lab, scanning, knowledge, reports and device tools all create, explain or enrich Collection work instead of owning competing card databases."
         },
         {
           title: "Current Preview scope",
-          text: "Local Collection management is part of the Preview foundation. Identity and import/export contracts continue to mature before wider release."
+          text: "The Preview supports local Collection records, RFID Tag editing, comparisons, labels, history, backups and user-controlled imports and exports."
         }
       ]
     }
