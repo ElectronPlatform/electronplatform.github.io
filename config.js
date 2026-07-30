@@ -13,10 +13,10 @@ window.ELECTRON_PORTAL_CONFIG = {
       url: "",
       availableLabel: "Download Electron Preview 1 (.dmg)",
       availableStatus: "Available",
-      availableNote: "Download the approved macOS installer from this page.",
+      availableNote: "Download the approved MacOs installer from this page.",
       unavailableLabel: "Installer being prepared",
       status: "Installer being prepared",
-      note: "No public macOS installer is available yet."
+      note: "No public MacOs installer is available yet."
     },
     windows: {
       url: "",

@@ -12,7 +12,7 @@ You need:
 - permission to test the RFID item;
 - an independent backup of any important Electron data.
 
-The current release process has been validated primarily on macOS arm64.
+The current release process has been validated primarily on MacOs arm64.
 Platform support for your package should be confirmed by the Preview
 coordinator.
 

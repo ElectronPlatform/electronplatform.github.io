@@ -34,7 +34,7 @@ planned features.
 
 - A final signed and notarized public installer has not yet been confirmed.
 - Clean-machine portability still requires release validation.
-- The currently reviewed macOS PM3 client has local Homebrew runtime
+- The currently reviewed MacOs PM3 client has local Homebrew runtime
   dependencies that must be resolved or reproduced for distribution.
 - The exact corresponding Proxmark3 source bundle and build provenance must be
   completed for any release that includes GPL-covered PM3 binaries.
