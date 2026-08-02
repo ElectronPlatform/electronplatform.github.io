@@ -4,11 +4,11 @@
 
 **Release target:** MacOs on Apple Silicon
 
-**Current status:** internal release candidate; not publicly available
+**Current status:** published Early Public Preview
 
 ## Purpose
 
-Public Preview 1 is prepared for a small group of real users to perform
+Public Preview 1 is published for early users to perform
 workflow, hardware and compatibility testing. It focuses on clear evidence,
 safe defaults and practical feedback.
 
@@ -16,15 +16,14 @@ safe defaults and practical feedback.
 
 Current build:
 
-- Unsigned — it is not signed with an Apple Developer ID. The internal package
+- Unsigned — it is not signed with an Apple Developer ID. The package
   uses only local ad-hoc signing for bundle integrity.
 - Not notarized by Apple.
 - Intended for experienced Early Public Preview testers.
 
-The review candidate is version 0.8.0 with bundle ID
-`app.electronrfid.preview`. Its current SHA-256 and build date are recorded on
-the prepared Download page. Those values must be regenerated whenever the DMG
-changes.
+The published build is version 0.8.0 with bundle ID
+`app.electronrfid.preview`. Its SHA-256 and build date are recorded on the
+official Download page and GitHub release.
 
 Later broader public releases are intended to be Apple Developer ID signed and
 Apple notarized after the project joins Apple's Developer Program.
@@ -99,8 +98,8 @@ values are shown as not reported or unknown instead of being invented.
 
 Compatibility depends on the Proxmark3 board, PM3 client, firmware and RFID
 technology. The unsigned and non-notarized status is deliberately disclosed
-for this Early Public Preview. Final clean-machine validation and exact GPL
-source pairing remain release gates.
+for this Early Public Preview. The matching GPL corresponding source is
+published with the release.
 See [Known Limitations and Issues](KNOWN_LIMITATIONS.md) for the current list.
 
 ## Feedback

@@ -34,15 +34,15 @@
     <section class="pageHero">
       <p class="eyebrow">Early Public Preview 1</p>
       <h1>Download &amp; Installation</h1>
-      <p>This is the official download-status and installation guide for Electron. Public installers are being prepared and no public download is available yet. When released, the standard Preview will provide 30 days of full application access from first launch.</p>
+      <p>This is the official download and installation guide for Electron. Early Public Preview 1 is available for MacOs Apple Silicon and provides 30 days of full application access from first launch.</p>
     </section>
 
     <section class="infoPanel distributionNotice" aria-labelledby="distributionNoticeTitle">
       <p class="eyebrow">Distribution notice</p>
       <h2 id="distributionNoticeTitle">Early Public Preview</h2>
-      <p><strong>This Early Public Preview is currently prepared for distribution without Apple Developer ID signing or Apple notarization.</strong></p>
+      <p><strong>This Early Public Preview is distributed without Apple Developer ID signing or Apple notarization.</strong></p>
       <p>This allows the project to gather real-world feedback before investing in Apple's Developer Program. MacOs may therefore ask the user to confirm the application during first launch.</p>
-      <p>This internal review candidate has been checked against its frozen source revision. The DMG, matching source archives and checksums will become available together only after Ronald approves the public GitHub release.</p>
+      <p>The published DMG has been checked against its public source revision. The matching source archives and checksums are available with the official GitHub release.</p>
     </section>
 
     <section class="infoPanel" aria-labelledby="downloadTitle">
@@ -51,7 +51,7 @@
           <p class="eyebrow">Download</p>
           <h2 id="downloadTitle">Choose your platform</h2>
         </div>
-        <p class="sectionNote">A download button becomes active only after an approved installer has been published.</p>
+        <p class="sectionNote">Download only from this page or the official Electron Platform GitHub release.</p>
       </div>
       <div class="downloadGrid">
         <article class="downloadCard" data-download-platform="macosAppleSilicon">
@@ -59,9 +59,9 @@
             <p class="platformLabel platformLabelMac">MacOs</p>
             <h3>Apple Silicon</h3>
           </div>
-          <span class="platformStatus" data-download-status>Installer being prepared</span>
-          <p data-download-note>No public MacOs installer is available yet.</p>
-          <a class="downloadAction disabled" data-download-action aria-disabled="true">Installer being prepared</a>
+          <span class="platformStatus" data-download-status>Available now</span>
+          <p data-download-note>Download the approved MacOs installer from this page.</p>
+          <a class="downloadAction" data-download-action href="https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-arm64.dmg" target="_blank" rel="noopener">Download Electron Preview 1 (.dmg)</a>
         </article>
         <article class="downloadCard" data-download-platform="windows">
           <div>
@@ -88,20 +88,21 @@
       <div class="sectionIntro">
         <div>
           <p class="eyebrow">Verification information</p>
-          <h2 id="releaseMetadataTitle">Current internal review candidate</h2>
+          <h2 id="releaseMetadataTitle">Published Early Public Preview</h2>
         </div>
-        <p class="sectionNote">These values must be regenerated if the DMG changes. No public download is active yet.</p>
+        <p class="sectionNote">Use these values to verify the published installer before opening it.</p>
       </div>
       <div class="previewFacts">
         <div><span>Version</span><strong data-release-field="version">0.8.0</strong></div>
-        <div><span>Build date</span><strong data-release-field="buildDate">2 August 2026, 19:13 AEST</strong></div>
+        <div><span>Build date</span><strong data-release-field="buildDate">2 August 2026, 22:29 AEST</strong></div>
         <div><span>Bundle ID</span><strong data-release-field="bundleId">app.electronrfid.preview</strong></div>
-        <div><span>Installer filename</span><strong data-release-field="filename">Electron Preview-0.8.0-arm64.dmg</strong></div>
+        <div><span>Installer filename</span><strong data-release-field="filename">Electron-Preview-0.8.0-arm64.dmg</strong></div>
         <div><span>Signing</span><strong data-release-field="signingStatus">Not Apple Developer ID signed</strong></div>
         <div><span>Notarization</span><strong data-release-field="notarizationStatus">Not notarized</strong></div>
-        <div><span>Source provenance</span><strong data-release-field="provenanceStatus">Verified against source commit 8c3849f273c5</strong></div>
-        <div><span>SHA-256</span><code data-release-field="sha256">9709153438721d1d0bb2202464e98914a33e51839e631c2c71c03c47d7ac4f5e</code></div>
+        <div><span>Source provenance</span><strong data-release-field="provenanceStatus">Verified against public source commit 4fdcec2714dd</strong></div>
+        <div><span>SHA-256</span><code data-release-field="sha256">61fae56779c550fa0dc8a09ca47dcf26fdbb64f963a81d6750495530a5bd6d03</code></div>
       </div>
+      <p class="supportNote">Download <a href="https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/SHA256SUMS.txt">SHA256SUMS.txt</a> or view the <a href="https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/tag/v0.8.0-early-preview.1">complete GitHub release and matching source archives</a>.</p>
     </section>
 
     <section class="contentGrid twoColumn installationSection">
@@ -120,7 +121,7 @@
         <p class="eyebrow">Installing on <span class="productNameCase">MacOs</span></p>
         <h2>Normal installation</h2>
         <ol class="stepList">
-          <li>Download the official Electron DMG from this page when it becomes available.</li>
+          <li>Download the official Electron DMG from this page.</li>
           <li>Open the downloaded DMG.</li>
           <li>Drag Electron into the Applications folder.</li>
           <li>Eject the Electron installer.</li>

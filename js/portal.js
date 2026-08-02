@@ -50,7 +50,7 @@
     }
 
     const status=byId("downloadStatus");
-    if(status) status.textContent=String(config.downloadStatusText || "No public installer is available yet.");
+    if(status) status.textContent=String(config.downloadStatusText || "See the Download page for current availability.");
   }
 
   function configurePlatformDownloads(){

@@ -23,7 +23,7 @@ coordinator.
 ## 2. Install and start Electron
 
 Follow the instructions supplied with your Preview package. Early Public
-Preview 1 is being prepared without Apple Developer ID signing or Apple
+Preview 1 is distributed without Apple Developer ID signing or Apple
 notarization.
 
 MacOs may show an unidentified-developer or verification message. Use only

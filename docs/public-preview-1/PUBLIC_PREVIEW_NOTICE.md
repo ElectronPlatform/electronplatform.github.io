@@ -3,20 +3,20 @@
 Electron Public Preview is test software. It may contain errors, stop working
 or produce incomplete results.
 
-Public Preview 1 is currently a release candidate. No public installer is
-available until the official Electron website activates a verified download.
+Electron Early Public Preview 1 is publicly available through the verified
+download on the official Electron website.
 
 ## Distribution status
 
-This Early Public Preview is being prepared without Apple Developer ID signing
+This Early Public Preview is distributed without Apple Developer ID signing
 or Apple notarization. MacOs may therefore ask the user to confirm the
 application during first launch. Verify the official source revision and the
 published SHA-256 before using the installer, then follow only Apple's normal
 **Open** or **Open Anyway** workflow.
 
-The current internal review candidate is not yet paired with a frozen public
-GitHub source revision. No public download should be enabled until that source
-and package provenance has been verified.
+The published DMG is paired with its public GitHub source revision, SHA-256 and
+matching source archives. Download it only through the official website or its
+linked GitHub release.
 
 ## 30-day Preview period
 

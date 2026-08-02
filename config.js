@@ -2,31 +2,31 @@ window.ELECTRON_PORTAL_CONFIG = {
   productName: "Electron",
   subtitle: "RFID Intelligence Platform",
   previewVersion: "0.8.0",
-  buildLabel: "Preview Release Candidate",
+  buildLabel: "Early Public Preview",
   siteUrl: "https://electronplatform.github.io",
-  repositoryUrl: "https://github.com/ElectronPlatform/electronplatform.github.io",
+  repositoryUrl: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform",
   documentationRef: "main",
-  downloadUrl: "",
-  downloadStatusText: "Public Preview 1 installers are being prepared. No public installer is available yet.",
+  downloadUrl: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-arm64.dmg",
+  downloadStatusText: "Electron Early Public Preview 1 is available for MacOs Apple Silicon.",
   releaseCandidate: {
     version: "0.8.0",
-    buildDate: "2 August 2026, 19:13 AEST",
+    buildDate: "2 August 2026, 22:29 AEST",
     bundleId: "app.electronrfid.preview",
-    filename: "Electron Preview-0.8.0-arm64.dmg",
-    sha256: "9709153438721d1d0bb2202464e98914a33e51839e631c2c71c03c47d7ac4f5e",
+    filename: "Electron-Preview-0.8.0-arm64.dmg",
+    sha256: "61fae56779c550fa0dc8a09ca47dcf26fdbb64f963a81d6750495530a5bd6d03",
     signingStatus: "Not Apple Developer ID signed",
     notarizationStatus: "Not notarized",
-    provenanceStatus: "Verified against source commit 8c3849f273c5"
+    provenanceStatus: "Verified against public source commit 4fdcec2714dd"
   },
   downloads: {
     macosAppleSilicon: {
-      url: "",
+      url: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-arm64.dmg",
       availableLabel: "Download Electron Preview 1 (.dmg)",
-      availableStatus: "Available",
+      availableStatus: "Available now",
       availableNote: "Download the approved MacOs installer from this page.",
-      unavailableLabel: "Installer being prepared",
-      status: "Installer being prepared",
-      note: "No public MacOs installer is available yet."
+      unavailableLabel: "Installer unavailable",
+      status: "Installer unavailable",
+      note: "The MacOs installer link is temporarily unavailable."
     },
     windows: {
       url: "",
@@ -139,7 +139,7 @@ window.ELECTRON_PORTAL_CONFIG = {
         },
         {
           title: "Current Preview scope",
-          text: "The current report workflow supports structured local report generation and export, with wider release packaging still being prepared."
+          text: "The current Early Public Preview supports structured local report generation and export."
         }
       ]
     },

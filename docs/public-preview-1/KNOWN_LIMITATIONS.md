@@ -32,14 +32,14 @@ Preview 1. It is not a roadmap or a list of promised features.
 
 ## Distribution and installation limitations
 
-- No public installer is available yet.
-- The Early Public Preview candidate is not Apple Developer ID signed and is
-  not notarized. The internal package uses only local ad-hoc signing for bundle
+- The Early Public Preview is not Apple Developer ID signed and is not
+  notarized. The package uses only local ad-hoc signing for bundle
   integrity, which is not equivalent to Apple Developer ID signing.
-- The bundled Apple Silicon PM3 client now links only to MacOs system
-  libraries, but a full clean-machine release test is still required.
-- The exact corresponding Proxmark3 source bundle and build provenance must be
-  completed for any release that includes GPL-covered PM3 binaries.
+- The bundled Apple Silicon PM3 client links only to MacOs system libraries.
+  The current package was validated on the release Mac and a clean local user
+  account; wider Mac and hardware combinations remain unverified.
+- The matching corresponding Proxmark3 source bundle and build provenance are
+  published with this release.
 - The Electron Public Preview License v1.0 has been selected for Public Preview
   1 and must be included with the release.
 - Windows and Linux packaging targets exist in project configuration, but

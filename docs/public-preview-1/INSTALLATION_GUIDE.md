@@ -1,8 +1,7 @@
 # Electron Public Preview 1 Installation Guide
 
-**Current status:** the public installer is not yet available. The current
-Apple Silicon DMG is an internal review candidate for an unsigned,
-non-notarized Early Public Preview.
+**Current status:** the unsigned, non-notarized Apple Silicon DMG is publicly
+available as Electron Early Public Preview 1.
 
 Use the official Download and Installation page for current availability:
 
@@ -22,14 +21,13 @@ locally.
 
 ## Early Public Preview distribution
 
-Electron Public Preview 1 is being prepared without Apple Developer ID signing
-or Apple notarization. This allows the project to gather real-world feedback
-before investing in Apple's Developer Program.
+Electron Early Public Preview 1 is distributed without Apple Developer ID
+signing or Apple notarization. This allows the project to gather real-world
+feedback before investing in Apple's Developer Program.
 
-Before a public download is enabled, the DMG must be rebuilt from a matching
-public GitHub source revision, checked after packaging and published with its
-exact SHA-256. The current internal candidate has not yet passed that public
-source-provenance gate.
+The published DMG was built from the matching public GitHub source revision,
+checked after packaging and published with its exact SHA-256 and corresponding
+source archives.
 
 ## Verify the installer
 
@@ -39,7 +37,7 @@ The release page must publish the installer filename and SHA-256 checksum.
 In Terminal, the downloaded DMG can be checked with:
 
 ```text
-shasum -a 256 "/path/to/Electron Preview-0.8.0-arm64.dmg"
+shasum -a 256 "/path/to/Electron-Preview-0.8.0-arm64.dmg"
 ```
 
 The result must exactly match the checksum on the official release page. Do

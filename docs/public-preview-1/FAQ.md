@@ -6,8 +6,8 @@ The official Download and Installation page is:
 
 <https://electronplatform.github.io/download.html>
 
-No public installer is available until that page activates an approved
-download. Do not use an installer from an unofficial source.
+The approved MacOs Apple Silicon installer is available there. Do not use an
+installer from an unofficial source, and verify its published SHA-256 first.
 
 ## Why is a status shown as Unknown?
 
@@ -48,9 +48,9 @@ hardware combinations.
 ## Why isn't Electron signed yet?
 
 This is an early community Preview. Apple Developer ID signing and notarization
-require a paid Apple Developer Program membership, so Public Preview 1 is being
-prepared first for experienced testers with a published checksum and matching
-source information.
+require a paid Apple Developer Program membership. Early Public Preview 1 is
+therefore distributed for experienced testers with a published checksum and
+matching source information.
 
 MacOs may show an unidentified-developer or verification message during first
 launch. This is expected for the current distribution method. Follow only
@@ -135,7 +135,7 @@ Feedback packages are also created locally and must be sent by you.
 
 ## Which operating systems are supported?
 
-Public Preview 1 is being prepared for MacOs on Apple Silicon. Windows, Linux
+Early Public Preview 1 is available for MacOs on Apple Silicon. Windows, Linux
 and Intel Mac support are not claimed until dedicated packages are built and
 tested.
 
