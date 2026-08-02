@@ -50,7 +50,7 @@ window.ELECTRON_PORTAL_CONFIG = {
   supportEmail: "electron.platform@gmail.com",
   support: {
     provider: "PayPal",
-    url: "",
+    url: "https://www.paypal.com/ncp/payment/SH3BTJERWR5XG",
     buttonLabel: "Support Electron with PayPal",
     unavailableLabel: "PayPal support is not currently enabled",
     expectationText: "Financial support is voluntary appreciation. It does not affect Preview access and does not purchase guaranteed features, timelines or individual support."
