@@ -92,6 +92,14 @@
     });
   }
 
+  function configureReleaseCandidateDetails(){
+    const release=config.releaseCandidate || {};
+    document.querySelectorAll("[data-release-field]").forEach(element=>{
+      const value=release[element.dataset.releaseField];
+      if(value!==undefined && value!==null && String(value).trim()) element.textContent=String(value);
+    });
+  }
+
   function renderFeatures(){
     const grid=byId("featureGrid");
     if(!grid) return;
@@ -307,6 +315,7 @@
     setText("assistanceCredit", config.assistanceCredit);
     configureDownloads();
     configurePlatformDownloads();
+    configureReleaseCandidateDetails();
     configureSupportLinks();
     configureFinancialSupport();
     configureDocumentationLinks();

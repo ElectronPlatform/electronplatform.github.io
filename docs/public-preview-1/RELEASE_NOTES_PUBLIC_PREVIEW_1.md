@@ -1,10 +1,33 @@
 # Electron Public Preview 1 Release Notes
 
+**Application version:** 0.8.0
+
+**Release target:** MacOs on Apple Silicon
+
+**Current status:** internal release candidate; not publicly available
+
 ## Purpose
 
-Public Preview 1 makes Electron available to a small group of real users for
+Public Preview 1 is prepared for a small group of real users to perform
 workflow, hardware and compatibility testing. It focuses on clear evidence,
 safe defaults and practical feedback.
+
+## Distribution Status
+
+Current build:
+
+- Unsigned — it is not signed with an Apple Developer ID. The internal package
+  uses only local ad-hoc signing for bundle integrity.
+- Not notarized by Apple.
+- Intended for experienced Early Public Preview testers.
+
+The review candidate is version 0.8.0 with bundle ID
+`app.electronrfid.preview`. Its current SHA-256 and build date are recorded on
+the prepared Download page. Those values must be regenerated whenever the DMG
+changes.
+
+Later broader public releases are intended to be Apple Developer ID signed and
+Apple notarized after the project joins Apple's Developer Program.
 
 ## Available in this Preview
 
@@ -38,6 +61,21 @@ Engineering Mode and the internal build checklist. The normal Device Studio
 explorer, safe diagnostics, scans, Collection, reports and feedback remain
 available.
 
+## Preview access
+
+- The standard Public Preview provides 30 days of full application access from
+  first launch.
+- Saved Collection data is not deleted when the Preview expires.
+- Additional testing time requires a signed Preview Extension Key tied to the local
+  Installation ID.
+- Local device verification uses salted hashes rather than storing or
+  uploading raw machine identifiers or MAC addresses.
+- A single matching signal is sufficient, small hardware changes are
+  tolerated, and access pauses only after three consecutive complete
+  mismatches.
+- A legitimate device change can be reviewed and restored with a signed,
+  short-lived recovery token.
+
 ## Electron Engine and connection status
 
 The Electron Engine supplies structured, read-only connection and compatibility
@@ -60,9 +98,10 @@ values are shown as not reported or unknown instead of being invented.
 ## Known limitations
 
 Compatibility depends on the Proxmark3 board, PM3 client, firmware and RFID
-technology. Public installer, signing, clean-machine portability, exact GPL
-source pairing and the Electron application licence are still release gates.
-See [Known Limitations](KNOWN_LIMITATIONS.md) for the current list.
+technology. The unsigned and non-notarized status is deliberately disclosed
+for this Early Public Preview. Final clean-machine validation and exact GPL
+source pairing remain release gates.
+See [Known Limitations and Issues](KNOWN_LIMITATIONS.md) for the current list.
 
 ## Feedback
 
@@ -73,3 +112,6 @@ package through the official Preview support channel.
 
 This Preview should be used only with RFID items that the tester owns or is
 authorised to test.
+
+Installation, user and support instructions are available from the official
+[Documentation page](https://electronplatform.github.io/documentation.html).

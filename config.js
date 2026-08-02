@@ -8,6 +8,16 @@ window.ELECTRON_PORTAL_CONFIG = {
   documentationRef: "main",
   downloadUrl: "",
   downloadStatusText: "Public Preview 1 installers are being prepared. No public installer is available yet.",
+  releaseCandidate: {
+    version: "0.8.0",
+    buildDate: "2 August 2026, 19:13 AEST",
+    bundleId: "app.electronrfid.preview",
+    filename: "Electron Preview-0.8.0-arm64.dmg",
+    sha256: "9709153438721d1d0bb2202464e98914a33e51839e631c2c71c03c47d7ac4f5e",
+    signingStatus: "Not Apple Developer ID signed",
+    notarizationStatus: "Not notarized",
+    provenanceStatus: "Verified against source commit 8c3849f273c5"
+  },
   downloads: {
     macosAppleSilicon: {
       url: "",
@@ -136,12 +146,12 @@ window.ELECTRON_PORTAL_CONFIG = {
     {
       id: "device-guard",
       icon: "shield",
-      title: "Device Guard",
+      title: "Device Safety",
       description: "Keep hardware workflows predictable with device checks, capability checks and command safety.",
       actionLabel: "View details",
       actionTarget: "./features.html#device-guard",
       dialogTitle: "Predictable hardware workflows",
-      dialogIntro: "Device Guard adds context and lifecycle checks around reader operations so hardware behaviour remains understandable and controlled.",
+      dialogIntro: "Electron's device safety checks add context and lifecycle checks around reader operations so hardware behaviour remains understandable and controlled.",
       details: [
         {
           title: "What it does",
@@ -153,7 +163,7 @@ window.ELECTRON_PORTAL_CONFIG = {
         },
         {
           title: "Collection relationship",
-          text: "Device Guard protects hardware workflows and supplies operational evidence. It does not decide card identity or own Collection records."
+          text: "Device safety checks protect hardware workflows and supply operational information. They do not decide card identity or own Collection records."
         },
         {
           title: "Current Preview scope",

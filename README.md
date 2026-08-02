@@ -82,6 +82,11 @@ copies through `repositoryUrl` and `documentationRef` in `config.js`. Do not
 publish internal plans, handoffs, constitutions or unfinished legal drafts in
 this folder.
 
+The Public Preview 1 snapshot currently contains the Installation Guide, Quick
+Start, User Guide, Public Preview Notice, Known Limitations and Issues, FAQ,
+Support Guide, Release Notes and Changelog. Keep these byte-identical to the
+approved application-repository copies before publication.
+
 ## Release Distribution
 
 Keep release packages separate from the GitHub Pages source so the website

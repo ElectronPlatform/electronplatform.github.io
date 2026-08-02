@@ -3,6 +3,48 @@
 Electron Public Preview is test software. It may contain errors, stop working
 or produce incomplete results.
 
+Public Preview 1 is currently a release candidate. No public installer is
+available until the official Electron website activates a verified download.
+
+## Distribution status
+
+This Early Public Preview is being prepared without Apple Developer ID signing
+or Apple notarization. MacOs may therefore ask the user to confirm the
+application during first launch. Verify the official source revision and the
+published SHA-256 before using the installer, then follow only Apple's normal
+**Open** or **Open Anyway** workflow.
+
+The current internal review candidate is not yet paired with a frozen public
+GitHub source revision. No public download should be enabled until that source
+and package provenance has been verified.
+
+## 30-day Preview period
+
+- The standard Preview period begins when the installed Preview is launched for
+  the first time.
+- The full application remains available for 30 days.
+- Electron shows a reminder during the final five days.
+- After day 30, Electron opens the expiry screen instead of the full
+  application.
+- Saved Collection data is not deleted when the Preview expires.
+- Approved testers may request a signed Preview Extension Key tied to their
+  Installation ID.
+- Preview Extension Key validation happens locally. No internet account or automatic upload is
+  required.
+
+## Local device verification
+
+Electron records privacy-preserving hashes of available local machine and
+network signals so a Preview installation can recognise the Mac on which it
+started. Raw MAC addresses and the raw platform machine identifier are not
+stored or uploaded.
+
+One matching signal is sufficient. Missing signals do not count as a mismatch,
+and small hardware changes are tolerated. Access is paused only after three
+consecutive launches where all available signals differ. A legitimate hardware
+change can be reviewed by Electron Support and restored with a signed,
+short-lived recovery token.
+
 ## What participation means
 
 - Features, screens and data structures may change.
@@ -38,3 +80,7 @@ support channel.
 > I understand that Electron is preview software. I will keep independent
 > backups, verify important results, use only RFID items I own or am authorised
 > to test, and review any feedback package before sharing it.
+
+See the official
+[Documentation page](https://electronplatform.github.io/documentation.html)
+for installation, user and support guidance.

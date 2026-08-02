@@ -34,6 +34,7 @@
       <p class="eyebrow">Preview</p>
       <h1>Preview Release Candidate <span id="previewVersion">0.8.0</span></h1>
       <p>Electron Public Preview 1 is being prepared as a local-first RFID Collection and evidence platform. Core workflows support compatible stock Proxmark3 firmware, while extra hardware status appears only when the connected firmware reports it.</p>
+      <p>The standard Preview lasts 30 days from first launch. After expiry, Electron retains the saved RFID Collection but requires a valid signed Preview Extension Key before the full app can reopen.</p>
       <a id="primaryDownload" class="primaryDownload" href="./download.html">Download &amp; Installation</a>
       <p id="downloadStatus" class="downloadStatus"></p>
     </section>
@@ -44,7 +45,8 @@
         <h2>Build information</h2>
         <div class="previewFacts">
           <div><span>Build</span><strong id="buildLabel">Preview Release Candidate</strong></div>
-          <div><span>Distribution</span><strong>Not published yet</strong></div>
+          <div><span>Distribution</span><strong>Unsigned · not notarized · not published</strong></div>
+          <div><span>Preview access</span><strong>30 days from first launch</strong></div>
           <div><span>Data sharing</span><strong>User controlled</strong></div>
           <div><span>Firmware support</span><strong>Capability based</strong></div>
         </div>
@@ -52,7 +54,7 @@
       <article class="infoPanel">
         <p class="eyebrow">Tester Notes</p>
         <h2>Before testing</h2>
-        <p>Electron Preview is intended for early testers. A firmware change is not required for the core workflows. Signing, notarization, final packaging and clean-machine verification must be completed before the public installer is released.</p>
+        <p>Electron Preview is intended for experienced early testers. A firmware change is not required for the core workflows. Early Public Preview 1 is being prepared without Apple Developer ID signing or Apple notarization; testers must verify the official source, release details and SHA-256 before using the installer.</p>
       </article>
     </section>
 

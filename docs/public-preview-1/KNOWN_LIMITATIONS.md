@@ -1,7 +1,7 @@
-# Known Limitations
+# Known Limitations and Issues
 
-This list describes known limits of Public Preview 1. It is not a list of
-planned features.
+This list describes confirmed limits and known release issues for Public
+Preview 1. It is not a roadmap or a list of promised features.
 
 ## Public Preview limitations
 
@@ -32,13 +32,16 @@ planned features.
 
 ## Distribution and installation limitations
 
-- A final signed and notarized public installer has not yet been confirmed.
-- Clean-machine portability still requires release validation.
-- The currently reviewed MacOs PM3 client has local Homebrew runtime
-  dependencies that must be resolved or reproduced for distribution.
+- No public installer is available yet.
+- The Early Public Preview candidate is not Apple Developer ID signed and is
+  not notarized. The internal package uses only local ad-hoc signing for bundle
+  integrity, which is not equivalent to Apple Developer ID signing.
+- The bundled Apple Silicon PM3 client now links only to MacOs system
+  libraries, but a full clean-machine release test is still required.
 - The exact corresponding Proxmark3 source bundle and build provenance must be
   completed for any release that includes GPL-covered PM3 binaries.
-- The Electron application licence has not yet been selected.
+- The Electron Public Preview License v1.0 has been selected for Public Preview
+  1 and must be included with the release.
 - Windows and Linux packaging targets exist in project configuration, but
   Public Preview 1 support is not claimed until those packages are built and
   tested.
@@ -57,3 +60,30 @@ planned features.
 Device Console and Restore Helper can expose expert or potentially mutating
 commands. Their presence does not replace authorisation, command review or a
 verified backup.
+
+## Preview access limitations
+
+- The standard Preview provides 30 days of full access from first launch.
+- Reinstalling does not promise a new Preview period.
+- Additional testing time and device-verification recovery require an approved
+  signed Preview Extension Key tied to the Installation ID.
+- Device verification is local and tolerant, but it is not an online account
+  or a guarantee against deliberate application modification.
+- There is no online token revocation or account recovery service.
+
+## Known user-facing issues
+
+- Short physical LED activity may finish before the application can observe
+  and mirror it.
+- A PM3 device can appear over USB while its active session is unavailable
+  because another application owns the serial port.
+- Some advanced PM3 commands can be available in Device Console without a
+  guided Electron explanation.
+- Preview data structures may change. A later build may require specific
+  migration instructions.
+
+See the official
+[Documentation page](https://electronplatform.github.io/documentation.html)
+for common explanations and
+[Support](https://electronplatform.github.io/support.html) for reporting an
+issue.

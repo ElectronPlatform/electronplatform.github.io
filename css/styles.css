@@ -534,6 +534,10 @@ body.moduleDialogOpen{overflow:hidden}
 .stepList.compact{margin-top:10px}
 .securityPanel{border-color:rgba(248,212,119,.32)}
 .securityPanel > p:not(.eyebrow){max-width:1060px}
+.distributionNotice{border-color:rgba(248,212,119,.4);background:linear-gradient(145deg,rgba(42,31,7,.72),rgba(5,18,40,.88))}
+.distributionNotice p{max-width:1080px}
+.releaseMetadata{margin-top:18px}
+.releaseMetadata code{display:block;color:#dbeafe;font-size:13px;line-height:1.5;overflow-wrap:anywhere;word-break:break-word;white-space:normal}
 .methodGrid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
