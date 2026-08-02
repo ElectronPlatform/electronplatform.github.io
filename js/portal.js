@@ -286,7 +286,7 @@
   }
 
   function configureDocumentationLinks(){
-    const repository=String(config.repositoryUrl || "").replace(/\/+$/,"");
+    const repository=String(config.documentationRepositoryUrl || config.repositoryUrl || "").replace(/\/+$/,"");
     const reference=encodeURIComponent(String(config.documentationRef || "main"));
     const localReview=window.location.protocol==="file:" ||
       ["localhost","127.0.0.1"].includes(window.location.hostname);
@@ -306,7 +306,9 @@
 
   function init(){
     if(document.body?.dataset?.page==="home"){
-      document.title=`${config.productName || "Electron"} - ${config.subtitle || "RFID Intelligence Platform"}`;
+      if(!String(document.title || "").trim()){
+        document.title=`${config.productName || "Electron"} - ${config.subtitle || "RFID Intelligence Platform"}`;
+      }
     }
     setText("portalTagline", config.tagline);
     setText("previewVersion", config.previewVersion);

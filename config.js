@@ -5,6 +5,7 @@ window.ELECTRON_PORTAL_CONFIG = {
   buildLabel: "Early Public Preview",
   siteUrl: "https://electronplatform.github.io",
   repositoryUrl: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform",
+  documentationRepositoryUrl: "https://github.com/ElectronPlatform/electronplatform.github.io",
   documentationRef: "main",
   downloadUrl: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-arm64.dmg",
   downloadStatusText: "Electron Early Public Preview 1 is available for MacOs Apple Silicon.",
