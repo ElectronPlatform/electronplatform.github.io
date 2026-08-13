@@ -12,6 +12,7 @@ const outputDirectory = path.join(root, "documentation", "public-preview-1");
 const stagingDirectory = path.join(root, ".documentation-staging");
 const templatePath = path.join(root, "templates", "documentation.html");
 const checkOnly = process.argv.includes("--check");
+const publicScreenshotPrefix = "https://raw.githubusercontent.com/ElectronPlatform/electron-rfid-intelligence-platform/main/docs/screenshots/";
 
 const documents = [
   {
@@ -113,6 +114,17 @@ function rewriteDocumentHref(href) {
   return fragment ? `${output}#${fragment}` : output;
 }
 
+function localWebsiteScreenshot(source) {
+  if (!source || !source.startsWith(publicScreenshotPrefix)) {
+    return source;
+  }
+  const filename = source.slice(publicScreenshotPrefix.length);
+  if (!/^[a-z0-9][a-z0-9-]*\.png$/i.test(filename)) {
+    throw new Error(`Unsupported public screenshot path: ${source}`);
+  }
+  return `../../images/screenshots/${filename.replace(/\.png$/i, ".webp")}`;
+}
+
 function renderMarkdown(source) {
   const parsed = marked.parse(source, { gfm: true });
   const dom = new JSDOM(`<body>${parsed}</body>`);
@@ -131,6 +143,7 @@ function renderMarkdown(source) {
   });
 
   document.querySelectorAll("img").forEach(image => {
+    image.setAttribute("src", localWebsiteScreenshot(image.getAttribute("src")));
     image.setAttribute("loading", "lazy");
   });
 

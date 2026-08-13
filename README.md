@@ -83,6 +83,11 @@ Documentation page links to generated, branded HTML under
 website. Do not publish internal plans, handoffs, constitutions or unfinished
 legal drafts in this folder.
 
+The HTML generator resolves approved public-documentation screenshots to the
+optimised local WebP copies under `images/screenshots/`. This keeps visitor
+pages fast and prevents their presentation from depending on GitHub's raw-file
+service.
+
 The Public Preview 1 snapshot currently contains the Installation Guide, Quick
 Start, User Guide, Public Preview Notice, Known Limitations and Issues, FAQ,
 Support Guide, Release Notes and Changelog. Keep these generated from the
