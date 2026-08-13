@@ -38,7 +38,7 @@ the same serial device.
 Open **Device Console** and select **Check Device**. If the USB device is
 detected but the session is not connected, select **Connect Device**.
 
-![Device connection status](docs/screenshots/device-connection-status.png)
+![Device connection status](https://raw.githubusercontent.com/ElectronPlatform/electron-rfid-intelligence-platform/main/docs/screenshots/device-connection-status.png)
 
 The status card separates:
 
@@ -51,7 +51,7 @@ The status card separates:
 Open **Workshop**, choose **Card Lab**, place one authorised card or tag on the
 reader and select **Quick Scan**.
 
-![Card Lab ready for a first scan](docs/screenshots/card-lab-first-scan.png)
+![Card Lab ready for a first scan](https://raw.githubusercontent.com/ElectronPlatform/electron-rfid-intelligence-platform/main/docs/screenshots/card-lab-first-scan.png)
 
 Keep the item steady until the workflow finishes. The progress panel shows the
 current read-only command and completed steps.
@@ -68,13 +68,13 @@ Do not treat a suggested card family or inferred value as chip-reported fact.
 
 Open **RFID Tag**. The workspace starts without a selected record.
 
-![No RFID Tag selected](docs/screenshots/rfid-tag-no-selection.png)
+![No RFID Tag selected](https://raw.githubusercontent.com/ElectronPlatform/electron-rfid-intelligence-platform/main/docs/screenshots/rfid-tag-no-selection.png)
 
 - Select **New RFID Tag** to create a record.
 - Select **Open RFID Tag...** to use an existing Collection record.
 - Search by RFID Tag ID or Alias / Name, select one result and choose **Open**.
 
-![RFID Tag Picker with no matching records](docs/screenshots/rfid-tag-picker-empty-search.png)
+![RFID Tag Picker with no matching records](https://raw.githubusercontent.com/ElectronPlatform/electron-rfid-intelligence-platform/main/docs/screenshots/rfid-tag-picker-empty-search.png)
 
 ## 7. Get help or send feedback
 

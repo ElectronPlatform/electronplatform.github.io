@@ -35,6 +35,10 @@ Preview 1. It is not a roadmap or a list of promised features.
 - The Early Public Preview is not Apple Developer ID signed and is not
   notarized. The package uses only local ad-hoc signing for bundle
   integrity, which is not equivalent to Apple Developer ID signing.
+- Apple Silicon (arm64) and Apple Intel (x64) are the official Mac Preview
+  targets. The currently published package and bundled PM3 client are arm64.
+  The Intel installer remains unavailable until a matching x64 PM3 runtime and
+  package pass the same release verification.
 - The bundled Apple Silicon PM3 client links only to MacOs system libraries.
   The current package was validated on the release Mac and a clean local user
   account; wider Mac and hardware combinations remain unverified.

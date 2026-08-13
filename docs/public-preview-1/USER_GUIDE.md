@@ -17,6 +17,38 @@ Electron is a local-first RFID Collection and evidence platform.
 Electron distinguishes direct evidence from observations, calculations and
 inferences. **Unknown** means that the available evidence is insufficient.
 
+### Normal and Advanced view
+
+Electron starts in **Normal** view on a new installation. Normal focuses on
+understandable summaries, the strongest available evidence, confidence and the
+recommended next action. Select **Advanced** in the application header when
+you need protocol details, evidence sources, command information or expert
+analysis. The choice is shared by the card workspaces and is remembered
+locally.
+
+Normal and Advanced change presentation only. **Advanced never grants a
+permission, disables a safety check or changes Protection/Safe Mode.**
+
+### Protection Mode
+
+Protection Mode controls when Electron asks for extra permission before a
+higher-risk or unrecognised action. New installations use **Always On —
+Recommended**. Settings also offers a **Temporary Expert Session** and **Always
+Off — Advanced users only** for experienced users who do not want repeated
+Protection confirmations.
+
+Temporary Expert Sessions end after the selected 5, 10, 30 or 60 minutes, or
+when the connected PM3 is disconnected, depending on the option selected. They
+never persist across an application restart. **Always Off** persists until the
+user changes it, but it does not disable Electron's hard security boundaries:
+PM3 shell escape and firmware, bootloader and FPGA changes remain unavailable
+through this command path.
+
+Use **Settings → Protection Mode → Restore Recommended Safety Settings** to
+return Protection Mode to **Always On**, return the information view to
+**Normal**, end an active Expert Session and revoke unused one-time Protection
+authorization. Other application settings are not changed.
+
 ## 2. First launch and Preview access
 
 The standard Preview provides 30 days of full access from first launch.
@@ -124,14 +156,23 @@ printer.
 
 ### Scan / Intelligence
 
-This workspace contains Card Lab:
+This workspace acquires a temporary card observation and then hands it to Card
+Lab for explanation:
 
 - **Quick Scan** performs guided identification.
 - **Explore Card** provides a deeper, family-aware workflow when supported.
-- **Card Viewer** presents saved read details and evidence.
+- **Card Lab** explains the likely identity, confidence and recommended next
+  action.
+- **Card Viewer** inspects the captured information and supporting evidence; it
+  does not become a separate database.
 
 Keep the RFID item steady during a scan. The workflow panel shows the current
 step and the read-only PM3 command Electron is observing.
+
+In Normal view, Card Lab and Card Viewer prioritise the readable summary and
+next step. Advanced view reveals technical card structure, protocol sources,
+safe command details and explicit advanced read workflows without changing
+their existing confirmations or safety rules.
 
 ### Research
 

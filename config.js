@@ -8,7 +8,7 @@ window.ELECTRON_PORTAL_CONFIG = {
   documentationRepositoryUrl: "https://github.com/ElectronPlatform/electronplatform.github.io",
   documentationRef: "main",
   downloadUrl: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-arm64.dmg",
-  downloadStatusText: "Electron Early Public Preview 1 is available for MacOs Apple Silicon.",
+  downloadStatusText: "Electron Early Public Preview 1 is available for MacOs Apple Silicon. The Apple Intel installer is being prepared.",
   releaseCandidate: {
     version: "0.8.0",
     buildDate: "2 August 2026, 22:29 AEST",
@@ -28,6 +28,15 @@ window.ELECTRON_PORTAL_CONFIG = {
       unavailableLabel: "Installer unavailable",
       status: "Installer unavailable",
       note: "The MacOs installer link is temporarily unavailable."
+    },
+    macosIntel: {
+      url: "",
+      availableLabel: "Download Electron Preview 1 (.dmg)",
+      availableStatus: "Available now",
+      availableNote: "Download the approved Apple Intel installer from this page.",
+      unavailableLabel: "Installer being prepared",
+      status: "Official Preview target",
+      note: "The Apple Intel installer will be published after its x64 PM3 runtime and package pass release verification."
     },
     windows: {
       url: "",

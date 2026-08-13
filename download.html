@@ -44,7 +44,7 @@
     <section class="pageHero">
       <p class="eyebrow">Early Public Preview 1</p>
       <h1>Download &amp; Installation</h1>
-      <p>This is the official download and installation guide for Electron. Early Public Preview 1 is available for MacOs Apple Silicon and provides 30 days of full application access from first launch.</p>
+      <p>This is the official download and installation guide for Electron. Apple Silicon and Apple Intel are the official Mac Preview targets and share the same features, documentation, licensing and security model. The current public installer is for Apple Silicon and provides 30 days of full application access from first launch.</p>
     </section>
 
     <section class="infoPanel distributionNotice" aria-labelledby="distributionNoticeTitle">
@@ -72,6 +72,15 @@
           <span class="platformStatus" data-download-status>Available now</span>
           <p data-download-note>Download the approved MacOs installer from this page.</p>
           <a class="downloadAction" data-download-action href="https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-arm64.dmg" target="_blank" rel="noopener">Download Electron Preview 1 (.dmg)</a>
+        </article>
+        <article class="downloadCard" data-download-platform="macosIntel">
+          <div>
+            <p class="platformLabel platformLabelMac">MacOs</p>
+            <h3>Apple Intel</h3>
+          </div>
+          <span class="platformStatus" data-download-status>Official Preview target</span>
+          <p data-download-note>The Apple Intel installer will be published after its x64 PM3 runtime and package pass release verification.</p>
+          <a class="downloadAction disabled" data-download-action aria-disabled="true">Installer being prepared</a>
         </article>
         <article class="downloadCard" data-download-platform="windows">
           <div>
@@ -120,7 +129,8 @@
         <p class="eyebrow">System requirements</p>
         <h2>Before you install</h2>
         <ul class="cleanList">
-          <li>Current validation target: a Mac with Apple Silicon.</li>
+          <li>Use the architecture-matched installer for Apple Silicon (arm64) or Apple Intel (x64).</li>
+          <li>The current published and verified installer is Apple Silicon; the Intel package is still being prepared.</li>
           <li>A compatible Proxmark3 and a working USB-C or USB-A connection.</li>
           <li>Permission to test every RFID card, tag or device you use.</li>
           <li>Internet access for downloads and current documentation; core Collection data remains local.</li>

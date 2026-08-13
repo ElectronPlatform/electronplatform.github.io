@@ -82,8 +82,9 @@ time is needed:
 
 1. Open **Settings → Preview Access**.
 2. Select **Request Additional Testing Time**.
-3. Electron prepares an email with the Installation ID and current status.
-4. Review and send the email yourself.
+3. Electron opens the official contact page in the default web browser.
+4. Email Electron Support from that page and include the Installation ID shown
+   in Preview Access, the current status and why more testing time is needed.
 5. If approved, Electron Support supplies a signed Preview Extension Key.
 6. Paste the complete key in Preview Access and select **Apply Extension Key**.
 

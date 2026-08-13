@@ -3,9 +3,17 @@
 This changelog records public, user-visible Electron releases. Internal
 development checkpoints and historical sprint notes are intentionally omitted.
 
-## [0.8.0] — Public Preview 1 release candidate
+## [0.8.0] — Electron Early Public Preview 1
 
-**Public release status:** not published.
+**Released:** 2 August 2026
+
+### Public milestone
+
+- First public GitHub repository.
+- First public GitHub pre-release.
+- First public website.
+- First public download: version 0.8.0.
+- Beginning of the public Electron RFID Intelligence Platform.
 
 ### Added
 
@@ -49,15 +57,13 @@ development checkpoints and historical sprint notes are intentionally omitted.
 
 ### Known limitations
 
-- Public Preview 1 is deliberately unsigned and not notarized; final
-  clean-machine acceptance remains open.
-- Public Preview 1 support is currently limited to the approved MacOs Apple
-  Silicon package when it becomes available.
+- Early Public Preview 1 is deliberately unsigned and not notarized.
+- Early Public Preview 1 support is limited to the published MacOs Apple
+  Silicon package.
 - Hardware and firmware combinations can expose different information.
 - Some hardware fields correctly remain **Unknown**.
-- Electron Public Preview License v1.0 has been selected. The exact
-  corresponding Proxmark3 source release must still be completed before public
-  distribution.
+- Electron Public Preview License v1.0 applies to this release. The matching
+  Proxmark3 corresponding-source package is published with it.
 
 See [Known Limitations and Issues](KNOWN_LIMITATIONS.md) and the
 [Public Preview 1 Release Notes](RELEASE_NOTES_PUBLIC_PREVIEW_1.md).

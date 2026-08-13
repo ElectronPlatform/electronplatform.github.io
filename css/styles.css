@@ -467,7 +467,7 @@ body.moduleDialogOpen{overflow:hidden}
 
 .downloadGrid{
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:14px;
 }
 .downloadCard{

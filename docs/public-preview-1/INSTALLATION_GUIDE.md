@@ -1,7 +1,9 @@
 # Electron Public Preview 1 Installation Guide
 
-**Current status:** the unsigned, non-notarized Apple Silicon DMG is publicly
-available as Electron Early Public Preview 1.
+**Current status:** Apple Silicon (arm64) and Apple Intel (x64) are the two
+official Mac Preview targets. The unsigned, non-notarized Apple Silicon DMG is
+publicly available as Electron Early Public Preview 1. The Intel installer is
+being prepared and is not yet available for download.
 
 Use the official Download and Installation page for current availability:
 
@@ -9,7 +11,8 @@ Use the official Download and Installation page for current availability:
 
 ## Requirements
 
-- A Mac with Apple Silicon.
+- A Mac with Apple Silicon or Apple Intel, using the matching Electron
+  installer when it is available.
 - A supported MacOs version stated with the final release.
 - A compatible Proxmark3 and a working USB-C or USB-A connection.
 - Permission to test every RFID card, tag or device you use.
@@ -39,6 +42,11 @@ In Terminal, the downloaded DMG can be checked with:
 ```text
 shasum -a 256 "/path/to/Electron-Preview-0.8.0-arm64.dmg"
 ```
+
+The published filename identifies the architecture: `arm64` is for Apple
+Silicon and `x64` is for Apple Intel. Never use an installer built for the
+other architecture merely because it can be opened through a compatibility
+layer.
 
 The result must exactly match the checksum on the official release page. Do
 not continue if it differs.

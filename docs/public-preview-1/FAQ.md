@@ -6,8 +6,10 @@ The official Download and Installation page is:
 
 <https://electronplatform.github.io/download.html>
 
-The approved MacOs Apple Silicon installer is available there. Do not use an
-installer from an unofficial source, and verify its published SHA-256 first.
+The approved MacOs Apple Silicon installer is available there. Apple Intel is
+an official Preview target, but its dedicated installer is still being
+prepared. Do not use an installer from an unofficial source, and verify its
+published SHA-256 first.
 
 ## Why is a status shown as Unknown?
 
@@ -69,9 +71,11 @@ Collection data is not deleted when the Preview expires.
 ## How do I request more testing time?
 
 Open **Settings → Preview Access** and select **Request Additional Testing
-Time**. Electron prepares an email containing the Installation ID and status.
-Nothing is sent automatically. If approved, Electron Support supplies a signed
-Preview Extension Key for that Installation ID.
+Time**. Electron opens the official contact page in the default web browser.
+Email Electron Support from that page and include the Installation ID shown in
+Preview Access and why more testing time is needed. Nothing is sent
+automatically. If approved, Electron Support supplies a signed Preview
+Extension Key for that Installation ID.
 
 ## Why does Electron verify the Mac?
 
@@ -135,9 +139,12 @@ Feedback packages are also created locally and must be sent by you.
 
 ## Which operating systems are supported?
 
-Early Public Preview 1 is available for MacOs on Apple Silicon. Windows, Linux
-and Intel Mac support are not claimed until dedicated packages are built and
-tested.
+Apple Silicon (arm64) and Apple Intel (x64) are the official Mac Preview
+targets and use the same Electron features, documentation, licensing and
+security model. The current public download is Apple Silicon. The Intel
+installer will appear only after its architecture-specific PM3 runtime and
+package have passed release verification. Windows and Linux support is not
+claimed until dedicated packages are built and tested.
 
 ## Where do I get help?
 

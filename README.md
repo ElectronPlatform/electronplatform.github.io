@@ -84,8 +84,20 @@ this folder.
 
 The Public Preview 1 snapshot currently contains the Installation Guide, Quick
 Start, User Guide, Public Preview Notice, Known Limitations and Issues, FAQ,
-Support Guide, Release Notes and Changelog. Keep these byte-identical to the
-approved application-repository copies before publication.
+Support Guide, Release Notes and Changelog. Keep these generated from the
+approved application-repository sources before publication. These files must
+not be edited independently in this repository. The generation manifest permits
+only small publication-path adjustments where a target requires them.
+
+From the sibling application repository, update and verify them with:
+
+```text
+npm run docs:sync:website
+npm run docs:check:website
+```
+
+Website HTML, navigation, styling and website-only wording remain owned and
+edited in this repository.
 
 ## Release Distribution
 
