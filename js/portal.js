@@ -285,25 +285,6 @@
     });
   }
 
-  function configureDocumentationLinks(){
-    const repository=String(config.documentationRepositoryUrl || config.repositoryUrl || "").replace(/\/+$/,"");
-    const reference=encodeURIComponent(String(config.documentationRef || "main"));
-    const localReview=window.location.protocol==="file:" ||
-      ["localhost","127.0.0.1"].includes(window.location.hostname);
-    document.querySelectorAll("[data-document-path]").forEach(link=>{
-      const documentPath=String(link.dataset.documentPath || "").replace(/^\/+/,"");
-      if(documentPath && localReview){
-        link.href=`./${documentPath}`;
-        link.target="_blank";
-        link.rel="noopener";
-      }else if(repository && documentPath){
-        link.href=`${repository}/blob/${reference}/${documentPath}`;
-        link.target="_blank";
-        link.rel="noopener";
-      }
-    });
-  }
-
   function init(){
     if(document.body?.dataset?.page==="home"){
       if(!String(document.title || "").trim()){
@@ -320,7 +301,6 @@
     configureReleaseCandidateDetails();
     configureSupportLinks();
     configureFinancialSupport();
-    configureDocumentationLinks();
     renderFeatures();
     configureModuleDialog();
     markActiveNav();

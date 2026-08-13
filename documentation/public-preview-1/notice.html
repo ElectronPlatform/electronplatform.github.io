@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Public Preview Notice - Electron RFID Intelligence Platform</title>
+  <meta name="description" content="Read the responsibilities and safety boundaries for Electron Public Preview 1.">
+  <link rel="canonical" href="https://electronplatform.github.io/documentation/public-preview-1/notice.html">
+  <meta property="og:title" content="Public Preview Notice - Electron RFID Intelligence Platform">
+  <meta property="og:description" content="Read the responsibilities and safety boundaries for Electron Public Preview 1.">
+  <meta property="og:url" content="https://electronplatform.github.io/documentation/public-preview-1/notice.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="../../images/electron-icon.png">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../config.js"></script>
+</head>
+<body data-page="documentation">
+  <header class="siteHeader">
+    <a class="brand" href="../../index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="../../images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html" data-page-link="home">Home</a>
+      <a href="../../preview.html" data-page-link="preview">Preview</a>
+      <a href="../../features.html" data-page-link="features">Features</a>
+      <a href="../../documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="../../about.html" data-page-link="about">About</a>
+      <a href="../../support.html" data-page-link="support">Support</a>
+      <a href="../../contact.html" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink" href="../../download.html"><span class="downloadGlyph" aria-hidden="true">↓</span> Download</a>
+  </header>
+
+  <main class="documentationMain">
+    <nav class="documentationBreadcrumbs" aria-label="Breadcrumb">
+      <a href="../../documentation.html">Documentation</a>
+      <span aria-hidden="true">/</span>
+      <span>Public Preview 1</span>
+    </nav>
+
+    <div class="documentationLayout">
+      <aside class="documentationSidebar" aria-label="Public Preview 1 documents">
+        <p class="eyebrow">Public Preview 1</p>
+        <h2>Documentation</h2>
+        <nav class="documentationMenu">
+          <a href="installation.html">Installation Guide</a>
+          <a href="quick-start.html">Quick Start</a>
+          <a href="user-guide.html">User Guide</a>
+          <a href="notice.html" aria-current="page">Public Preview Notice</a>
+          <a href="limitations.html">Known Limitations</a>
+          <a href="faq.html">FAQ</a>
+          <a href="release-notes.html">Release Notes</a>
+          <a href="support.html">Support Guide</a>
+          <a href="changelog.html">Changelog</a>
+        </nav>
+        <a class="documentationIndexLink" href="../../documentation.html">All documentation</a>
+      </aside>
+
+      <article class="documentationArticle">
+        <div class="documentationContent">
+          <h1 id="public-preview-notice">Public Preview Notice</h1>
+<p>Electron Public Preview is test software. It may contain errors, stop working
+or produce incomplete results.</p>
+<p>Electron Early Public Preview 1 is publicly available through the verified
+download on the official Electron website.</p>
+<h2 id="distribution-status">Distribution status</h2>
+<p>This Early Public Preview is distributed without Apple Developer ID signing
+or Apple notarization. MacOs may therefore ask the user to confirm the
+application during first launch. Verify the official source revision and the
+published SHA-256 before using the installer, then follow only Apple's normal
+<strong>Open</strong> or <strong>Open Anyway</strong> workflow.</p>
+<p>The published DMG is paired with its public GitHub source revision, SHA-256 and
+matching source archives. Download it only through the official website or its
+linked GitHub release.</p>
+<h2 id="30-day-preview-period">30-day Preview period</h2>
+<ul>
+<li>The standard Preview period begins when the installed Preview is launched for
+the first time.</li>
+<li>The full application remains available for 30 days.</li>
+<li>Electron shows a reminder during the final five days.</li>
+<li>After day 30, Electron opens the expiry screen instead of the full
+application.</li>
+<li>Saved Collection data is not deleted when the Preview expires.</li>
+<li>Approved testers may request a signed Preview Extension Key tied to their
+Installation ID.</li>
+<li>Preview Extension Key validation happens locally. No internet account or automatic upload is
+required.</li>
+</ul>
+<h2 id="local-device-verification">Local device verification</h2>
+<p>Electron records privacy-preserving hashes of available local machine and
+network signals so a Preview installation can recognise the Mac on which it
+started. Raw MAC addresses and the raw platform machine identifier are not
+stored or uploaded.</p>
+<p>One matching signal is sufficient. Missing signals do not count as a mismatch,
+and small hardware changes are tolerated. Access is paused only after three
+consecutive launches where all available signals differ. A legitimate hardware
+change can be reviewed by Electron Support and restored with a signed,
+short-lived recovery token.</p>
+<h2 id="what-participation-means">What participation means</h2>
+<ul>
+<li>Features, screens and data structures may change.</li>
+<li>Hardware and firmware combinations may behave differently.</li>
+<li>A detected device or recognised card family does not guarantee that every
+value can be read.</li>
+<li>You remain responsible for your computer, Proxmark3, RFID items and stored
+data.</li>
+<li>Keep independent backups outside Electron.</li>
+<li>Check important results before relying on them.</li>
+<li>Use only RFID items that you own or are authorised to test.</li>
+</ul>
+<p>The Preview is provided for evaluation. Fault-free operation, suitability for
+a particular purpose and recovery of lost data cannot be guaranteed.</p>
+<h2 id="sending-feedback">Sending feedback</h2>
+<p>Select <strong>Send Feedback</strong> in Electron and describe:</p>
+<ol>
+<li>what you were trying to do;</li>
+<li>the steps that led to the issue;</li>
+<li>what you expected;</li>
+<li>what happened instead.</li>
+</ol>
+<p>You may choose to include a screenshot, log or device output. Electron creates
+a local package for review; it is not uploaded automatically. Inspect the
+package and remove card data, keys, dumps, payment information, private paths
+or other sensitive information before sharing it through the official Preview
+support channel.</p>
+<h2 id="short-onboarding-acceptance">Short onboarding acceptance</h2>
+<blockquote>
+<p>I understand that Electron is preview software. I will keep independent
+backups, verify important results, use only RFID items I own or am authorised
+to test, and review any feedback package before sharing it.</p>
+</blockquote>
+<p>See the official
+<a href="https://electronplatform.github.io/documentation.html">Documentation page</a>
+for installation, user and support guidance.</p>
+
+        </div>
+        <nav class="documentationPager" aria-label="Document navigation">
+          <a class="previous" href="user-guide.html"><span>Previous</span><strong>← User Guide</strong></a>
+          <a class="next" href="limitations.html"><span>Next</span><strong>Known Limitations →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="../../images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="footerLinks" role="navigation" aria-label="Footer navigation">
+      <a href="../../download.html">Download &amp; Installation</a>
+      <a href="../../documentation.html">Documentation</a>
+      <a href="../../support.html">Support Electron</a>
+      <a href="../../contact.html">Contact</a>
+    </div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="../../js/portal.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"6b1635ebcaec4df2808ab0c1b22b2358"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

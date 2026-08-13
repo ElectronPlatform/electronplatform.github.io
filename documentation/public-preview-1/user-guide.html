@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Guide - Electron RFID Intelligence Platform</title>
+  <meta name="description" content="Learn the Electron workspaces, records, reports and everyday workflows.">
+  <link rel="canonical" href="https://electronplatform.github.io/documentation/public-preview-1/user-guide.html">
+  <meta property="og:title" content="User Guide - Electron RFID Intelligence Platform">
+  <meta property="og:description" content="Learn the Electron workspaces, records, reports and everyday workflows.">
+  <meta property="og:url" content="https://electronplatform.github.io/documentation/public-preview-1/user-guide.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="../../images/electron-icon.png">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../config.js"></script>
+</head>
+<body data-page="documentation">
+  <header class="siteHeader">
+    <a class="brand" href="../../index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="../../images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html" data-page-link="home">Home</a>
+      <a href="../../preview.html" data-page-link="preview">Preview</a>
+      <a href="../../features.html" data-page-link="features">Features</a>
+      <a href="../../documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="../../about.html" data-page-link="about">About</a>
+      <a href="../../support.html" data-page-link="support">Support</a>
+      <a href="../../contact.html" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink" href="../../download.html"><span class="downloadGlyph" aria-hidden="true">↓</span> Download</a>
+  </header>
+
+  <main class="documentationMain">
+    <nav class="documentationBreadcrumbs" aria-label="Breadcrumb">
+      <a href="../../documentation.html">Documentation</a>
+      <span aria-hidden="true">/</span>
+      <span>Public Preview 1</span>
+    </nav>
+
+    <div class="documentationLayout">
+      <aside class="documentationSidebar" aria-label="Public Preview 1 documents">
+        <p class="eyebrow">Public Preview 1</p>
+        <h2>Documentation</h2>
+        <nav class="documentationMenu">
+          <a href="installation.html">Installation Guide</a>
+          <a href="quick-start.html">Quick Start</a>
+          <a href="user-guide.html" aria-current="page">User Guide</a>
+          <a href="notice.html">Public Preview Notice</a>
+          <a href="limitations.html">Known Limitations</a>
+          <a href="faq.html">FAQ</a>
+          <a href="release-notes.html">Release Notes</a>
+          <a href="support.html">Support Guide</a>
+          <a href="changelog.html">Changelog</a>
+        </nav>
+        <a class="documentationIndexLink" href="../../documentation.html">All documentation</a>
+      </aside>
+
+      <article class="documentationArticle">
+        <div class="documentationContent">
+          <h1 id="electron-public-preview-1-user-guide">Electron Public Preview 1 User Guide</h1>
+<p>This first user guide covers the normal Public Preview workflow. It does not
+replace the safety information in the <a href="notice.html">Public Preview Notice</a>.</p>
+<h2 id="1-how-electron-is-organised">1. How Electron is organised</h2>
+<p>Electron is a local-first RFID Collection and evidence platform.</p>
+<ul>
+<li><strong>Collection</strong> is the lasting record of RFID items you choose to save.</li>
+<li><strong>Scans</strong> are temporary observations until you deliberately save useful
+information.</li>
+<li><strong>Device tools</strong> operate and explain connected hardware.</li>
+<li><strong>Reports and feedback packages</strong> are created locally and shared only when
+you choose.</li>
+</ul>
+<p>Electron distinguishes direct evidence from observations, calculations and
+inferences. <strong>Unknown</strong> means that the available evidence is insufficient.</p>
+<h3 id="normal-and-advanced-view">Normal and Advanced view</h3>
+<p>Electron starts in <strong>Normal</strong> view on a new installation. Normal focuses on
+understandable summaries, the strongest available evidence, confidence and the
+recommended next action. Select <strong>Advanced</strong> in the application header when
+you need protocol details, evidence sources, command information or expert
+analysis. The choice is shared by the card workspaces and is remembered
+locally.</p>
+<p>Normal and Advanced change presentation only. <strong>Advanced never grants a
+permission, disables a safety check or changes Protection/Safe Mode.</strong></p>
+<h3 id="protection-mode">Protection Mode</h3>
+<p>Protection Mode controls when Electron asks for extra permission before a
+higher-risk or unrecognised action. New installations use <strong>Always On —
+Recommended</strong>. Settings also offers a <strong>Temporary Expert Session</strong> and <strong>Always
+Off — Advanced users only</strong> for experienced users who do not want repeated
+Protection confirmations.</p>
+<p>Temporary Expert Sessions end after the selected 5, 10, 30 or 60 minutes, or
+when the connected PM3 is disconnected, depending on the option selected. They
+never persist across an application restart. <strong>Always Off</strong> persists until the
+user changes it, but it does not disable Electron's hard security boundaries:
+PM3 shell escape and firmware, bootloader and FPGA changes remain unavailable
+through this command path.</p>
+<p>Use <strong>Settings → Protection Mode → Restore Recommended Safety Settings</strong> to
+return Protection Mode to <strong>Always On</strong>, return the information view to
+<strong>Normal</strong>, end an active Expert Session and revoke unused one-time Protection
+authorization. Other application settings are not changed.</p>
+<h2 id="2-first-launch-and-preview-access">2. First launch and Preview access</h2>
+<p>The standard Preview provides 30 days of full access from first launch.</p>
+<p>Open <strong>Settings → Preview Access</strong> to see:</p>
+<ul>
+<li>Installation ID;</li>
+<li>installation date;</li>
+<li>days remaining;</li>
+<li>access end date;</li>
+<li>tester level;</li>
+<li>device-verification status.</li>
+</ul>
+<p>Saved Collection data is not deleted when the Preview expires. Approved
+additional testing time requires a signed Preview Extension Key tied to the Installation ID.</p>
+<h2 id="3-main-workspaces">3. Main workspaces</h2>
+<h3 id="workshop">Workshop</h3>
+<p>Use Workshop when you know the task but not which technical workspace to open.
+It provides entry points for Card Lab, Collection, Device Studio and advanced
+tools.</p>
+<h3 id="collection">Collection</h3>
+<p>Collection lists saved RFID Tag records. Use it to:</p>
+<ul>
+<li>search and open records;</li>
+<li>review Collection health and backup status;</li>
+<li>import or export selected records;</li>
+<li>open one record in the RFID Tag workspace.</li>
+</ul>
+<h3 id="rfid-tag">RFID Tag</h3>
+<p>RFID Tag starts with <strong>No RFID tag selected</strong>.</p>
+<ul>
+<li><strong>Open RFID Tag...</strong> opens the shared picker.</li>
+<li><strong>New RFID Tag</strong> starts an empty record.</li>
+<li>Existing records show their Alias / Name and RFID Tag ID.</li>
+</ul>
+<p>The picker searches RFID Tag ID and Alias / Name by default. Additional search
+fields are available under <strong>More Search Options</strong>. Select a column heading to
+sort results.</p>
+<h3 id="device-console">Device Console</h3>
+<p>Device Console owns the active PM3 session and direct command workflows. It
+shows:</p>
+<ul>
+<li>USB device detection;</li>
+<li>active-session state;</li>
+<li>diagnostic availability;</li>
+<li>recommended next action;</li>
+<li>command output.</li>
+</ul>
+<p>Use <strong>Check Device</strong> to detect USB presence. Use <strong>Connect Device</strong> to start an
+active PM3 session. Only one application can normally use the PM3 serial port
+at a time.</p>
+<p>Device Console is an expert surface. Read a command and its safety status
+before running it.</p>
+<h3 id="device-studio">Device Studio</h3>
+<p>Device Studio explains connected Proxmark3 hardware through a PCB view,
+component information and safe diagnostics.</p>
+<p>Public Preview Device Studio:</p>
+<ul>
+<li>is diagnostic and read-only;</li>
+<li>does not flash firmware;</li>
+<li>does not reconfigure the FPGA;</li>
+<li>does not write, clone, emulate, restore or attack RFID items;</li>
+<li>reports unsupported information as Unknown;</li>
+<li>shows additional status only when hardware or firmware evidence supports it.</li>
+</ul>
+<p>Use <strong>Quick Refresh</strong> for current status. Use <strong>Full RF Check</strong> only when you
+want the explicit read-only RF measurements.</p>
+<h3 id="restore-helper">Restore Helper</h3>
+<p>Restore Helper starts without a selected RFID Tag. Open a record, verify the
+registered backup and review every generated command.</p>
+<p>A generated command is not proof that the target is correct. Confirm:</p>
+<ul>
+<li>ownership or authorisation;</li>
+<li>exact card family and target;</li>
+<li>backup integrity;</li>
+<li>recovery path;</li>
+<li>effect of every command.</li>
+</ul>
+<h3 id="compare">Compare</h3>
+<p>Compare starts without selected records. Choose the source and destination
+RFID Tags explicitly, then compare their registered backups. Loose-file
+comparison remains separate.</p>
+<h3 id="labels">Labels</h3>
+<p>Labels starts without a selected RFID Tag. Choose a saved record, select the
+label style and use Print Preview. Direct printing requires a configured label
+printer.</p>
+<h3 id="scan-intelligence">Scan / Intelligence</h3>
+<p>This workspace acquires a temporary card observation and then hands it to Card
+Lab for explanation:</p>
+<ul>
+<li><strong>Quick Scan</strong> performs guided identification.</li>
+<li><strong>Explore Card</strong> provides a deeper, family-aware workflow when supported.</li>
+<li><strong>Card Lab</strong> explains the likely identity, confidence and recommended next
+action.</li>
+<li><strong>Card Viewer</strong> inspects the captured information and supporting evidence; it
+does not become a separate database.</li>
+</ul>
+<p>Keep the RFID item steady during a scan. The workflow panel shows the current
+step and the read-only PM3 command Electron is observing.</p>
+<p>In Normal view, Card Lab and Card Viewer prioritise the readable summary and
+next step. Advanced view reveals technical card structure, protocol sources,
+safe command details and explicit advanced read workflows without changing
+their existing confirmations or safety rules.</p>
+<h3 id="research">Research</h3>
+<p>Research stores user-created local research records and verified knowledge
+context. Nothing is uploaded automatically.</p>
+<h3 id="electron-portal">Electron Portal</h3>
+<p>Electron Portal provides Preview, support, licence, update and project
+information. <strong>Visit Electron Portal</strong> opens the official website.</p>
+<h3 id="history-and-change-log">History and Change Log</h3>
+<p>History presents stored RFID history and observations. Change Log shows
+compact summaries of local record changes. Use <strong>View full details</strong> to inspect
+previous and new values.</p>
+<h2 id="4-first-safe-scan">4. First safe scan</h2>
+<ol>
+<li>Connect the Proxmark3 by USB.</li>
+<li>Open Device Console and select <strong>Check Device</strong>.</li>
+<li>Select <strong>Connect Device</strong> if USB is detected but no session is active.</li>
+<li>Open Workshop and choose <strong>Card Lab</strong>.</li>
+<li>Place one authorised card or tag on the reader.</li>
+<li>Select <strong>Quick Scan</strong>.</li>
+<li>Wait for the workflow to finish.</li>
+<li>Review the result and evidence sources.</li>
+<li>Save only the information you intend to keep.</li>
+</ol>
+<p>Do not treat a suggested family or inferred value as direct chip evidence.</p>
+<h2 id="5-saving-and-backing-up-records">5. Saving and backing up records</h2>
+<p>Collection data is local. Use Collection export and database backup tools to
+keep an independent copy.</p>
+<p>Before a risky test:</p>
+<ol>
+<li>open the correct RFID Tag;</li>
+<li>verify the current UID and card family;</li>
+<li>register or create the required backup;</li>
+<li>confirm that the backup can be found and read;</li>
+<li>store another copy outside Electron.</li>
+</ol>
+<p>An application reinstall is not a backup strategy.</p>
+<h2 id="6-reports">6. Reports</h2>
+<p>Reports are derived from selected Electron information. Review a report before
+sharing it, especially when it contains:</p>
+<ul>
+<li>UIDs or identifiers;</li>
+<li>screenshots;</li>
+<li>technical card data;</li>
+<li>local file paths;</li>
+<li>device or firmware information.</li>
+</ul>
+<p>Electron does not make an unsafe disclosure safe merely by placing it in a
+report.</p>
+<h2 id="7-feedback">7. Feedback</h2>
+<p>Select <strong>Send Feedback</strong> to create a local, reviewable package. Include the
+steps, expected result and actual result. Add screenshots or logs only when
+useful.</p>
+<p>Nothing is uploaded automatically. Inspect and redact the package before
+sending it through the official support route.</p>
+<h2 id="8-settings">8. Settings</h2>
+<p>Settings contains:</p>
+<ul>
+<li>photo-storage quality for newly selected photos;</li>
+<li>Help Engine visibility;</li>
+<li>additional Device Command Safety rules;</li>
+<li>database management;</li>
+<li>Preview Access;</li>
+<li>backup storage location.</li>
+</ul>
+<p>Public Preview does not expose Engineering Mode, maintainer hotspot authoring
+or the internal Preview Build Checklist.</p>
+<h2 id="9-updating-or-reinstalling">9. Updating or reinstalling</h2>
+<p>Quit Electron before replacing the application with a newer approved build.
+Read that build's release notes and back up the Collection first.</p>
+<p>Replacing the application normally preserves local data, but future Preview
+release notes may require different steps. Preview access is associated with
+local installation data; reinstalling does not promise a new 30-day period.</p>
+<h2 id="10-troubleshooting">10. Troubleshooting</h2>
+<h3 id="usb-detected-session-not-connected">USB detected, session not connected</h3>
+<p>Close other software using the PM3 serial port and select <strong>Connect Device</strong>.</p>
+<h3 id="device-not-detected">Device not detected</h3>
+<p>Reconnect the USB cable, try a direct port or known working adapter and select
+<strong>Check Device</strong> again.</p>
+<h3 id="device-studio-shows-unknown">Device Studio shows Unknown</h3>
+<p>The current hardware, PM3 client or firmware did not provide enough evidence.
+Unknown is not automatically a fault.</p>
+<h3 id="a-scan-finds-nothing">A scan finds nothing</h3>
+<p>Keep the item steady, verify whether it is HF or LF, remove other RFID items
+from the reader area and try the appropriate authorised scan.</p>
+<h3 id="electron-is-no-longer-opening-the-full-app">Electron is no longer opening the full app</h3>
+<p>Open the Preview Access information shown on the expiry screen. If the 30-day
+period ended, request approved additional testing time. If device verification
+paused access, request a device review.</p>
+<h3 id="more-help">More help</h3>
+<ul>
+<li><a href="installation.html">Installation Guide</a></li>
+<li><a href="quick-start.html">Quick Start</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="limitations.html">Known Limitations and Issues</a></li>
+<li><a href="support.html">Support Guide</a></li>
+</ul>
+
+        </div>
+        <nav class="documentationPager" aria-label="Document navigation">
+          <a class="previous" href="quick-start.html"><span>Previous</span><strong>← Quick Start</strong></a>
+          <a class="next" href="notice.html"><span>Next</span><strong>Public Preview Notice →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="../../images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="footerLinks" role="navigation" aria-label="Footer navigation">
+      <a href="../../download.html">Download &amp; Installation</a>
+      <a href="../../documentation.html">Documentation</a>
+      <a href="../../support.html">Support Electron</a>
+      <a href="../../contact.html">Contact</a>
+    </div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="../../js/portal.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"6b1635ebcaec4df2808ab0c1b22b2358"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

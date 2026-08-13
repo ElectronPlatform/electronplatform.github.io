@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Known Limitations - Electron RFID Intelligence Platform</title>
+  <meta name="description" content="Review current platform, hardware and workflow limitations.">
+  <link rel="canonical" href="https://electronplatform.github.io/documentation/public-preview-1/limitations.html">
+  <meta property="og:title" content="Known Limitations - Electron RFID Intelligence Platform">
+  <meta property="og:description" content="Review current platform, hardware and workflow limitations.">
+  <meta property="og:url" content="https://electronplatform.github.io/documentation/public-preview-1/limitations.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="../../images/electron-icon.png">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../config.js"></script>
+</head>
+<body data-page="documentation">
+  <header class="siteHeader">
+    <a class="brand" href="../../index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="../../images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html" data-page-link="home">Home</a>
+      <a href="../../preview.html" data-page-link="preview">Preview</a>
+      <a href="../../features.html" data-page-link="features">Features</a>
+      <a href="../../documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="../../about.html" data-page-link="about">About</a>
+      <a href="../../support.html" data-page-link="support">Support</a>
+      <a href="../../contact.html" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink" href="../../download.html"><span class="downloadGlyph" aria-hidden="true">↓</span> Download</a>
+  </header>
+
+  <main class="documentationMain">
+    <nav class="documentationBreadcrumbs" aria-label="Breadcrumb">
+      <a href="../../documentation.html">Documentation</a>
+      <span aria-hidden="true">/</span>
+      <span>Public Preview 1</span>
+    </nav>
+
+    <div class="documentationLayout">
+      <aside class="documentationSidebar" aria-label="Public Preview 1 documents">
+        <p class="eyebrow">Public Preview 1</p>
+        <h2>Documentation</h2>
+        <nav class="documentationMenu">
+          <a href="installation.html">Installation Guide</a>
+          <a href="quick-start.html">Quick Start</a>
+          <a href="user-guide.html">User Guide</a>
+          <a href="notice.html">Public Preview Notice</a>
+          <a href="limitations.html" aria-current="page">Known Limitations</a>
+          <a href="faq.html">FAQ</a>
+          <a href="release-notes.html">Release Notes</a>
+          <a href="support.html">Support Guide</a>
+          <a href="changelog.html">Changelog</a>
+        </nav>
+        <a class="documentationIndexLink" href="../../documentation.html">All documentation</a>
+      </aside>
+
+      <article class="documentationArticle">
+        <div class="documentationContent">
+          <h1 id="known-limitations-and-issues">Known Limitations and Issues</h1>
+<p>This list describes confirmed limits and known release issues for Public
+Preview 1. It is not a roadmap or a list of promised features.</p>
+<h2 id="public-preview-limitations">Public Preview limitations</h2>
+<ul>
+<li>Workflows, labels and stored-data structures may still change.</li>
+<li>The Electron Engine currently provides a read-only background foundation and
+shared connection-status information. A complete guided diagnostic workflow
+is not part of this Preview.</li>
+<li>Some hardware fields remain <strong>Unknown</strong> when the PM3 client or firmware does
+not report evidence for them.</li>
+<li>Support has not been verified across every Proxmark3 board and firmware
+combination.</li>
+<li>Only one program can normally use the PM3 serial connection at a time.</li>
+<li>Multiple simultaneous Proxmark3 devices are not supported as a normal
+workflow.</li>
+</ul>
+<h2 id="hardware-and-firmware-dependencies">Hardware and firmware dependencies</h2>
+<ul>
+<li>Available scan and diagnostic data depends on the PM3 client, firmware,
+FPGA image, board type and connected RFID item.</li>
+<li>Stock firmware may expose less structured status information than the
+Device Studio development firmware.</li>
+<li>Stable device serial number, PCB revision, LED brightness, authoritative
+busy state, temperature and power-sensor data may not be available.</li>
+<li>Short physical LED pulses are not guaranteed to be mirrored perfectly in the
+application.</li>
+<li>Device Studio does not guess a component state when firmware evidence is
+absent.</li>
+</ul>
+<h2 id="distribution-and-installation-limitations">Distribution and installation limitations</h2>
+<ul>
+<li>The Early Public Preview is not Apple Developer ID signed and is not
+notarized. The package uses only local ad-hoc signing for bundle
+integrity, which is not equivalent to Apple Developer ID signing.</li>
+<li>Apple Silicon (arm64) and Apple Intel (x64) are the official Mac Preview
+targets. The currently published package and bundled PM3 client are arm64.
+The Intel installer remains unavailable until a matching x64 PM3 runtime and
+package pass the same release verification.</li>
+<li>The bundled Apple Silicon PM3 client links only to MacOs system libraries.
+The current package was validated on the release Mac and a clean local user
+account; wider Mac and hardware combinations remain unverified.</li>
+<li>The matching corresponding Proxmark3 source bundle and build provenance are
+published with this release.</li>
+<li>The Electron Public Preview License v1.0 has been selected for Public Preview
+1 and must be included with the release.</li>
+<li>Windows and Linux packaging targets exist in project configuration, but
+Public Preview 1 support is not claimed until those packages are built and
+tested.</li>
+</ul>
+<h2 id="deliberately-not-available-in-preview-1">Deliberately not available in Preview 1</h2>
+<ul>
+<li>Maintainer hotspot calibration and component-authoring tools in public
+packages.</li>
+<li>Engineering Mode and the internal Preview Build Checklist in public
+packages.</li>
+<li>Firmware flashing, FPGA reconfiguration, RFID writing, cloning, emulation or
+attack workflows inside Device Studio.</li>
+<li>Full live RF visualisation and background hardware monitoring.</li>
+<li>Automatic cloud upload of Collection data or feedback packages.</li>
+</ul>
+<p>Device Console and Restore Helper can expose expert or potentially mutating
+commands. Their presence does not replace authorisation, command review or a
+verified backup.</p>
+<h2 id="preview-access-limitations">Preview access limitations</h2>
+<ul>
+<li>The standard Preview provides 30 days of full access from first launch.</li>
+<li>Reinstalling does not promise a new Preview period.</li>
+<li>Additional testing time and device-verification recovery require an approved
+signed Preview Extension Key tied to the Installation ID.</li>
+<li>Device verification is local and tolerant, but it is not an online account
+or a guarantee against deliberate application modification.</li>
+<li>There is no online token revocation or account recovery service.</li>
+</ul>
+<h2 id="known-user-facing-issues">Known user-facing issues</h2>
+<ul>
+<li>Short physical LED activity may finish before the application can observe
+and mirror it.</li>
+<li>A PM3 device can appear over USB while its active session is unavailable
+because another application owns the serial port.</li>
+<li>Some advanced PM3 commands can be available in Device Console without a
+guided Electron explanation.</li>
+<li>Preview data structures may change. A later build may require specific
+migration instructions.</li>
+</ul>
+<p>See the official
+<a href="https://electronplatform.github.io/documentation.html">Documentation page</a>
+for common explanations and
+<a href="https://electronplatform.github.io/support.html">Support</a> for reporting an
+issue.</p>
+
+        </div>
+        <nav class="documentationPager" aria-label="Document navigation">
+          <a class="previous" href="notice.html"><span>Previous</span><strong>← Public Preview Notice</strong></a>
+          <a class="next" href="faq.html"><span>Next</span><strong>FAQ →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="../../images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="footerLinks" role="navigation" aria-label="Footer navigation">
+      <a href="../../download.html">Download &amp; Installation</a>
+      <a href="../../documentation.html">Documentation</a>
+      <a href="../../support.html">Support Electron</a>
+      <a href="../../contact.html">Contact</a>
+    </div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="../../js/portal.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"6b1635ebcaec4df2808ab0c1b22b2358"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

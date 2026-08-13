@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Installation Guide - Electron RFID Intelligence Platform</title>
+  <meta name="description" content="Install, verify and start Electron Public Preview 1 safely.">
+  <link rel="canonical" href="https://electronplatform.github.io/documentation/public-preview-1/installation.html">
+  <meta property="og:title" content="Installation Guide - Electron RFID Intelligence Platform">
+  <meta property="og:description" content="Install, verify and start Electron Public Preview 1 safely.">
+  <meta property="og:url" content="https://electronplatform.github.io/documentation/public-preview-1/installation.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="../../images/electron-icon.png">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../config.js"></script>
+</head>
+<body data-page="documentation">
+  <header class="siteHeader">
+    <a class="brand" href="../../index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="../../images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html" data-page-link="home">Home</a>
+      <a href="../../preview.html" data-page-link="preview">Preview</a>
+      <a href="../../features.html" data-page-link="features">Features</a>
+      <a href="../../documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="../../about.html" data-page-link="about">About</a>
+      <a href="../../support.html" data-page-link="support">Support</a>
+      <a href="../../contact.html" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink" href="../../download.html"><span class="downloadGlyph" aria-hidden="true">↓</span> Download</a>
+  </header>
+
+  <main class="documentationMain">
+    <nav class="documentationBreadcrumbs" aria-label="Breadcrumb">
+      <a href="../../documentation.html">Documentation</a>
+      <span aria-hidden="true">/</span>
+      <span>Public Preview 1</span>
+    </nav>
+
+    <div class="documentationLayout">
+      <aside class="documentationSidebar" aria-label="Public Preview 1 documents">
+        <p class="eyebrow">Public Preview 1</p>
+        <h2>Documentation</h2>
+        <nav class="documentationMenu">
+          <a href="installation.html" aria-current="page">Installation Guide</a>
+          <a href="quick-start.html">Quick Start</a>
+          <a href="user-guide.html">User Guide</a>
+          <a href="notice.html">Public Preview Notice</a>
+          <a href="limitations.html">Known Limitations</a>
+          <a href="faq.html">FAQ</a>
+          <a href="release-notes.html">Release Notes</a>
+          <a href="support.html">Support Guide</a>
+          <a href="changelog.html">Changelog</a>
+        </nav>
+        <a class="documentationIndexLink" href="../../documentation.html">All documentation</a>
+      </aside>
+
+      <article class="documentationArticle">
+        <div class="documentationContent">
+          <h1 id="electron-public-preview-1-installation-guide">Electron Public Preview 1 Installation Guide</h1>
+<p><strong>Current status:</strong> Apple Silicon (arm64) and Apple Intel (x64) are the two
+official Mac Preview targets. The unsigned, non-notarized Apple Silicon DMG is
+publicly available as Electron Early Public Preview 1. The Intel installer is
+being prepared and is not yet available for download.</p>
+<p>Use the official Download and Installation page for current availability:</p>
+<p><a href="https://electronplatform.github.io/download.html">https://electronplatform.github.io/download.html</a></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>A Mac with Apple Silicon or Apple Intel, using the matching Electron
+installer when it is available.</li>
+<li>A supported MacOs version stated with the final release.</li>
+<li>A compatible Proxmark3 and a working USB-C or USB-A connection.</li>
+<li>Permission to test every RFID card, tag or device you use.</li>
+<li>An independent backup location for important Collection data.</li>
+</ul>
+<p>Internet access is needed to download Electron and view current online
+documentation. The core application, Collection and Preview Extension Key validation operate
+locally.</p>
+<h2 id="early-public-preview-distribution">Early Public Preview distribution</h2>
+<p>Electron Early Public Preview 1 is distributed without Apple Developer ID
+signing or Apple notarization. This allows the project to gather real-world
+feedback before investing in Apple's Developer Program.</p>
+<p>The published DMG was built from the matching public GitHub source revision,
+checked after packaging and published with its exact SHA-256 and corresponding
+source archives.</p>
+<h2 id="verify-the-installer">Verify the installer</h2>
+<p>Download Electron only from the official website or its linked GitHub release.
+The release page must publish the installer filename and SHA-256 checksum.</p>
+<p>In Terminal, the downloaded DMG can be checked with:</p>
+<pre><code class="language-text">shasum -a 256 "/path/to/Electron-Preview-0.8.0-arm64.dmg"
+</code></pre>
+<p>The published filename identifies the architecture: <code>arm64</code> is for Apple
+Silicon and <code>x64</code> is for Apple Intel. Never use an installer built for the
+other architecture merely because it can be opened through a compatibility
+layer.</p>
+<p>The result must exactly match the checksum on the official release page. Do
+not continue if it differs.</p>
+<h2 id="install-electron">Install Electron</h2>
+<ol>
+<li>Open the downloaded DMG.</li>
+<li>Drag <strong>Electron Preview</strong> into <strong>Applications</strong>.</li>
+<li>Wait for the copy to finish.</li>
+<li>Eject the Electron installer.</li>
+<li>Open <strong>Electron Preview</strong> from Applications.</li>
+</ol>
+<p>Installing a newer approved Preview normally means replacing the application
+in Applications. Quit Electron and read that build's release notes first.</p>
+<h2 id="first-launch-on-macos">First launch on MacOs</h2>
+<p>Because this Early Public Preview is not Apple Developer ID signed or
+notarized, MacOs may show messages such as:</p>
+<ul>
+<li>“Electron cannot be opened because it is from an unidentified developer.”</li>
+<li>“Apple could not verify this application.”</li>
+</ul>
+<p>These messages are expected for this distribution method. They describe the
+application's signing status and do not by themselves show that Electron is
+unsafe. Electron is intended for review and testing when the DMG comes from the
+official release, its checksum matches and the published source revision can
+be inspected.</p>
+<p>Use only Apple's normal <strong>Open</strong> or <strong>Open Anyway</strong> workflow after confirming
+the source and checksum. Do not disable MacOs security or use Terminal commands
+to remove its protection.</p>
+<h3 id="open-from-applications">Open from Applications</h3>
+<ol>
+<li>Open Applications.</li>
+<li>Right-click or Control-click <strong>Electron Preview</strong>.</li>
+<li>Select <strong>Open</strong>.</li>
+<li>Select <strong>Open</strong> again when MacOs asks for confirmation.</li>
+</ol>
+<h3 id="use-privacy-security">Use Privacy &amp; Security</h3>
+<ol>
+<li>Try to open Electron once.</li>
+<li>Open <strong>System Settings</strong>.</li>
+<li>Select <strong>Privacy &amp; Security</strong>.</li>
+<li>Scroll to the Security section.</li>
+<li>Select <strong>Open Anyway</strong> for Electron and confirm.</li>
+<li>Open Electron again.</li>
+</ol>
+<h2 id="what-electron-creates-on-first-launch">What Electron creates on first launch</h2>
+<p>On first launch Electron:</p>
+<ul>
+<li>creates local Preview settings and support folders;</li>
+<li>creates an Installation ID;</li>
+<li>starts the standard 30-day Preview period;</li>
+<li>opens with an empty starter Collection for a new user;</li>
+<li>does not require an internet account;</li>
+<li>does not upload Collection or feedback data automatically.</li>
+</ul>
+<p>The Installation ID and access status are visible under <strong>Settings → Preview
+Access</strong>.</p>
+<h2 id="connect-a-proxmark3">Connect a Proxmark3</h2>
+<ol>
+<li>Connect the Proxmark3 directly by USB.</li>
+<li>Close other programs that may be using its serial port.</li>
+<li>Open <strong>Device Console</strong>.</li>
+<li>Select <strong>Check Device</strong>.</li>
+<li>If <strong>USB device</strong> is detected but <strong>Active session</strong> is not connected,
+select <strong>Connect Device</strong>.</li>
+</ol>
+<p>USB detection only means that the computer can see a compatible device. An
+active session means Electron can communicate with it.</p>
+<h2 id="storage-and-reinstall-behaviour">Storage and reinstall behaviour</h2>
+<p>Application removal and local data removal are separate:</p>
+<ul>
+<li>replacing or removing the application should not by itself delete the
+Collection;</li>
+<li>Preview data is stored under the current user's Electron Preview data
+locations;</li>
+<li>reinstalling does not promise a new 30-day period;</li>
+<li>back up the Collection before replacing a build or intentionally deleting
+local data.</li>
+</ul>
+<p>Follow release-specific migration instructions when supplied. Do not assume a
+future build can always read older Preview data.</p>
+<h2 id="uninstall">Uninstall</h2>
+<p>To remove the application, quit Electron and move <strong>Electron Preview</strong> from
+Applications to the Bin.</p>
+<p>Do not remove the Electron Preview data folders unless you intentionally want
+to remove local settings, access information and Collection data. Make a
+verified backup first.</p>
+<h2 id="need-help">Need help?</h2>
+<ul>
+<li><a href="quick-start.html">Quick Start</a></li>
+<li><a href="user-guide.html">User Guide</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="limitations.html">Known Limitations and Issues</a></li>
+<li><a href="support.html">Support Guide</a></li>
+<li><a href="https://electronplatform.github.io/contact.html">https://electronplatform.github.io/contact.html</a></li>
+</ul>
+
+        </div>
+        <nav class="documentationPager" aria-label="Document navigation">
+          <span class="documentationPagerSpacer"></span>
+          <a class="next" href="quick-start.html"><span>Next</span><strong>Quick Start →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="../../images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="footerLinks" role="navigation" aria-label="Footer navigation">
+      <a href="../../download.html">Download &amp; Installation</a>
+      <a href="../../documentation.html">Documentation</a>
+      <a href="../../support.html">Support Electron</a>
+      <a href="../../contact.html">Contact</a>
+    </div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="../../js/portal.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"6b1635ebcaec4df2808ab0c1b22b2358"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

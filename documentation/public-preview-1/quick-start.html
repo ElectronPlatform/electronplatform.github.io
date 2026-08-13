@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick Start - Electron RFID Intelligence Platform</title>
+  <meta name="description" content="Connect a Proxmark3 and complete your first safe scan with Electron.">
+  <link rel="canonical" href="https://electronplatform.github.io/documentation/public-preview-1/quick-start.html">
+  <meta property="og:title" content="Quick Start - Electron RFID Intelligence Platform">
+  <meta property="og:description" content="Connect a Proxmark3 and complete your first safe scan with Electron.">
+  <meta property="og:url" content="https://electronplatform.github.io/documentation/public-preview-1/quick-start.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="../../images/electron-icon.png">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../config.js"></script>
+</head>
+<body data-page="documentation">
+  <header class="siteHeader">
+    <a class="brand" href="../../index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="../../images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html" data-page-link="home">Home</a>
+      <a href="../../preview.html" data-page-link="preview">Preview</a>
+      <a href="../../features.html" data-page-link="features">Features</a>
+      <a href="../../documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="../../about.html" data-page-link="about">About</a>
+      <a href="../../support.html" data-page-link="support">Support</a>
+      <a href="../../contact.html" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink" href="../../download.html"><span class="downloadGlyph" aria-hidden="true">↓</span> Download</a>
+  </header>
+
+  <main class="documentationMain">
+    <nav class="documentationBreadcrumbs" aria-label="Breadcrumb">
+      <a href="../../documentation.html">Documentation</a>
+      <span aria-hidden="true">/</span>
+      <span>Public Preview 1</span>
+    </nav>
+
+    <div class="documentationLayout">
+      <aside class="documentationSidebar" aria-label="Public Preview 1 documents">
+        <p class="eyebrow">Public Preview 1</p>
+        <h2>Documentation</h2>
+        <nav class="documentationMenu">
+          <a href="installation.html">Installation Guide</a>
+          <a href="quick-start.html" aria-current="page">Quick Start</a>
+          <a href="user-guide.html">User Guide</a>
+          <a href="notice.html">Public Preview Notice</a>
+          <a href="limitations.html">Known Limitations</a>
+          <a href="faq.html">FAQ</a>
+          <a href="release-notes.html">Release Notes</a>
+          <a href="support.html">Support Guide</a>
+          <a href="changelog.html">Changelog</a>
+        </nav>
+        <a class="documentationIndexLink" href="../../documentation.html">All documentation</a>
+      </aside>
+
+      <article class="documentationArticle">
+        <div class="documentationContent">
+          <h1 id="electron-public-preview-1-quick-start">Electron Public Preview 1 Quick Start</h1>
+<p>Use these steps to make your first safe scan.</p>
+<p>For installation and MacOs security guidance, first read the official
+<a href="https://electronplatform.github.io/download.html">Download and Installation Guide</a>.</p>
+<h2 id="1-check-the-requirements">1. Check the requirements</h2>
+<p>You need:</p>
+<ul>
+<li>the approved Electron Public Preview package supplied to you;</li>
+<li>a compatible Proxmark3 and USB cable;</li>
+<li>the supported PM3 client and firmware supplied or identified for that build;</li>
+<li>permission to test the RFID item;</li>
+<li>an independent backup of any important Electron data.</li>
+</ul>
+<p>The current release process has been validated primarily on MacOs with Apple
+Silicon.
+Platform support for your package should be confirmed by the Preview
+coordinator.</p>
+<h2 id="2-install-and-start-electron">2. Install and start Electron</h2>
+<p>Follow the instructions supplied with your Preview package. Early Public
+Preview 1 is distributed without Apple Developer ID signing or Apple
+notarization.</p>
+<p>MacOs may show an unidentified-developer or verification message. Use only
+Apple's normal <strong>Open</strong> or <strong>Open Anyway</strong> workflow after confirming the
+official source and SHA-256. Do not disable operating-system security.</p>
+<h2 id="3-connect-the-proxmark3">3. Connect the Proxmark3</h2>
+<p>Connect the Proxmark3 directly by USB. Close other programs that may be using
+the same serial device.</p>
+<p>Open <strong>Device Console</strong> and select <strong>Check Device</strong>. If the USB device is
+detected but the session is not connected, select <strong>Connect Device</strong>.</p>
+<p><img src="https://raw.githubusercontent.com/ElectronPlatform/electron-rfid-intelligence-platform/main/docs/screenshots/device-connection-status.png" alt="Device connection status" loading="lazy" /></p>
+<p>The status card separates:</p>
+<ul>
+<li><strong>USB device</strong> — whether the computer can see the device;</li>
+<li><strong>Active session</strong> — whether Electron can communicate with it;</li>
+<li><strong>Diagnostics</strong> — whether current measurements are available.</li>
+</ul>
+<h2 id="4-run-a-first-safe-scan">4. Run a first safe scan</h2>
+<p>Open <strong>Workshop</strong>, choose <strong>Card Lab</strong>, place one authorised card or tag on the
+reader and select <strong>Quick Scan</strong>.</p>
+<p><img src="https://raw.githubusercontent.com/ElectronPlatform/electron-rfid-intelligence-platform/main/docs/screenshots/card-lab-first-scan.png" alt="Card Lab ready for a first scan" loading="lazy" /></p>
+<p>Keep the item steady until the workflow finishes. The progress panel shows the
+current read-only command and completed steps.</p>
+<h2 id="5-review-the-result">5. Review the result</h2>
+<p>Read the Card Lab explanation, then open <strong>Card Viewer</strong> for the stored read
+details. A value shown as <strong>Unknown</strong> was not supported by the available
+evidence.</p>
+<p>Do not treat a suggested card family or inferred value as chip-reported fact.</p>
+<h2 id="6-save-or-open-an-rfid-tag">6. Save or open an RFID Tag</h2>
+<p>Open <strong>RFID Tag</strong>. The workspace starts without a selected record.</p>
+<p><img src="https://raw.githubusercontent.com/ElectronPlatform/electron-rfid-intelligence-platform/main/docs/screenshots/rfid-tag-no-selection.png" alt="No RFID Tag selected" loading="lazy" /></p>
+<ul>
+<li>Select <strong>New RFID Tag</strong> to create a record.</li>
+<li>Select <strong>Open RFID Tag...</strong> to use an existing Collection record.</li>
+<li>Search by RFID Tag ID or Alias / Name, select one result and choose <strong>Open</strong>.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/ElectronPlatform/electron-rfid-intelligence-platform/main/docs/screenshots/rfid-tag-picker-empty-search.png" alt="RFID Tag Picker with no matching records" loading="lazy" /></p>
+<h2 id="7-get-help-or-send-feedback">7. Get help or send feedback</h2>
+<p>Use the information buttons beside controls for contextual help. Select
+<strong>Send Feedback</strong> in the application header to prepare a local feedback
+package.</p>
+<p>Include:</p>
+<ul>
+<li>what you tried;</li>
+<li>what you expected and what happened;</li>
+<li>the Electron version;</li>
+<li>connection and firmware information when relevant;</li>
+<li>a screenshot only after checking it for private data.</li>
+</ul>
+<p>Electron does not automatically upload the package. Inspect it first, then
+share it through the official Preview support channel if you choose.</p>
+<p>Continue through the
+<a href="https://electronplatform.github.io/documentation.html">Documentation page</a>,
+or use <a href="https://electronplatform.github.io/support.html">Support</a> if something
+does not work as expected.</p>
+
+        </div>
+        <nav class="documentationPager" aria-label="Document navigation">
+          <a class="previous" href="installation.html"><span>Previous</span><strong>← Installation Guide</strong></a>
+          <a class="next" href="user-guide.html"><span>Next</span><strong>User Guide →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="../../images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="footerLinks" role="navigation" aria-label="Footer navigation">
+      <a href="../../download.html">Download &amp; Installation</a>
+      <a href="../../documentation.html">Documentation</a>
+      <a href="../../support.html">Support Electron</a>
+      <a href="../../contact.html">Contact</a>
+    </div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="../../js/portal.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"6b1635ebcaec4df2808ab0c1b22b2358"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

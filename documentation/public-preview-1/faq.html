@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ - Electron RFID Intelligence Platform</title>
+  <meta name="description" content="Answers to common questions about Electron Public Preview 1.">
+  <link rel="canonical" href="https://electronplatform.github.io/documentation/public-preview-1/faq.html">
+  <meta property="og:title" content="FAQ - Electron RFID Intelligence Platform">
+  <meta property="og:description" content="Answers to common questions about Electron Public Preview 1.">
+  <meta property="og:url" content="https://electronplatform.github.io/documentation/public-preview-1/faq.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="../../images/electron-icon.png">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../config.js"></script>
+</head>
+<body data-page="documentation">
+  <header class="siteHeader">
+    <a class="brand" href="../../index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="../../images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html" data-page-link="home">Home</a>
+      <a href="../../preview.html" data-page-link="preview">Preview</a>
+      <a href="../../features.html" data-page-link="features">Features</a>
+      <a href="../../documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="../../about.html" data-page-link="about">About</a>
+      <a href="../../support.html" data-page-link="support">Support</a>
+      <a href="../../contact.html" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink" href="../../download.html"><span class="downloadGlyph" aria-hidden="true">↓</span> Download</a>
+  </header>
+
+  <main class="documentationMain">
+    <nav class="documentationBreadcrumbs" aria-label="Breadcrumb">
+      <a href="../../documentation.html">Documentation</a>
+      <span aria-hidden="true">/</span>
+      <span>Public Preview 1</span>
+    </nav>
+
+    <div class="documentationLayout">
+      <aside class="documentationSidebar" aria-label="Public Preview 1 documents">
+        <p class="eyebrow">Public Preview 1</p>
+        <h2>Documentation</h2>
+        <nav class="documentationMenu">
+          <a href="installation.html">Installation Guide</a>
+          <a href="quick-start.html">Quick Start</a>
+          <a href="user-guide.html">User Guide</a>
+          <a href="notice.html">Public Preview Notice</a>
+          <a href="limitations.html">Known Limitations</a>
+          <a href="faq.html" aria-current="page">FAQ</a>
+          <a href="release-notes.html">Release Notes</a>
+          <a href="support.html">Support Guide</a>
+          <a href="changelog.html">Changelog</a>
+        </nav>
+        <a class="documentationIndexLink" href="../../documentation.html">All documentation</a>
+      </aside>
+
+      <article class="documentationArticle">
+        <div class="documentationContent">
+          <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<h2 id="where-can-i-download-electron">Where can I download Electron?</h2>
+<p>The official Download and Installation page is:</p>
+<p><a href="https://electronplatform.github.io/download.html">https://electronplatform.github.io/download.html</a></p>
+<p>The approved MacOs Apple Silicon installer is available there. Apple Intel is
+an official Preview target, but its dedicated installer is still being
+prepared. Do not use an installer from an unofficial source, and verify its
+published SHA-256 first.</p>
+<h2 id="why-is-a-status-shown-as-unknown">Why is a status shown as Unknown?</h2>
+<p>Electron did not receive enough evidence to report that value. The hardware,
+PM3 client or firmware may not expose it. Electron shows <strong>Unknown</strong> instead of
+guessing.</p>
+<h2 id="why-is-my-proxmark3-visible-over-usb-but-there-is-no-active-session">Why is my Proxmark3 visible over USB but there is no active session?</h2>
+<p>USB detection only confirms that the computer can see a likely device. Select
+<strong>Connect Device</strong> to start Electron's PM3 session. Close other software using
+the same serial port first.</p>
+<h2 id="can-electron-recognise-data-automatically">Can Electron recognise data automatically?</h2>
+<p>Electron can parse supported PM3 output and suggest a card family or explain
+reported fields. Results depend on the card, command, client and firmware.
+Check whether a value is reported, observed, calculated or inferred.</p>
+<h2 id="may-i-scan-or-copy-any-rfid-tag">May I scan or copy any RFID tag?</h2>
+<p>No. Use only items that you own or are authorised to test. Copying, writing or
+emulating a credential can be restricted or unlawful even when reading its
+public identification data is possible.</p>
+<h2 id="where-are-rfid-tag-records-stored">Where are RFID Tag records stored?</h2>
+<p>They are stored locally in Electron's Collection database on your computer.
+Electron does not automatically upload them. Use the backup tools and keep an
+independent copy in a safe location.</p>
+<h2 id="why-is-this-a-public-preview">Why is this a Public Preview?</h2>
+<p>The core workflows are ready for real testing, but compatibility, packaging
+and some user-facing details still need validation across more systems and
+hardware combinations.</p>
+<h2 id="why-isn-t-electron-signed-yet">Why isn't Electron signed yet?</h2>
+<p>This is an early community Preview. Apple Developer ID signing and notarization
+require a paid Apple Developer Program membership. Early Public Preview 1 is
+therefore distributed for experienced testers with a published checksum and
+matching source information.</p>
+<p>MacOs may show an unidentified-developer or verification message during first
+launch. This is expected for the current distribution method. Follow only
+Apple's normal <strong>Open</strong> or <strong>Open Anyway</strong> procedure after verifying the
+official download and SHA-256.</p>
+<p>If the Preview proves valuable, later broader public releases are intended to
+use Apple Developer ID signing and Apple notarization.</p>
+<h2 id="how-long-can-i-use-the-preview">How long can I use the Preview?</h2>
+<p>The standard Preview provides 30 days of full access from first launch.
+Electron shows the current status under <strong>Settings → Preview Access</strong>. Saved
+Collection data is not deleted when the Preview expires.</p>
+<h2 id="how-do-i-request-more-testing-time">How do I request more testing time?</h2>
+<p>Open <strong>Settings → Preview Access</strong> and select <strong>Request Additional Testing
+Time</strong>. Electron opens the official contact page in the default web browser.
+Email Electron Support from that page and include the Installation ID shown in
+Preview Access and why more testing time is needed. Nothing is sent
+automatically. If approved, Electron Support supplies a signed Preview
+Extension Key for that Installation ID.</p>
+<h2 id="why-does-electron-verify-the-mac">Why does Electron verify the Mac?</h2>
+<p>Preview access is intended for the installation on which it began. Electron
+stores privacy-preserving hashes of available machine and network signals. It
+does not store or upload raw MAC addresses or the raw platform machine
+identifier.</p>
+<p>Normal hardware changes are tolerated. If every available signal differs
+during three consecutive launches, access pauses and Electron offers a device
+review route.</p>
+<h2 id="does-reinstalling-start-another-30-days">Does reinstalling start another 30 days?</h2>
+<p>No. Reinstalling the application does not promise a new Preview period.
+Application files, Preview access information and Collection data are separate.</p>
+<h2 id="does-expiry-delete-my-collection">Does expiry delete my Collection?</h2>
+<p>No. Preview expiry stops the full application from opening but does not delete
+the saved Collection. Keep an independent backup regardless.</p>
+<h2 id="does-electron-require-an-internet-account">Does Electron require an internet account?</h2>
+<p>No. Core use, Collection storage and Preview Extension Key validation are local.
+Internet access is needed for downloads, current documentation and support
+messages that you choose to send.</p>
+<h2 id="what-should-i-include-with-feedback">What should I include with feedback?</h2>
+<p>Include the steps, expected result, actual result and Electron version. Add
+connection, firmware or device information when relevant. Review every
+screenshot, log and feedback package before sharing it; remove private RFID
+data, keys, dumps, payment information, paths and identifiers.</p>
+<h2 id="what-should-i-do-before-a-restore-or-write-action">What should I do before a restore or write action?</h2>
+<p>Confirm ownership or permission, identify the exact target, read the command,
+make and verify a backup, and understand which data will change. Stop if the
+card family, target or recovery path is uncertain.</p>
+<h2 id="does-device-studio-write-to-cards-or-flash-firmware">Does Device Studio write to cards or flash firmware?</h2>
+<p>No. Device Studio is diagnostic and read-only. It does not provide firmware
+flashing, FPGA reconfiguration, RFID writing, cloning, restore, emulation or
+attack workflows.</p>
+<p>Device Console and Restore Helper are separate expert surfaces and can expose
+commands that require additional review and authorisation.</p>
+<h2 id="why-do-the-header-leds-not-always-match-a-short-physical-flash">Why do the header LEDs not always match a short physical flash?</h2>
+<p>Short hardware LED pulses can finish before polling observes them. Electron
+does not invent persistent physical LED states to make the display look more
+active.</p>
+<h2 id="is-my-collection-uploaded">Is my Collection uploaded?</h2>
+<p>No. Collection data remains local unless you deliberately export or share it.
+Feedback packages are also created locally and must be sent by you.</p>
+<h2 id="which-operating-systems-are-supported">Which operating systems are supported?</h2>
+<p>Apple Silicon (arm64) and Apple Intel (x64) are the official Mac Preview
+targets and use the same Electron features, documentation, licensing and
+security model. The current public download is Apple Silicon. The Intel
+installer will appear only after its architecture-specific PM3 runtime and
+package have passed release verification. Windows and Linux support is not
+claimed until dedicated packages are built and tested.</p>
+<h2 id="where-do-i-get-help">Where do I get help?</h2>
+<p>Read the <a href="support.html">Support Guide</a> or use the official Contact page:</p>
+<p><a href="https://electronplatform.github.io/contact.html">https://electronplatform.github.io/contact.html</a></p>
+
+        </div>
+        <nav class="documentationPager" aria-label="Document navigation">
+          <a class="previous" href="limitations.html"><span>Previous</span><strong>← Known Limitations</strong></a>
+          <a class="next" href="release-notes.html"><span>Next</span><strong>Release Notes →</strong></a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="../../images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="footerLinks" role="navigation" aria-label="Footer navigation">
+      <a href="../../download.html">Download &amp; Installation</a>
+      <a href="../../documentation.html">Documentation</a>
+      <a href="../../support.html">Support Electron</a>
+      <a href="../../contact.html">Contact</a>
+    </div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="../../js/portal.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"6b1635ebcaec4df2808ab0c1b22b2358"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

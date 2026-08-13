@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog - Electron RFID Intelligence Platform</title>
+  <meta name="description" content="Review the public change history for Electron Public Preview 1.">
+  <link rel="canonical" href="https://electronplatform.github.io/documentation/public-preview-1/changelog.html">
+  <meta property="og:title" content="Changelog - Electron RFID Intelligence Platform">
+  <meta property="og:description" content="Review the public change history for Electron Public Preview 1.">
+  <meta property="og:url" content="https://electronplatform.github.io/documentation/public-preview-1/changelog.html">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/png" href="../../images/electron-icon.png">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../config.js"></script>
+</head>
+<body data-page="documentation">
+  <header class="siteHeader">
+    <a class="brand" href="../../index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="../../images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html" data-page-link="home">Home</a>
+      <a href="../../preview.html" data-page-link="preview">Preview</a>
+      <a href="../../features.html" data-page-link="features">Features</a>
+      <a href="../../documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="../../about.html" data-page-link="about">About</a>
+      <a href="../../support.html" data-page-link="support">Support</a>
+      <a href="../../contact.html" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink" href="../../download.html"><span class="downloadGlyph" aria-hidden="true">↓</span> Download</a>
+  </header>
+
+  <main class="documentationMain">
+    <nav class="documentationBreadcrumbs" aria-label="Breadcrumb">
+      <a href="../../documentation.html">Documentation</a>
+      <span aria-hidden="true">/</span>
+      <span>Public Preview 1</span>
+    </nav>
+
+    <div class="documentationLayout">
+      <aside class="documentationSidebar" aria-label="Public Preview 1 documents">
+        <p class="eyebrow">Public Preview 1</p>
+        <h2>Documentation</h2>
+        <nav class="documentationMenu">
+          <a href="installation.html">Installation Guide</a>
+          <a href="quick-start.html">Quick Start</a>
+          <a href="user-guide.html">User Guide</a>
+          <a href="notice.html">Public Preview Notice</a>
+          <a href="limitations.html">Known Limitations</a>
+          <a href="faq.html">FAQ</a>
+          <a href="release-notes.html">Release Notes</a>
+          <a href="support.html">Support Guide</a>
+          <a href="changelog.html" aria-current="page">Changelog</a>
+        </nav>
+        <a class="documentationIndexLink" href="../../documentation.html">All documentation</a>
+      </aside>
+
+      <article class="documentationArticle">
+        <div class="documentationContent">
+          <h1 id="changelog">Changelog</h1>
+<p>This changelog records public, user-visible Electron releases. Internal
+development checkpoints and historical sprint notes are intentionally omitted.</p>
+<h2 id="0-8-0-electron-early-public-preview-1">[0.8.0] — Electron Early Public Preview 1</h2>
+<p><strong>Released:</strong> 2 August 2026</p>
+<h3 id="public-milestone">Public milestone</h3>
+<ul>
+<li>First public GitHub repository.</li>
+<li>First public GitHub pre-release.</li>
+<li>First public website.</li>
+<li>First public download: version 0.8.0.</li>
+<li>Beginning of the public Electron RFID Intelligence Platform.</li>
+</ul>
+<h3 id="added">Added</h3>
+<ul>
+<li>Guided Card Lab HF and LF identification workflows.</li>
+<li>Card Viewer for reviewing stored read evidence.</li>
+<li>Local Collection and RFID Tag record management.</li>
+<li>Shared RFID Tag Picker for RFID Tag, Restore Helper, Compare and Labels.</li>
+<li>Device Console with command library and command-safety controls.</li>
+<li>Device Studio PCB Explorer and safe, read-only diagnostics.</li>
+<li>Research, History and Change Log workspaces.</li>
+<li>Local reports and user-controlled feedback packages.</li>
+<li>Shared workflow-progress panel for supported scans and analysis.</li>
+<li>Clear connection status separating USB detection, active PM3 session and
+diagnostic availability.</li>
+<li>Thirty-day Preview access with signed extension and recovery tokens.</li>
+<li>Privacy-preserving, tolerant local device verification.</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>RFID-related workspaces no longer silently select a Collection record.</li>
+<li>Change Log tables use compact summaries with full details in the existing
+detail view.</li>
+<li>Card Viewer distinguishes reported, observed and inferred evidence and no
+longer accepts temporary physical-card notes that disappear after the
+session.</li>
+<li>Public Preview packages hide maintainer authoring, hotspot calibration,
+Engineering Mode and the internal build checklist.</li>
+<li>Public wording uses Device Connection, Compatibility and Diagnostics instead
+of the former user-facing internal name.</li>
+</ul>
+<h3 id="safety-and-privacy">Safety and privacy</h3>
+<ul>
+<li>Device Studio remains diagnostic and read-only.</li>
+<li>Feedback packages are created locally and are never uploaded automatically.</li>
+<li>Saved Collection data remains local unless the user explicitly exports or
+shares it.</li>
+<li>Raw MAC addresses and raw machine identifiers are not stored for Preview
+device verification.</li>
+<li>Legacy <code>EP-EXT</code> values are rejected; approved access changes require signed
+tokens.</li>
+</ul>
+<h3 id="known-limitations">Known limitations</h3>
+<ul>
+<li>Early Public Preview 1 is deliberately unsigned and not notarized.</li>
+<li>Early Public Preview 1 support is limited to the published MacOs Apple
+Silicon package.</li>
+<li>Hardware and firmware combinations can expose different information.</li>
+<li>Some hardware fields correctly remain <strong>Unknown</strong>.</li>
+<li>Electron Public Preview License v1.0 applies to this release. The matching
+Proxmark3 corresponding-source package is published with it.</li>
+</ul>
+<p>See <a href="limitations.html">Known Limitations and Issues</a> and the
+<a href="release-notes.html">Public Preview 1 Release Notes</a>.</p>
+
+        </div>
+        <nav class="documentationPager" aria-label="Document navigation">
+          <a class="previous" href="support.html"><span>Previous</span><strong>← Support Guide</strong></a>
+          <span class="documentationPagerSpacer"></span>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="../../images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="footerLinks" role="navigation" aria-label="Footer navigation">
+      <a href="../../download.html">Download &amp; Installation</a>
+      <a href="../../documentation.html">Documentation</a>
+      <a href="../../support.html">Support Electron</a>
+      <a href="../../contact.html">Contact</a>
+    </div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="../../js/portal.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"6b1635ebcaec4df2808ab0c1b22b2358"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

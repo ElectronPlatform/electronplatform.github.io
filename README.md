@@ -77,10 +77,11 @@ The website uses relative paths such as `./css`, `./js`, `./images` and
 `./assets`, making it portable to any static web server.
 
 Public documentation snapshots for a release belong under
-`docs/<release-name>/`. The Documentation page links to the GitHub-rendered
-copies through `repositoryUrl` and `documentationRef` in `config.js`. Do not
-publish internal plans, handoffs, constitutions or unfinished legal drafts in
-this folder.
+`docs/<release-name>/`. Markdown remains the authoritative source. The
+Documentation page links to generated, branded HTML under
+`documentation/<release-name>/`, so visitors stay within the public Electron
+website. Do not publish internal plans, handoffs, constitutions or unfinished
+legal drafts in this folder.
 
 The Public Preview 1 snapshot currently contains the Installation Guide, Quick
 Start, User Guide, Public Preview Notice, Known Limitations and Issues, FAQ,
@@ -113,17 +114,17 @@ fallback until the first approved package is published.
 
 ## Local Preview
 
-Open this file in a browser:
+Install the documentation build dependencies and generate the public pages:
 
 ```text
-index.html
+npm install
+npm run build:docs
 ```
 
-No Node.js server is required for the current static version.
-
-If you prefer a local web server during testing, run one inside the Portal folder
-and open `http://localhost:8080`. A missing `favicon.ico` warning is harmless if
-the browser asks for it before deployment.
+Then run `npm run preview` and open `http://localhost:8080`. Use
+`npm run check:docs` to verify that all generated pages are current and valid.
+The published site remains fully static; Node.js is used only while generating
+and validating the documentation.
 
 ## Publishing Workflow
 
@@ -142,7 +143,8 @@ database are needed.
 
 - Platform download URLs and status: `config.js`
 - Shared download status: `config.js`
-- Public documentation Git reference: `config.js`
+- Documentation source-to-page mapping: `scripts/build-docs.js`
+- Documentation page template: `templates/documentation.html`
 - Preview version: `config.js`
 - Footer credits: `config.js`
 - Feature cards: `config.js`
@@ -152,6 +154,7 @@ database are needed.
 - Images: `images/`
 - Public screenshots: `images/screenshots/`
 - Public release-document snapshots: `docs/`
+- Generated public documentation pages: `documentation/`
 - Static assets: `assets/`
 - Support email: `config.js`
 - External support provider, label, URL and expectation text: `config.js`
