@@ -64,15 +64,14 @@
         <div class="documentationContent">
           <h1 id="electron-public-preview-1-installation-guide">Electron Public Preview 1 Installation Guide</h1>
 <p><strong>Current status:</strong> Apple Silicon (arm64) and Apple Intel (x64) are the two
-official Mac Preview targets. The unsigned, non-notarized Apple Silicon DMG is
-publicly available as Electron Early Public Preview 1. The Intel installer is
-being prepared and is not yet available for download.</p>
+official Mac Preview targets. Architecture-specific unsigned, non-notarized
+DMGs for both are publicly available as Electron Early Public Preview 1.</p>
 <p>Use the official Download and Installation page for current availability:</p>
 <p><a href="https://electronplatform.github.io/download.html">https://electronplatform.github.io/download.html</a></p>
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li>A Mac with Apple Silicon or Apple Intel, using the matching Electron
-installer when it is available.</li>
+installer.</li>
 <li>A supported MacOs version stated with the final release.</li>
 <li>A compatible Proxmark3 and a working USB-C or USB-A connection.</li>
 <li>Permission to test every RFID card, tag or device you use.</li>
@@ -93,6 +92,7 @@ source archives.</p>
 The release page must publish the installer filename and SHA-256 checksum.</p>
 <p>In Terminal, the downloaded DMG can be checked with:</p>
 <pre><code class="language-text">shasum -a 256 "/path/to/Electron-Preview-0.8.0-arm64.dmg"
+shasum -a 256 "/path/to/Electron-Preview-0.8.0-x64.dmg"
 </code></pre>
 <p>The published filename identifies the architecture: <code>arm64</code> is for Apple
 Silicon and <code>x64</code> is for Apple Intel. Never use an installer built for the

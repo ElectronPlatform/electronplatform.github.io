@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Download Electron Early Public Preview 1 for MacOs Apple Silicon, verify its SHA-256 and follow the unsigned, not-notarized installation guide.">
+  <meta name="description" content="Download Electron Early Public Preview 1 for MacOs Apple Silicon or Apple Intel, verify its SHA-256 and follow the unsigned, not-notarized installation guide.">
   <meta name="robots" content="index, follow">
-  <title>Download Electron RFID | MacOs Apple Silicon Preview</title>
+  <title>Download Electron RFID | MacOs Preview</title>
   <link rel="canonical" href="https://electronplatform.github.io/download.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Electron RFID Intelligence Platform">
-  <meta property="og:title" content="Download Electron RFID | MacOs Apple Silicon Preview">
-  <meta property="og:description" content="Official DMG, checksum and installation guidance for Electron Early Public Preview 1 on MacOs Apple Silicon.">
+  <meta property="og:title" content="Download Electron RFID | MacOs Preview">
+  <meta property="og:description" content="Official DMGs, checksums and installation guidance for Electron Early Public Preview 1 on MacOs Apple Silicon and Apple Intel.">
   <meta property="og:url" content="https://electronplatform.github.io/download.html">
   <meta property="og:image" content="https://electronplatform.github.io/images/screenshots/device-connection-status.webp">
   <meta property="og:image:alt" content="Electron Proxmark3 connection status">
@@ -44,7 +44,7 @@
     <section class="pageHero">
       <p class="eyebrow">Early Public Preview 1</p>
       <h1>Download &amp; Installation</h1>
-      <p>This is the official download and installation guide for Electron. Apple Silicon and Apple Intel are the official Mac Preview targets and share the same features, documentation, licensing and security model. The current public installer is for Apple Silicon and provides 30 days of full application access from first launch.</p>
+      <p>This is the official download and installation guide for Electron. Apple Silicon and Apple Intel are the official Mac Preview targets and share the same features, documentation, licensing and security model. Choose the installer that matches your Mac. Both provide 30 days of full application access from first launch.</p>
     </section>
 
     <section class="infoPanel distributionNotice" aria-labelledby="distributionNoticeTitle">
@@ -78,9 +78,9 @@
             <p class="platformLabel platformLabelMac">MacOs</p>
             <h3>Apple Intel</h3>
           </div>
-          <span class="platformStatus" data-download-status>Official Preview target</span>
-          <p data-download-note>The Apple Intel installer will be published after its x64 PM3 runtime and package pass release verification.</p>
-          <a class="downloadAction disabled" data-download-action aria-disabled="true">Installer being prepared</a>
+          <span class="platformStatus" data-download-status>Available now</span>
+          <p data-download-note>Download the approved Apple Intel installer from this page.</p>
+          <a class="downloadAction" data-download-action href="https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-x64.dmg" target="_blank" rel="noopener">Download Electron Preview 1 (.dmg)</a>
         </article>
         <article class="downloadCard" data-download-platform="windows">
           <div>
@@ -113,13 +113,15 @@
       </div>
       <div class="previewFacts">
         <div><span>Version</span><strong data-release-field="version">0.8.0</strong></div>
-        <div><span>Build date</span><strong data-release-field="buildDate">2 August 2026, 22:29 AEST</strong></div>
+        <div><span>Build dates</span><strong data-release-field="buildDate">2 August 2026 (arm64); 17 August 2026 (x64)</strong></div>
         <div><span>Bundle ID</span><strong data-release-field="bundleId">app.electronrfid.preview</strong></div>
-        <div><span>Installer filename</span><strong data-release-field="filename">Electron-Preview-0.8.0-arm64.dmg</strong></div>
+        <div><span>Apple Silicon filename</span><strong data-release-field="filename">Electron-Preview-0.8.0-arm64.dmg</strong></div>
+        <div><span>Apple Intel filename</span><strong>Electron-Preview-0.8.0-x64.dmg</strong></div>
         <div><span>Signing</span><strong data-release-field="signingStatus">Not Apple Developer ID signed</strong></div>
         <div><span>Notarization</span><strong data-release-field="notarizationStatus">Not notarized</strong></div>
-        <div><span>Source provenance</span><strong data-release-field="provenanceStatus">Verified against public source commit 4fdcec2714dd</strong></div>
-        <div><span>SHA-256</span><code data-release-field="sha256">61fae56779c550fa0dc8a09ca47dcf26fdbb64f963a81d6750495530a5bd6d03</code></div>
+        <div><span>Source provenance</span><strong data-release-field="provenanceStatus">arm64: 4fdcec2714dd; x64: 73132225ddda</strong></div>
+        <div><span>Apple Silicon SHA-256</span><code data-release-field="sha256">61fae56779c550fa0dc8a09ca47dcf26fdbb64f963a81d6750495530a5bd6d03</code></div>
+        <div><span>Apple Intel SHA-256</span><code>9acbe0803accb20dfbbccde2a2fc7bf7e87bd817bea536664da7cdb19559ec59</code></div>
       </div>
       <p class="supportNote">Download <a href="https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/SHA256SUMS.txt">SHA256SUMS.txt</a> or view the <a href="https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/tag/v0.8.0-early-preview.1">complete GitHub release and matching source archives</a>.</p>
     </section>
@@ -130,7 +132,7 @@
         <h2>Before you install</h2>
         <ul class="cleanList">
           <li>Use the architecture-matched installer for Apple Silicon (arm64) or Apple Intel (x64).</li>
-          <li>The current published and verified installer is Apple Silicon; the Intel package is still being prepared.</li>
+          <li>Both architecture-specific installers are published and verified; choose the one that matches your Mac.</li>
           <li>A compatible Proxmark3 and a working USB-C or USB-A connection.</li>
           <li>Permission to test every RFID card, tag or device you use.</li>
           <li>Internet access for downloads and current documentation; core Collection data remains local.</li>

@@ -6,16 +6,16 @@ window.ELECTRON_PORTAL_CONFIG = {
   siteUrl: "https://electronplatform.github.io",
   repositoryUrl: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform",
   downloadUrl: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-arm64.dmg",
-  downloadStatusText: "Electron Early Public Preview 1 is available for MacOs Apple Silicon. The Apple Intel installer is being prepared.",
+  downloadStatusText: "Electron Early Public Preview 1 is available for MacOs Apple Silicon and Apple Intel.",
   releaseCandidate: {
     version: "0.8.0",
-    buildDate: "2 August 2026, 22:29 AEST",
+    buildDate: "2 August 2026 (arm64); 17 August 2026 (x64)",
     bundleId: "app.electronrfid.preview",
     filename: "Electron-Preview-0.8.0-arm64.dmg",
     sha256: "61fae56779c550fa0dc8a09ca47dcf26fdbb64f963a81d6750495530a5bd6d03",
     signingStatus: "Not Apple Developer ID signed",
     notarizationStatus: "Not notarized",
-    provenanceStatus: "Verified against public source commit 4fdcec2714dd"
+    provenanceStatus: "arm64: 4fdcec2714dd; x64: 73132225ddda"
   },
   downloads: {
     macosAppleSilicon: {
@@ -28,13 +28,13 @@ window.ELECTRON_PORTAL_CONFIG = {
       note: "The MacOs installer link is temporarily unavailable."
     },
     macosIntel: {
-      url: "",
+      url: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-x64.dmg",
       availableLabel: "Download Electron Preview 1 (.dmg)",
       availableStatus: "Available now",
       availableNote: "Download the approved Apple Intel installer from this page.",
       unavailableLabel: "Installer being prepared",
       status: "Official Preview target",
-      note: "The Apple Intel installer will be published after its x64 PM3 runtime and package pass release verification."
+      note: "Download the approved Apple Intel installer from this page."
     },
     windows: {
       url: "",

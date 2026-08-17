@@ -36,12 +36,11 @@ Preview 1. It is not a roadmap or a list of promised features.
   notarized. The package uses only local ad-hoc signing for bundle
   integrity, which is not equivalent to Apple Developer ID signing.
 - Apple Silicon (arm64) and Apple Intel (x64) are the official Mac Preview
-  targets. The currently published package and bundled PM3 client are arm64.
-  The Intel installer remains unavailable until a matching x64 PM3 runtime and
-  package pass the same release verification.
-- The bundled Apple Silicon PM3 client links only to MacOs system libraries.
-  The current package was validated on the release Mac and a clean local user
-  account; wider Mac and hardware combinations remain unverified.
+  targets. Separate architecture-specific installers and PM3 clients are
+  published for both targets.
+- The bundled Apple Silicon and Apple Intel PM3 clients link only to MacOs
+  system libraries. Each package passed architecture-specific qualification;
+  wider Mac and hardware combinations remain unverified.
 - The matching corresponding Proxmark3 source bundle and build provenance are
   published with this release.
 - The Electron Public Preview License v1.0 has been selected for Public Preview

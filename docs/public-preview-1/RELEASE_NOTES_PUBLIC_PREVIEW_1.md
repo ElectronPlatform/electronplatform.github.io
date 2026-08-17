@@ -2,7 +2,7 @@
 
 **Application version:** 0.8.0
 
-**Release target:** MacOs on Apple Silicon
+**Release targets:** MacOs on Apple Silicon (arm64) and Apple Intel (x64)
 
 **Current status:** published Early Public Preview
 
@@ -21,8 +21,8 @@ Current build:
 - Not notarized by Apple.
 - Intended for experienced Early Public Preview testers.
 
-The published build is version 0.8.0 with bundle ID
-`app.electronrfid.preview`. Its SHA-256 and build date are recorded on the
+The published architecture-specific builds are version 0.8.0 with bundle ID
+`app.electronrfid.preview`. Their SHA-256 values and build dates are recorded on the
 official Download page and GitHub release.
 
 Later broader public releases are intended to be Apple Developer ID signed and

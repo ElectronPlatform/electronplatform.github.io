@@ -6,10 +6,9 @@ The official Download and Installation page is:
 
 <https://electronplatform.github.io/download.html>
 
-The approved MacOs Apple Silicon installer is available there. Apple Intel is
-an official Preview target, but its dedicated installer is still being
-prepared. Do not use an installer from an unofficial source, and verify its
-published SHA-256 first.
+Approved MacOs installers for Apple Silicon and Apple Intel are available
+there. Choose the installer that matches your Mac. Do not use an installer
+from an unofficial source, and verify its published SHA-256 first.
 
 ## Why is a status shown as Unknown?
 
@@ -141,10 +140,10 @@ Feedback packages are also created locally and must be sent by you.
 
 Apple Silicon (arm64) and Apple Intel (x64) are the official Mac Preview
 targets and use the same Electron features, documentation, licensing and
-security model. The current public download is Apple Silicon. The Intel
-installer will appear only after its architecture-specific PM3 runtime and
-package have passed release verification. Windows and Linux support is not
-claimed until dedicated packages are built and tested.
+security model. Architecture-specific installers for both targets are
+published after passing their respective package and runtime checks. Windows
+and Linux support is not claimed until dedicated packages are built and
+tested.
 
 ## Where do I get help?
 

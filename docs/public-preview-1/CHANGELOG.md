@@ -13,6 +13,7 @@ development checkpoints and historical sprint notes are intentionally omitted.
 - First public GitHub pre-release.
 - First public website.
 - First public download: version 0.8.0.
+- Architecture-specific MacOs downloads for Apple Silicon and Apple Intel.
 - Beginning of the public Electron RFID Intelligence Platform.
 
 ### Added
@@ -58,8 +59,8 @@ development checkpoints and historical sprint notes are intentionally omitted.
 ### Known limitations
 
 - Early Public Preview 1 is deliberately unsigned and not notarized.
-- Early Public Preview 1 support is limited to the published MacOs Apple
-  Silicon package.
+- Early Public Preview 1 support includes separate published MacOs Apple
+  Silicon and Apple Intel packages.
 - Hardware and firmware combinations can expose different information.
 - Some hardware fields correctly remain **Unknown**.
 - Electron Public Preview License v1.0 applies to this release. The matching
