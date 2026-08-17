@@ -6,6 +6,7 @@
   "scripts": {
     "build:docs": "node scripts/build-docs.js",
     "check:docs": "node scripts/build-docs.js --check",
+    "check:navigation": "node scripts/check-runtime-navigation.js",
     "preview": "python3 -m http.server 8080"
   },
   "devDependencies": {

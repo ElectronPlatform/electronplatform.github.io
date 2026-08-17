@@ -29,7 +29,6 @@
     const page=document.body?.dataset?.page || "home";
 
     if(header){
-      header.href="./download.html";
       header.removeAttribute("target");
       header.removeAttribute("rel");
       header.removeAttribute("aria-disabled");
@@ -41,7 +40,6 @@
     }
 
     if(primary){
-      primary.href="./download.html";
       primary.removeAttribute("target");
       primary.removeAttribute("rel");
       primary.removeAttribute("aria-disabled");
