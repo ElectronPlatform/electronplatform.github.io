@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Report a problem with the Electron RFID Intelligence Platform website or its public documentation.">
+  <meta name="robots" content="index, follow">
+  <title>Report a Website Issue | Electron RFID Intelligence Platform</title>
+  <link rel="canonical" href="https://electronplatform.github.io/report-website-issue.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Electron RFID Intelligence Platform">
+  <meta property="og:title" content="Report an Electron Website Issue">
+  <meta property="og:description" content="Prepare a website problem report on Electron, then review and submit it on GitHub.">
+  <meta property="og:url" content="https://electronplatform.github.io/report-website-issue.html">
+  <meta property="og:image" content="https://electronplatform.github.io/images/screenshots/workshop-overview.webp">
+  <meta property="og:image:alt" content="Electron RFID Intelligence Platform Workshop">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="./images/electron-icon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="config.js"></script>
+</head>
+<body data-page="support">
+  <header class="siteHeader">
+    <a class="brand" href="./index.html" aria-label="Electron home">
+      <span class="brandBadge"><img src="./images/electron-icon.png" alt=""></span>
+      <span>
+        <strong>ELECTRON</strong>
+        <small>RFID Intelligence Platform</small>
+      </span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="./index.html" data-page-link="home">Home</a>
+      <a href="./preview.html" data-page-link="preview">Preview</a>
+      <a href="./features.html" data-page-link="features">Features</a>
+      <a href="./documentation.html" data-page-link="documentation">Documentation</a>
+      <a href="./about.html" data-page-link="about">About</a>
+      <a href="./support.html" data-page-link="support">Support</a>
+      <a href="./contact.html" data-page-link="contact">Contact</a>
+    </nav>
+    <a id="headerDownload" class="downloadLink" href="./download.html">Download</a>
+  </header>
+
+  <main class="pageMain reportIssueMain">
+    <nav class="reportBreadcrumbs" aria-label="Breadcrumb">
+      <a href="./support.html">Support</a>
+      <span aria-hidden="true">/</span>
+      <span>Report a website issue</span>
+    </nav>
+
+    <section class="pageHero reportIssueHero">
+      <p class="eyebrow">Website feedback</p>
+      <h1>Report a website issue</h1>
+      <p>Describe the problem here in familiar Electron surroundings. Nothing is sent automatically. Your answers stay in this browser until you choose to continue to GitHub.</p>
+    </section>
+
+    <div class="reportIssueLayout">
+      <form id="websiteIssueForm" class="infoPanel reportIssueForm">
+        <div class="formHeading">
+          <p class="eyebrow">Your report</p>
+          <h2>What should we improve?</h2>
+          <p>Required fields are marked with <span aria-hidden="true">*</span><span class="srOnly">an asterisk</span>.</p>
+        </div>
+
+        <div class="formField">
+          <label for="issueType">Type of issue <span aria-hidden="true">*</span></label>
+          <select id="issueType" name="issueType" required>
+            <option value="">Choose an issue type</option>
+            <option>Broken link or missing page</option>
+            <option>Incorrect or outdated information</option>
+            <option>Display, layout, or accessibility problem</option>
+            <option>Download or installation information</option>
+            <option>Other website problem</option>
+          </select>
+        </div>
+
+        <div class="formField">
+          <label for="issueSummary">Short summary <span aria-hidden="true">*</span></label>
+          <input id="issueSummary" name="issueSummary" type="text" maxlength="120" autocomplete="off" placeholder="Example: Quick Start image does not load" required>
+          <small>Describe the problem in one sentence.</small>
+        </div>
+
+        <div class="formField">
+          <label for="pageUrl">Page address <span aria-hidden="true">*</span></label>
+          <input id="pageUrl" name="pageUrl" type="url" maxlength="500" inputmode="url" placeholder="https://electronplatform.github.io/..." required>
+          <small>Copy the address of the page where you found the problem.</small>
+        </div>
+
+        <div class="formField">
+          <label for="problem">What is wrong? <span aria-hidden="true">*</span></label>
+          <textarea id="problem" name="problem" rows="7" maxlength="1500" placeholder="Tell us what you saw and what you were trying to do." required></textarea>
+        </div>
+
+        <div class="formField">
+          <label for="expected">What did you expect? <span aria-hidden="true">*</span></label>
+          <textarea id="expected" name="expected" rows="5" maxlength="1000" placeholder="Describe what the page or link should have shown or done." required></textarea>
+        </div>
+
+        <div class="formField">
+          <label for="environment">Browser and device <span class="optionalLabel">Optional</span></label>
+          <input id="environment" name="environment" type="text" maxlength="250" autocomplete="off" placeholder="Example: Safari on macOS, or Chrome on Android">
+          <small>Add this when the problem may depend on your browser, computer, phone, or operating system.</small>
+        </div>
+
+        <div class="privacyCheck">
+          <input id="privacyConfirmed" name="privacyConfirmed" type="checkbox" required>
+          <label for="privacyConfirmed">I checked that this report does not contain passwords, RFID keys, card dumps, personal data, or other sensitive information. <span aria-hidden="true">*</span></label>
+        </div>
+
+        <div class="reportSubmitPanel">
+          <div>
+            <strong>Final step: GitHub</strong>
+            <span>GitHub will open with this report already filled in. You can review it, add a checked screenshot, and decide whether to submit it.</span>
+          </div>
+          <button class="reportSubmitButton" type="submit">Review on GitHub <span aria-hidden="true">→</span></button>
+        </div>
+        <p id="issueFormStatus" class="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="reportIssueAside" aria-label="What happens next">
+        <section class="infoPanel">
+          <p class="eyebrow">What happens next?</p>
+          <ol class="reportSteps">
+            <li><span>1</span><div><strong>Complete this form</strong><p>Your answers remain on this page.</p></div></li>
+            <li><span>2</span><div><strong>Review on GitHub</strong><p>GitHub opens with your report filled in. A GitHub account is required to submit it.</p></div></li>
+            <li><span>3</span><div><strong>You decide</strong><p>Edit, add a privacy-checked screenshot, submit, or close the page without sending.</p></div></li>
+          </ol>
+        </section>
+
+        <section class="infoPanel privacyReminderPanel">
+          <p class="eyebrow">Before continuing</p>
+          <h2>Keep private data private</h2>
+          <p>Website issues are public. Do not include RFID dumps, keys, passwords, personal information, private download links, or unreviewed diagnostic files.</p>
+          <p>If the problem should not be public, use the <a href="./contact.html">official contact route</a> instead.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="footerMark"><span class="brandBadge small"><img src="./images/electron-icon.png" alt=""></span><span>© 2026 Electron Project</span></div>
+    <div class="footerLinks" role="navigation" aria-label="Footer navigation">
+      <a href="./download.html">Download &amp; Installation</a>
+      <a href="./documentation.html">Documentation</a>
+      <a href="./support.html">Support Electron</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+    <div class="credits">
+      <strong id="footerCredit">Created by Ronald Peters</strong>
+      <span id="assistanceCredit">Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.</span>
+    </div>
+  </footer>
+
+  <script src="./js/portal.js"></script>
+  <script src="./js/report-website-issue.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"6b1635ebcaec4df2808ab0c1b22b2358"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

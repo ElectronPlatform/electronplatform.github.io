@@ -1,0 +1,73 @@
+name: Website issue
+description: Report a problem with the Electron public website or its documentation.
+title: "[Website]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the Electron website.
+
+        Please describe only the website problem. Do not include RFID dumps, keys, personal data, passwords, or other sensitive information.
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: What kind of website issue is this?
+      options:
+        - Broken link or missing page
+        - Incorrect or outdated information
+        - Display, layout, or accessibility problem
+        - Download or installation information
+        - Other website problem
+    validations:
+      required: true
+
+  - type: input
+    id: page-url
+    attributes:
+      label: Page address
+      description: Copy the address of the page where you found the problem.
+      placeholder: https://electronplatform.github.io/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Explain what you saw and what you were trying to do.
+      placeholder: Describe the website problem in your own words.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: Tell us what you expected the page or link to show or do.
+      placeholder: Describe the result you expected.
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      description: Add this if the problem may depend on your browser, computer, phone, or operating system.
+      placeholder: "Example: Safari 20 on macOS, or Chrome on Android"
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or extra information
+      description: You may drag a screenshot here after checking it for private or sensitive information.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I checked that my report does not contain passwords, RFID keys, dumps, personal data, or other sensitive information.
+          required: true
