@@ -952,7 +952,79 @@ body.moduleDialogOpen{overflow:hidden}
 }
 .reportSubmitButton:hover{filter:brightness(1.1)}
 .reportSubmitButton:focus-visible{outline:2px solid #7dd3fc;outline-offset:3px}
-.formStatus{min-height:20px;margin:12px 0 0;color:#7dd3fc;font-size:14px}
+.issueHandoffPanel{
+  margin-top:18px;
+  padding:20px;
+  border:1px solid rgba(56,189,248,.38);
+  border-radius:14px;
+  background:
+    radial-gradient(circle at 92% 10%,rgba(56,189,248,.14),transparent 36%),
+    linear-gradient(135deg,rgba(15,35,72,.88),rgba(3,12,29,.9));
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+}
+.issueHandoffPanel[hidden]{display:none}
+.issueHandoffPanel[data-state="success"]{
+  border-color:rgba(52,211,153,.52);
+  background:
+    radial-gradient(circle at 92% 10%,rgba(52,211,153,.15),transparent 36%),
+    linear-gradient(135deg,rgba(10,49,55,.88),rgba(3,22,30,.92));
+}
+.issueHandoffPanel[data-state="error"]{border-color:rgba(248,212,119,.42)}
+.issueHandoffHeader{display:flex;align-items:center;gap:14px}
+.issueHandoffHeader > div{min-width:0}
+.issueHandoffHeader .eyebrow{margin-bottom:5px;font-size:12px}
+.issueHandoffHeader h3{margin:0;font-size:23px;line-height:1.25}
+.issueHandoffIcon{
+  flex:0 0 auto;
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(56,189,248,.55);
+  border-radius:50%;
+  background:rgba(37,99,235,.18);
+  box-shadow:0 0 18px rgba(37,99,235,.25);
+}
+.issueHandoffIcon::before{content:"…";color:#7dd3fc;font-size:22px;font-weight:900;line-height:1}
+.issueHandoffPanel[data-state="checking"] .issueHandoffIcon::before{content:"↻"}
+.issueHandoffPanel[data-state="success"] .issueHandoffIcon{
+  border-color:rgba(52,211,153,.65);
+  background:rgba(16,185,129,.18);
+  box-shadow:0 0 18px rgba(16,185,129,.25);
+}
+.issueHandoffPanel[data-state="success"] .issueHandoffIcon::before{content:"✓";color:#6ee7b7}
+.issueHandoffPanel[data-state="error"] .issueHandoffIcon::before{content:"!";color:#f8d477}
+.issueHandoffMessage{margin:16px 0 0;color:#d4e0f1;line-height:1.55}
+.issueHandoffMeta{margin:8px 0 0;color:#8fa4c5;font-size:14px;line-height:1.5}
+.issueHandoffActions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.issueHandoffActions [hidden]{display:none}
+.issueHandoffPrimary,
+.issueHandoffSecondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:10px 14px;
+  border-radius:9px;
+  font:inherit;
+  font-weight:850;
+  cursor:pointer;
+}
+.issueHandoffPrimary{
+  color:#fff;
+  border:1px solid rgba(96,165,250,.58);
+  background:linear-gradient(180deg,#2563eb,#0b48d6);
+}
+.issueHandoffSecondary{
+  color:#dff6ff;
+  border:1px solid rgba(96,165,250,.28);
+  background:rgba(2,6,23,.48);
+}
+.issueHandoffPrimary:hover,
+.issueHandoffSecondary:hover{filter:brightness(1.1)}
+.issueHandoffPrimary:focus-visible,
+.issueHandoffSecondary:focus-visible{outline:2px solid #7dd3fc;outline-offset:2px}
+.issueHandoffSecondary:disabled{cursor:wait;opacity:.7}
 .reportIssueAside{display:grid;gap:18px}
 .reportIssueAside .infoPanel{padding:22px}
 .reportSteps{display:grid;gap:18px;margin:20px 0 0;padding:0;list-style:none}
@@ -1075,6 +1147,8 @@ body.moduleDialogOpen{overflow:hidden}
   .reportIssueAside{grid-template-columns:1fr}
   .reportSubmitPanel{align-items:stretch;flex-direction:column}
   .reportSubmitButton{justify-content:center;width:100%}
+  .issueHandoffActions{display:grid}
+  .issueHandoffPrimary,.issueHandoffSecondary{width:100%}
   .siteFooter{flex-direction:column;text-align:center}
   .footerLinks{flex-direction:column;gap:10px}
   .credits{text-align:center}

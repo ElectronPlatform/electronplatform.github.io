@@ -109,11 +109,29 @@
         <div class="reportSubmitPanel">
           <div>
             <strong>Final step: GitHub</strong>
-            <span>GitHub will open with this report already filled in. You can review it, add a checked screenshot, and decide whether to submit it.</span>
+            <span>GitHub will open in a new tab with this report already filled in. This Electron page stays open and checks for the submitted issue when you return.</span>
           </div>
           <button class="reportSubmitButton" type="submit">Review on GitHub <span aria-hidden="true">→</span></button>
         </div>
-        <p id="issueFormStatus" class="formStatus" role="status" aria-live="polite"></p>
+        <p id="issueFormStatus" class="srOnly" role="status" aria-live="polite"></p>
+
+        <section id="issueHandoffPanel" class="issueHandoffPanel" data-state="pending" hidden aria-labelledby="issueHandoffTitle">
+          <div class="issueHandoffHeader">
+            <span class="issueHandoffIcon" aria-hidden="true"></span>
+            <div>
+              <p id="issueHandoffEyebrow" class="eyebrow">GitHub review pending</p>
+              <h3 id="issueHandoffTitle">GitHub opened in a new tab</h3>
+            </div>
+          </div>
+          <p id="issueHandoffMessage" class="issueHandoffMessage">Review the report on GitHub and submit it when you are ready. Return to this tab afterwards for confirmation.</p>
+          <p id="issueHandoffMeta" class="issueHandoffMeta">Nothing has been confirmed as submitted yet.</p>
+          <div class="issueHandoffActions">
+            <a id="issueGithubLink" class="issueHandoffPrimary" target="_blank" rel="noopener noreferrer">Open GitHub again</a>
+            <button id="checkIssueStatus" class="issueHandoffSecondary" type="button">Check again</button>
+            <button id="editIssueForm" class="issueHandoffSecondary" type="button">Continue editing</button>
+            <button id="clearIssueForm" class="issueHandoffSecondary" type="button" hidden>Clear form</button>
+          </div>
+        </section>
       </form>
 
       <aside class="reportIssueAside" aria-label="What happens next">
@@ -121,8 +139,8 @@
           <p class="eyebrow">What happens next?</p>
           <ol class="reportSteps">
             <li><span>1</span><div><strong>Complete this form</strong><p>Your answers remain on this page.</p></div></li>
-            <li><span>2</span><div><strong>Review on GitHub</strong><p>GitHub opens with your report filled in. A GitHub account is required to submit it.</p></div></li>
-            <li><span>3</span><div><strong>You decide</strong><p>Edit, add a privacy-checked screenshot, submit, or close the page without sending.</p></div></li>
+            <li><span>2</span><div><strong>Review in a new tab</strong><p>GitHub opens with your report filled in. A GitHub account is required to submit it.</p></div></li>
+            <li><span>3</span><div><strong>Return for confirmation</strong><p>Electron checks for the unique report when you return and only shows success after finding it on GitHub.</p></div></li>
           </ol>
         </section>
 
