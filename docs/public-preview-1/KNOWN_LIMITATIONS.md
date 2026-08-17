@@ -38,7 +38,7 @@ Preview 1. It is not a roadmap or a list of promised features.
 - Apple Silicon (arm64) and Apple Intel (x64) are the official Mac Preview
   targets. Separate architecture-specific installers and PM3 clients are
   published for both targets.
-- The bundled Apple Silicon and Apple Intel PM3 clients link only to MacOs
+- The bundled Apple Silicon and Apple Intel PM3 clients link only to macOS
   system libraries. Each package passed architecture-specific qualification;
   wider Mac and hardware combinations remain unverified.
 - The matching corresponding Proxmark3 source bundle and build provenance are

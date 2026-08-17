@@ -7,6 +7,8 @@
     "build:docs": "node scripts/build-docs.js",
     "check:docs": "node scripts/build-docs.js --check",
     "check:navigation": "node scripts/check-runtime-navigation.js",
+    "check:seo": "node scripts/check-seo.js",
+    "submit:indexnow": "node scripts/submit-indexnow.js",
     "preview": "python3 -m http.server 8080"
   },
   "devDependencies": {

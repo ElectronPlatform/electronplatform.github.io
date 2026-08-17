@@ -117,7 +117,7 @@ GitHub release or another official release location.
 When a public Preview package is ready, publish the package, checksums, release
 notes, licence notices and corresponding source information together. Then
 update the matching platform entry under `downloads` and the shared
-`downloadStatusText` in `config.js`. The legacy `downloadUrl` remains a MacOs
+`downloadStatusText` in `config.js`. The legacy `downloadUrl` remains a macOS
 fallback until the first approved package is published.
 
 ## Local Preview

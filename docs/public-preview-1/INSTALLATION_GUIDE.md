@@ -12,7 +12,7 @@ Use the official Download and Installation page for current availability:
 
 - A Mac with Apple Silicon or Apple Intel, using the matching Electron
   installer.
-- A supported MacOs version stated with the final release.
+- A supported macOS version stated with the final release.
 - A compatible Proxmark3 and a working USB-C or USB-A connection.
 - Permission to test every RFID card, tag or device you use.
 - An independent backup location for important Collection data.
@@ -62,10 +62,10 @@ not continue if it differs.
 Installing a newer approved Preview normally means replacing the application
 in Applications. Quit Electron and read that build's release notes first.
 
-## First launch on MacOs
+## First launch on macOS
 
 Because this Early Public Preview is not Apple Developer ID signed or
-notarized, MacOs may show messages such as:
+notarized, macOS may show messages such as:
 
 - “Electron cannot be opened because it is from an unidentified developer.”
 - “Apple could not verify this application.”
@@ -77,7 +77,7 @@ official release, its checksum matches and the published source revision can
 be inspected.
 
 Use only Apple's normal **Open** or **Open Anyway** workflow after confirming
-the source and checksum. Do not disable MacOs security or use Terminal commands
+the source and checksum. Do not disable macOS security or use Terminal commands
 to remove its protection.
 
 ### Open from Applications
@@ -85,7 +85,7 @@ to remove its protection.
 1. Open Applications.
 2. Right-click or Control-click **Electron Preview**.
 3. Select **Open**.
-4. Select **Open** again when MacOs asks for confirmation.
+4. Select **Open** again when macOS asks for confirmation.
 
 ### Use Privacy & Security
 

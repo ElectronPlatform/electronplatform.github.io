@@ -196,6 +196,61 @@ function pagerLink(document, direction) {
   return `<a class="${className}" href="${document.output}"><span>${caption}</span><strong>${escapeHtml(label)}</strong></a>`;
 }
 
+function structuredData(document) {
+  const canonicalUrl = `https://electronplatform.github.io/documentation/public-preview-1/${document.output}`;
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "@id": `${canonicalUrl}#article`,
+        headline: `${document.label} - Electron RFID Intelligence Platform`,
+        description: document.description,
+        url: canonicalUrl,
+        mainEntityOfPage: canonicalUrl,
+        image: "https://electronplatform.github.io/images/screenshots/device-connection-status.webp",
+        author: {
+          "@type": "Person",
+          name: "Ronald Peters"
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Electron Project",
+          url: "https://electronplatform.github.io/"
+        },
+        isPartOf: {
+          "@type": "WebPage",
+          name: "Electron Public Preview 1 Documentation",
+          url: "https://electronplatform.github.io/documentation.html"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Electron",
+            item: "https://electronplatform.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Documentation",
+            item: "https://electronplatform.github.io/documentation.html"
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: document.label,
+            item: canonicalUrl
+          }
+        ]
+      }
+    ]
+  });
+}
+
 function buildPage(template, document, index) {
   const sourcePath = path.join(sourceDirectory, document.source);
   if (!fs.existsSync(sourcePath)) {
@@ -206,6 +261,7 @@ function buildPage(template, document, index) {
   page = replaceToken(page, "PAGE_TITLE", escapeHtml(document.label));
   page = replaceToken(page, "PAGE_DESCRIPTION", escapeHtml(document.description));
   page = replaceToken(page, "CANONICAL_URL", `https://electronplatform.github.io/documentation/public-preview-1/${document.output}`);
+  page = replaceToken(page, "STRUCTURED_DATA", structuredData(document));
   page = replaceToken(page, "DOCUMENTATION_MENU", documentationMenu(document));
   page = replaceToken(page, "DOCUMENT_CONTENT", renderMarkdown(fs.readFileSync(sourcePath, "utf8")));
   page = replaceToken(page, "PREVIOUS_LINK", pagerLink(documents[index - 1], "previous"));
@@ -242,8 +298,14 @@ function validateGeneratedPages(pages) {
     if (JSON.stringify(actualNavigation) !== JSON.stringify(expectedNavigation)) {
       throw new Error(`${output} primary navigation does not match documentation.html.`);
     }
-    if (document.querySelector("script:not([src])")) {
-      throw new Error(`${output} contains an unexpected inline script.`);
+    const inlineScripts = Array.from(document.querySelectorAll("script:not([src])"));
+    if (inlineScripts.length !== 1 || inlineScripts[0].type !== "application/ld+json") {
+      throw new Error(`${output} must contain exactly one JSON-LD structured-data script and no other inline scripts.`);
+    }
+    try {
+      JSON.parse(inlineScripts[0].textContent);
+    } catch {
+      throw new Error(`${output} contains invalid JSON-LD structured data.`);
     }
 
     document.querySelectorAll("a[href], img[src], script[src], link[href]").forEach(element => {

@@ -9,7 +9,7 @@ download on the official Electron website.
 ## Distribution status
 
 This Early Public Preview is distributed without Apple Developer ID signing
-or Apple notarization. MacOs may therefore ask the user to confirm the
+or Apple notarization. macOS may therefore ask the user to confirm the
 application during first launch. Verify the official source revision and the
 published SHA-256 before using the installer, then follow only Apple's normal
 **Open** or **Open Anyway** workflow.

@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Electron RFID Intelligence Platform | Proxmark3 Preview</title>
-  <meta name="description" content="Electron is a local-first RFID Collection and evidence platform for compatible Proxmark3 hardware. MacOs Preview targets for Apple Silicon and Apple Intel.">
+  <meta name="description" content="Electron is a local-first RFID collection and evidence platform for compatible Proxmark3 hardware, available for Apple silicon and Intel Macs.">
   <meta name="google-site-verification" content="5t48WRebRIh1_HljRnPCq5_31ca3hZH1_Tzs4H1MQi8">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://electronplatform.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Electron RFID Intelligence Platform">
   <meta property="og:title" content="Electron RFID Intelligence Platform | Proxmark3 Preview">
-  <meta property="og:description" content="A local-first RFID Collection and evidence platform for compatible Proxmark3 hardware. MacOs Preview targets for Apple Silicon and Apple Intel.">
+  <meta property="og:description" content="A local-first RFID collection and evidence platform for compatible Proxmark3 hardware, available for Apple silicon and Intel Macs.">
   <meta property="og:url" content="https://electronplatform.github.io/">
   <meta property="og:image" content="https://electronplatform.github.io/images/screenshots/workshop-overview.webp">
   <meta property="og:image:width" content="1308">
@@ -24,29 +24,59 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Electron RFID Intelligence Platform",
-    "alternateName": "Electron RFID",
-    "url": "https://electronplatform.github.io/",
-    "downloadUrl": "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-arm64.dmg",
-    "softwareVersion": "0.8.0",
-    "operatingSystem": "MacOs on Apple Silicon",
-    "applicationCategory": "DeveloperApplication",
-    "description": "A local-first RFID Collection and evidence platform for compatible Proxmark3 hardware.",
-    "license": "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/blob/main/ELECTRON_PUBLIC_PREVIEW_LICENSE_v1.0.md",
-    "releaseNotes": "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/blob/main/RELEASE_NOTES_PUBLIC_PREVIEW_1.md",
-    "author": {
-      "@type": "Person",
-      "name": "Ronald Peters"
-    },
-    "offers": {
-      "@type": "Offer",
-      "name": "30-day Early Public Preview access",
-      "price": "0",
-      "priceCurrency": "AUD",
-      "availability": "https://schema.org/InStock",
-      "url": "https://electronplatform.github.io/download.html"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://electronplatform.github.io/#website",
+        "name": "Electron RFID Intelligence Platform",
+        "alternateName": "Electron RFID",
+        "url": "https://electronplatform.github.io/",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://electronplatform.github.io/#organization",
+        "name": "Electron Project",
+        "url": "https://electronplatform.github.io/",
+        "logo": "https://electronplatform.github.io/images/electron-icon.png",
+        "sameAs": [
+          "https://github.com/ElectronPlatform"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://electronplatform.github.io/#software",
+        "name": "Electron RFID Intelligence Platform",
+        "alternateName": "Electron RFID",
+        "url": "https://electronplatform.github.io/",
+        "downloadUrl": [
+          "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-arm64.dmg",
+          "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-x64.dmg"
+        ],
+        "softwareVersion": "0.8.0",
+        "operatingSystem": "macOS on Apple silicon or Intel",
+        "applicationCategory": "DeveloperApplication",
+        "description": "A local-first RFID collection and evidence platform for compatible Proxmark3 hardware.",
+        "image": "https://electronplatform.github.io/images/screenshots/workshop-overview.webp",
+        "license": "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/blob/main/ELECTRON_PUBLIC_PREVIEW_LICENSE_v1.0.md",
+        "releaseNotes": "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/blob/main/RELEASE_NOTES_PUBLIC_PREVIEW_1.md",
+        "author": {
+          "@type": "Person",
+          "name": "Ronald Peters"
+        },
+        "publisher": {
+          "@id": "https://electronplatform.github.io/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "name": "30-day Early Public Preview access",
+          "price": "0",
+          "priceCurrency": "AUD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://electronplatform.github.io/download.html"
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -110,7 +140,7 @@
         <p class="platform">RFID Intelligence Platform</p>
         <p class="tagline" id="portalTagline">Helping you explore, understand and document RFID technologies.</p>
         <a id="primaryDownload" class="primaryDownload" href="./download.html">Download &amp; Installation</a>
-        <p id="downloadStatus" class="downloadStatus">Early Public Preview 1 is available for MacOs Apple Silicon and Apple Intel.</p>
+        <p id="downloadStatus" class="downloadStatus">Early Public Preview 1 is available for macOS Apple Silicon and Apple Intel.</p>
       </div>
     </section>
 

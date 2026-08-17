@@ -2,7 +2,7 @@
 
 **Application version:** 0.8.0
 
-**Release targets:** MacOs on Apple Silicon (arm64) and Apple Intel (x64)
+**Release targets:** macOS on Apple Silicon (arm64) and Apple Intel (x64)
 
 **Current status:** published Early Public Preview
 

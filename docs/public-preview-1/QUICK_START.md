@@ -2,7 +2,7 @@
 
 Use these steps to make your first safe scan.
 
-For installation and MacOs security guidance, first read the official
+For installation and macOS security guidance, first read the official
 [Download and Installation Guide](https://electronplatform.github.io/download.html).
 
 ## 1. Check the requirements
@@ -15,7 +15,7 @@ You need:
 - permission to test the RFID item;
 - an independent backup of any important Electron data.
 
-The current release process has been validated primarily on MacOs with Apple
+The current release process has been validated primarily on macOS with Apple
 Silicon.
 Platform support for your package should be confirmed by the Preview
 coordinator.
@@ -26,7 +26,7 @@ Follow the instructions supplied with your Preview package. Early Public
 Preview 1 is distributed without Apple Developer ID signing or Apple
 notarization.
 
-MacOs may show an unidentified-developer or verification message. Use only
+macOS may show an unidentified-developer or verification message. Use only
 Apple's normal **Open** or **Open Anyway** workflow after confirming the
 official source and SHA-256. Do not disable operating-system security.
 

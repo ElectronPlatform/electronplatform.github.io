@@ -6,7 +6,7 @@ The official Download and Installation page is:
 
 <https://electronplatform.github.io/download.html>
 
-Approved MacOs installers for Apple Silicon and Apple Intel are available
+Approved macOS installers for Apple Silicon and Apple Intel are available
 there. Choose the installer that matches your Mac. Do not use an installer
 from an unofficial source, and verify its published SHA-256 first.
 
@@ -53,7 +53,7 @@ require a paid Apple Developer Program membership. Early Public Preview 1 is
 therefore distributed for experienced testers with a published checksum and
 matching source information.
 
-MacOs may show an unidentified-developer or verification message during first
+macOS may show an unidentified-developer or verification message during first
 launch. This is expected for the current distribution method. Follow only
 Apple's normal **Open** or **Open Anyway** procedure after verifying the
 official download and SHA-256.
