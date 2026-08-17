@@ -1,6 +1,8 @@
 (function(){
   const REPOSITORY="ElectronPlatform/electronplatform.github.io";
   const STORAGE_KEY="electronWebsiteIssueHandoff";
+  const HISTORY_STORAGE_KEY="electronWebsiteIssueHistory";
+  const HISTORY_LIMIT=10;
   const CHECK_THROTTLE_MS=10000;
   const form=document.getElementById("websiteIssueForm");
   const liveStatus=document.getElementById("issueFormStatus");
@@ -13,9 +15,13 @@
   const checkButton=document.getElementById("checkIssueStatus");
   const editButton=document.getElementById("editIssueForm");
   const clearButton=document.getElementById("clearIssueForm");
+  const historyPanel=document.getElementById("issueHistoryPanel");
+  const historyList=document.getElementById("issueHistoryList");
+  const clearHistoryButton=document.getElementById("clearIssueHistory");
   if(!form || !panel) return;
 
   let activeReport=readStoredReport();
+  let issueHistory=readStoredHistory();
   let githubDraftUrl="";
   let checking=false;
   let lastCheckAt=0;
@@ -47,6 +53,87 @@
     }catch(_error){
       // The live page still works when session storage is unavailable.
     }
+  }
+
+  function normaliseStoredIssue(value){
+    if(!value || !Number.isInteger(value.number) || value.number<1 || typeof value.url!=="string") return null;
+    try{
+      const issueUrl=new URL(value.url);
+      const expectedPath=`/${REPOSITORY}/issues/${value.number}`;
+      if(issueUrl.origin!=="https://github.com" || issueUrl.pathname.replace(/\/$/,"")!==expectedPath) return null;
+    }catch(_error){
+      return null;
+    }
+    return {
+      number:value.number,
+      title:typeof value.title==="string" ? value.title.slice(0,200) : "",
+      url:value.url,
+      confirmedAt:typeof value.confirmedAt==="number" && Number.isFinite(value.confirmedAt) ? value.confirmedAt : Date.now()
+    };
+  }
+
+  function readStoredHistory(){
+    try{
+      const value=JSON.parse(window.localStorage.getItem(HISTORY_STORAGE_KEY) || "[]");
+      if(!Array.isArray(value)) return [];
+      return value.map(normaliseStoredIssue).filter(Boolean).slice(0,HISTORY_LIMIT);
+    }catch(_error){
+      return [];
+    }
+  }
+
+  function storeHistory(){
+    try{
+      if(issueHistory.length) window.localStorage.setItem(HISTORY_STORAGE_KEY,JSON.stringify(issueHistory));
+      else window.localStorage.removeItem(HISTORY_STORAGE_KEY);
+    }catch(_error){
+      // Confirming and opening an issue still works when local storage is unavailable.
+    }
+  }
+
+  function rememberConfirmedIssue(issue){
+    const storedIssue=normaliseStoredIssue({
+      number:issue.number,
+      title:issue.title || "",
+      url:issue.html_url,
+      confirmedAt:issue.created_at ? Date.parse(issue.created_at) : Date.now()
+    });
+    if(!storedIssue) return;
+    issueHistory=[storedIssue,...issueHistory.filter(item=>item.number!==storedIssue.number)].slice(0,HISTORY_LIMIT);
+    storeHistory();
+    renderIssueHistory();
+  }
+
+  function formatHistoryDate(timestamp){
+    return new Intl.DateTimeFormat(undefined,{dateStyle:"medium"}).format(new Date(timestamp));
+  }
+
+  function renderIssueHistory(){
+    if(!historyPanel || !historyList) return;
+    historyPanel.hidden=issueHistory.length===0;
+    historyList.replaceChildren();
+
+    issueHistory.forEach(issue=>{
+      const item=document.createElement("li");
+      item.className="issueHistoryItem";
+
+      const details=document.createElement("div");
+      const title=document.createElement("strong");
+      title.textContent=issue.title || `Website issue #${issue.number}`;
+      const meta=document.createElement("span");
+      meta.textContent=`Issue #${issue.number} · Confirmed ${formatHistoryDate(issue.confirmedAt)}`;
+      details.append(title,meta);
+
+      const link=document.createElement("a");
+      link.className="issueHistoryLink";
+      link.href=issue.url;
+      link.target="_blank";
+      link.rel="noopener noreferrer";
+      link.textContent=`View issue #${issue.number}`;
+
+      item.append(details,link);
+      historyList.append(item);
+    });
   }
 
   function buildGithubUrl(reportId){
@@ -176,9 +263,11 @@
           status:"success",
           issueNumber:issue.number,
           issueUrl:issue.html_url,
-          issueTitle:issue.title || ""
+          issueTitle:issue.title || "",
+          historySaved:true
         };
         storeReport();
+        rememberConfirmedIssue(issue);
         setSuccessPanel(issue);
       }else{
         setPendingPanel(
@@ -235,8 +324,14 @@
     waitingForReturn=false;
     storeReport();
     panel.hidden=true;
-    setLiveStatus("The completed report was cleared from this page.");
+    setLiveStatus("The form was cleared. Confirmed issue links remain saved in this browser.");
     document.getElementById("issueType")?.focus();
+  });
+  clearHistoryButton?.addEventListener("click",()=>{
+    issueHistory=[];
+    storeHistory();
+    renderIssueHistory();
+    setLiveStatus("Saved website issue links were removed from this browser.");
   });
 
   document.addEventListener("visibilitychange",()=>{
@@ -246,11 +341,18 @@
   window.addEventListener("focus",checkAfterReturn);
 
   if(activeReport?.status==="success" && activeReport.issueNumber && activeReport.issueUrl){
-    setSuccessPanel({number:activeReport.issueNumber,html_url:activeReport.issueUrl,title:activeReport.issueTitle});
+    const issue={number:activeReport.issueNumber,html_url:activeReport.issueUrl,title:activeReport.issueTitle};
+    if(!activeReport.historySaved){
+      rememberConfirmedIssue(issue);
+      activeReport.historySaved=true;
+      storeReport();
+    }
+    setSuccessPanel(issue);
   }else if(activeReport?.status==="pending"){
     setPendingPanel(
       "This tab is still waiting to confirm the GitHub submission. Use Check again after you have submitted the issue.",
       "The report details themselves were not saved in session storage."
     );
   }
+  renderIssueHistory();
 })();

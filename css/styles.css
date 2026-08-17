@@ -1025,6 +1025,54 @@ body.moduleDialogOpen{overflow:hidden}
 .issueHandoffPrimary:focus-visible,
 .issueHandoffSecondary:focus-visible{outline:2px solid #7dd3fc;outline-offset:2px}
 .issueHandoffSecondary:disabled{cursor:wait;opacity:.7}
+.issueHistoryPanel{
+  margin-top:18px;
+  padding:20px;
+  border:1px solid rgba(56,189,248,.22);
+  border-radius:14px;
+  background:rgba(3,12,29,.6);
+}
+.issueHistoryPanel[hidden]{display:none}
+.issueHistoryHeader{display:flex;align-items:start;justify-content:space-between;gap:18px}
+.issueHistoryHeader .eyebrow{margin-bottom:5px;font-size:12px}
+.issueHistoryHeader h3{margin:0;font-size:21px;line-height:1.25}
+.issueHistoryIntro{margin:14px 0 0;color:#a9bad4;font-size:14px;line-height:1.55}
+.issueHistoryList{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.issueHistoryItem{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:14px;
+  border:1px solid rgba(148,163,184,.18);
+  border-radius:10px;
+  background:rgba(15,23,42,.5);
+}
+.issueHistoryItem > div{min-width:0}
+.issueHistoryItem strong,
+.issueHistoryItem span{display:block}
+.issueHistoryItem strong{overflow-wrap:anywhere;color:#e6edf7;line-height:1.4}
+.issueHistoryItem span{margin-top:4px;color:#8fa4c5;font-size:13px}
+.issueHistoryLink,
+.issueHistoryClear{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:8px 12px;
+  border-radius:8px;
+  font:inherit;
+  font-size:14px;
+  font-weight:850;
+  cursor:pointer;
+}
+.issueHistoryLink{color:#dff6ff;border:1px solid rgba(96,165,250,.36);background:rgba(37,99,235,.2)}
+.issueHistoryClear{color:#a9bad4;border:1px solid rgba(148,163,184,.22);background:transparent}
+.issueHistoryLink:hover,
+.issueHistoryClear:hover{filter:brightness(1.15)}
+.issueHistoryLink:focus-visible,
+.issueHistoryClear:focus-visible{outline:2px solid #7dd3fc;outline-offset:2px}
 .reportIssueAside{display:grid;gap:18px}
 .reportIssueAside .infoPanel{padding:22px}
 .reportSteps{display:grid;gap:18px;margin:20px 0 0;padding:0;list-style:none}
@@ -1149,6 +1197,8 @@ body.moduleDialogOpen{overflow:hidden}
   .reportSubmitButton{justify-content:center;width:100%}
   .issueHandoffActions{display:grid}
   .issueHandoffPrimary,.issueHandoffSecondary{width:100%}
+  .issueHistoryHeader,.issueHistoryItem{align-items:stretch;flex-direction:column}
+  .issueHistoryLink,.issueHistoryClear{width:100%}
   .siteFooter{flex-direction:column;text-align:center}
   .footerLinks{flex-direction:column;gap:10px}
   .credits{text-align:center}

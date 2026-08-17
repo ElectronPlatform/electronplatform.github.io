@@ -132,6 +132,18 @@
             <button id="clearIssueForm" class="issueHandoffSecondary" type="button" hidden>Clear form</button>
           </div>
         </section>
+
+        <section id="issueHistoryPanel" class="issueHistoryPanel" hidden aria-labelledby="issueHistoryTitle">
+          <div class="issueHistoryHeader">
+            <div>
+              <p class="eyebrow">Saved in this browser</p>
+              <h3 id="issueHistoryTitle">Your website issues</h3>
+            </div>
+            <button id="clearIssueHistory" class="issueHistoryClear" type="button">Forget saved issues</button>
+          </div>
+          <p class="issueHistoryIntro">Confirmed public GitHub issues are kept here so you can return to them later. Electron stores only the issue number, title, link, and confirmation date—not your report answers.</p>
+          <ul id="issueHistoryList" class="issueHistoryList"></ul>
+        </section>
       </form>
 
       <aside class="reportIssueAside" aria-label="What happens next">

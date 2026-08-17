@@ -40,6 +40,9 @@ The Portal is split into separate pages:
 - `about.html` contains project background, philosophy and credits.
 - `support.html` explains community participation and the optional external
   financial-support route.
+- `report-website-issue.html` prepares a website report for GitHub, confirms a
+  submitted issue, and keeps links to the ten most recent confirmed issues in
+  that browser until the visitor chooses to forget them.
 - `contact.html` contains the official support and feedback route.
 
 Downloads are not embedded in the website source. Platform availability,
@@ -144,6 +147,12 @@ repository:
 No router ports, WireGuard changes, local public web server, backend, login or
 database are needed.
 
+New-issue email notifications remain a GitHub account preference, not website
+code. Repository maintainers can choose **Watch → Custom → Issues** for this
+repository and enable email delivery for watched repositories in their GitHub
+notification settings. Do not add SMTP credentials or a visitor email address
+to the static site.
+
 ## Edit Points
 
 - Platform download URLs and status: `config.js`
@@ -156,6 +165,8 @@ database are needed.
 - Feature-dialog behaviour: `js/portal.js`
 - Visual style: `css/styles.css`
 - Browser logic: `js/portal.js`
+- Website issue handoff and local confirmed-issue history:
+  `js/report-website-issue.js`
 - Images: `images/`
 - Public screenshots: `images/screenshots/`
 - Public release-document snapshots: `docs/`
