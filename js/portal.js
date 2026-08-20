@@ -225,6 +225,7 @@
       report:`<svg viewBox="0 0 48 48"><path d="M14 8h16l6 6v26H14V8z"/><path d="M29 8v7h7"/><path d="M20 25h16M20 32h10M20 18h5"/></svg>`,
       shield:`<svg viewBox="0 0 48 48"><path d="M24 6l16 6v11c0 10-6 17-16 21C14 40 8 33 8 23V12l16-6z"/><path d="M17 24l5 5 10-11"/></svg>`,
       device:`<svg viewBox="0 0 48 48"><rect x="9" y="13" width="30" height="22" rx="3"/><path d="M16 21h8M16 28h4M31 28h2M36 28h1"/><path d="M18 39h12"/></svg>`,
+      write:`<svg viewBox="0 0 48 48"><path d="M10 9h28v30H10z"/><path d="M16 16h16M16 23h10M16 30h7"/><path d="M30 31l8-8 4 4-8 8-6 2z"/></svg>`,
       feedback:`<svg viewBox="0 0 48 48"><path d="M10 13h28a4 4 0 014 4v14a4 4 0 01-4 4H22l-10 7v-7h-2a4 4 0 01-4-4V17a4 4 0 014-4z"/><path d="M17 24h.1M24 24h.1M31 24h.1"/></svg>`
     };
     return icons[name] || icons.device;

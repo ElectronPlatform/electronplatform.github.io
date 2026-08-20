@@ -205,6 +205,42 @@ h2{font-size:28px;margin:0 0 6px}
   align-items:flex-start;
   transition:border-color .16s ease, transform .16s ease, box-shadow .16s ease;
 }
+.featureCard[data-module-id="tag-builder"]{
+  grid-column:1/-1;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  grid-template-areas:
+    "icon title action"
+    "icon description action";
+  column-gap:18px;
+  row-gap:5px;
+  align-items:center;
+  min-height:0;
+  padding:20px 24px;
+  border-color:rgba(56,189,248,.46);
+  background:
+    radial-gradient(circle at 12% 50%,rgba(56,189,248,.18),transparent 28%),
+    linear-gradient(100deg,rgba(15,35,72,.92),rgba(4,13,31,.84));
+}
+.featureCard[data-module-id="tag-builder"] .featureIcon{
+  grid-area:icon;
+  margin:0;
+}
+.featureCard[data-module-id="tag-builder"] h3{
+  grid-area:title;
+  margin:0;
+  font-size:19px;
+}
+.featureCard[data-module-id="tag-builder"] p{
+  grid-area:description;
+  max-width:860px;
+  font-size:14px;
+}
+.featureCard[data-module-id="tag-builder"] .featureAction{
+  grid-area:action;
+  padding:0;
+  white-space:nowrap;
+}
+.detailedFeatureGrid .featureCard[data-module-id="tag-builder"]{min-height:0}
 .featureCard:hover,.featureCard:focus-visible{
   border-color:rgba(56,189,248,.72);
   transform:translateY(-2px);
@@ -1163,6 +1199,17 @@ body.moduleDialogOpen{overflow:hidden}
   h1{font-size:48px}
   .pageHero h1{font-size:38px}
   .featureGrid{grid-template-columns:1fr}
+  .featureCard[data-module-id="tag-builder"]{
+    display:flex;
+    min-height:190px;
+    padding:15px;
+  }
+  .featureCard[data-module-id="tag-builder"] .featureIcon{margin-bottom:11px}
+  .featureCard[data-module-id="tag-builder"] .featureAction{
+    margin-top:auto;
+    padding-top:10px;
+    white-space:normal;
+  }
   .featureBand,.previewBand,.textBand,.siteFooter,.pageMain{width:calc(100vw - 28px)}
   .pageHero{padding:28px}
   .moduleDialog{

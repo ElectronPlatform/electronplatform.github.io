@@ -68,6 +68,34 @@ window.ELECTRON_PORTAL_CONFIG = {
   assistanceCredit: "Developed with the assistance of OpenAI's ChatGPT and OpenAI Codex.",
   modules: [
     {
+      id: "tag-builder",
+      icon: "write",
+      title: "Tag Builder — In Development",
+      description: "Create supported RFID/NFC content through controlled writes, read-back and independent verification.",
+      actionLabel: "View development status",
+      actionTarget: "./features.html#tag-builder",
+      dialogTitle: "Build and verify supported tags",
+      dialogIntro: "Electron Next is developing Tag Builder as a controlled workspace for creating supported RFID/NFC content while keeping inspection, authorization, writing and verification visibly separate.",
+      details: [
+        {
+          title: "Development status",
+          text: "Tag Builder is under active controlled beta development. It is not part of Public Preview 0.8 and is not yet offered as a public release feature."
+        },
+        {
+          title: "Current physical validation",
+          text: "Development includes Type 2 NFC NDEF workflows and programmable 125 kHz T5577/T55x7 media, with initial LF validation covering controlled EM410x and HID Prox workflows on owned or disposable test carriers."
+        },
+        {
+          title: "Verified completion",
+          text: "A hardware write alone is not treated as success. Electron inspects compatibility, controls Proxmark3 ownership, writes in bounded stages, reads the carrier back and verifies the intended result before reporting Completed & Verified."
+        },
+        {
+          title: "Tag & Carrier Knowledge",
+          text: "The longer-term plan includes a vendor-neutral knowledge base explaining carrier types, capabilities, compatibility and relevant supplier references using verified evidence."
+        }
+      ]
+    },
+    {
       id: "knowledge-engine",
       icon: "book",
       title: "Knowledge Engine",
