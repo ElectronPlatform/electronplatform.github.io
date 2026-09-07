@@ -64,6 +64,7 @@ belong at the repository root when publishing through GitHub Pages.
 Public product copy should preserve these current decisions:
 
 - the RFID Collection is Electron's durable centre;
+- Proxmark3 is Electron's first implemented and tested RFID hardware provider;
 - compatible stock Proxmark3 firmware supports core Preview workflows;
 - additional Device Studio status appears only when the connected firmware
   reports the required capabilities;
@@ -114,11 +115,11 @@ Keep release packages separate from the GitHub Pages source so the website
 remains a simple static presentation layer. The final approved host may be a
 GitHub release or another official release location.
 
-When a public Preview package is ready, publish the package, checksums, release
-notes, licence notices and corresponding source information together. Then
+When public Preview availability changes, keep the packages, checksums, release
+notes, licence notices and corresponding source information aligned. Then
 update the matching platform entry under `downloads` and the shared
-`downloadStatusText` in `config.js`. The legacy `downloadUrl` remains a macOS
-fallback until the first approved package is published.
+`downloadStatusText` in `config.js`. The legacy `downloadUrl` remains the macOS
+Apple Silicon fallback.
 
 ## Local Preview
 

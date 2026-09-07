@@ -27,16 +27,15 @@ Electron Early Public Preview 1 is distributed without Apple Developer ID
 signing or Apple notarization. This allows the project to gather real-world
 feedback before investing in Apple's Developer Program.
 
-The published DMG was built from the matching public GitHub source revision,
-checked after packaging and published with its exact SHA-256 and corresponding
-source archives.
+The published installers are identified through the official GitHub release
+with their SHA-256 checksums and corresponding source information.
 
 ## Verify the installer
 
 Download Electron only from the official website or its linked GitHub release.
 The release page must publish the installer filename and SHA-256 checksum.
 
-In Terminal, the downloaded DMG can be checked with:
+In Terminal, the downloaded DMG can be checked with the matching filename:
 
 ```text
 shasum -a 256 "/path/to/Electron-Preview-0.8.0-arm64.dmg"

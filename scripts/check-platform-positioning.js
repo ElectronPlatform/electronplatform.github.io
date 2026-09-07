@@ -41,8 +41,16 @@ if (!/local-first RFID Collection and evidence platform/i.test(softwareDescripti
 }
 
 const aboutText = documentFor("about.html").body.textContent || "";
-if (!aboutText.includes("Proxmark3 is Electron's first implemented RFID hardware provider.")) {
-  throw new Error("About must identify Proxmark3 as Electron's first implemented RFID hardware provider.");
+if (!aboutText.includes("Proxmark3 is Electron's first currently implemented and tested RFID hardware provider.")) {
+  throw new Error("About must identify Proxmark3 as Electron's first currently implemented and tested RFID hardware provider.");
+}
+
+const portalConfig = fs.readFileSync(path.join(root, "config.js"), "utf8");
+if (!/published for macOS Apple Silicon \(arm64\) and Apple Intel \(x64\)/i.test(portalConfig)) {
+  throw new Error("Portal configuration must identify both published macOS Preview architectures.");
+}
+if (!/Public Preview 1 currently applies these checks to supported Proxmark3 hardware\./.test(portalConfig)) {
+  throw new Error("Current Device Safety scope must retain the verified Proxmark3 boundary.");
 }
 
 for (const [file, phrase] of [

@@ -6,7 +6,7 @@ window.ELECTRON_PORTAL_CONFIG = {
   siteUrl: "https://electronplatform.github.io",
   repositoryUrl: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform",
   downloadUrl: "https://github.com/ElectronPlatform/electron-rfid-intelligence-platform/releases/download/v0.8.0-early-preview.1/Electron-Preview-0.8.0-arm64.dmg",
-  downloadStatusText: "Electron Early Public Preview 1 is available for macOS Apple Silicon and Apple Intel.",
+  downloadStatusText: "Public Preview 1 version 0.8.0 is published for macOS Apple Silicon (arm64) and Apple Intel (x64).",
   releaseCandidate: {
     version: "0.8.0",
     buildDate: "2 August 2026 (arm64); 17 August 2026 (x64)",
@@ -32,7 +32,7 @@ window.ELECTRON_PORTAL_CONFIG = {
       availableLabel: "Download Electron Preview 1 (.dmg)",
       availableStatus: "Available now",
       availableNote: "Download the approved Apple Intel installer from this page.",
-      unavailableLabel: "Installer being prepared",
+      unavailableLabel: "Installer unavailable",
       status: "Official Preview target",
       note: "Download the approved Apple Intel installer from this page."
     },
@@ -203,7 +203,7 @@ window.ELECTRON_PORTAL_CONFIG = {
         },
         {
           title: "Current Preview scope",
-          text: "The Preview reports USB availability, active-session state and diagnostic readiness, while existing command-safety controls remain in effect."
+          text: "Public Preview 1 currently applies these checks to supported Proxmark3 hardware. It reports USB availability, active-session state and diagnostic readiness while existing command-safety controls remain in effect."
         }
       ]
     },

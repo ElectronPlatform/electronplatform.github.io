@@ -14,7 +14,7 @@ safe defaults and practical feedback.
 
 ## Distribution Status
 
-Current build:
+Published builds:
 
 - Unsigned — it is not signed with an Apple Developer ID. The package
   uses only local ad-hoc signing for bundle integrity.

@@ -139,11 +139,11 @@ Feedback packages are also created locally and must be sent by you.
 ## Which operating systems are supported?
 
 Apple Silicon (arm64) and Apple Intel (x64) are the official Mac Preview
-targets and use the same Electron features, documentation, licensing and
-security model. Architecture-specific installers for both targets are
-published after passing their respective package and runtime checks. Windows
-and Linux support is not claimed until dedicated packages are built and
-tested.
+targets. Architecture-specific installers and PM3 clients are published for
+both. They use the same Electron features, documentation, licensing and
+security model, but current real-world validation remains deeper on Apple
+Silicon. Windows and Linux support is not claimed until dedicated packages are
+built and tested.
 
 ## Where do I get help?
 
